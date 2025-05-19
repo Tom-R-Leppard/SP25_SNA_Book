@@ -1,0 +1,4 @@
+"0","V(second_order_wiley)$ego <- ifelse(V(second_order_wiley)$name %in% c(""Wiley""), ""red"", ""white"")"
+"0",""
+"0","par(mar = c(0,0,3,0))"
+"0","plot(second_order_wiley, vertex.color = V(second_order_wiley)$ego, main = ""Wiley's Second Order Ego Network"")"

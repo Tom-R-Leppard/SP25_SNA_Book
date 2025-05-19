@@ -1,0 +1,25 @@
+# A2_Project Prospectus
+
+Instructions: Follow the steps below and submit your assigment to Moodle assignment portal under Module 2. YOU MUST NAME YOUR FILE LIKE THIS: course_section_semester_assignment_unityID For example: DSA295_003_SP25_A2_trleppar
+
+Grading: Full marks are awarded for completion and proper naming. One mark dropped if not named properly, or for each portion incomplete.
+
+## Assignment:
+
+The final project is to provide a big report on a network of your choice. This report will have three parts, transformation, visualization, and analysis. This assignment is designed to get you thinking about your final project. Follow the steps in this assignment and turn in a prospectus on your project.
+
+### Part 1. Explore possible sources of data
+
+A. Visit my [Google drive folder](https://drive.google.com/drive/folders/18BRSRSLjBQcbYOiu59cWZ4fzmmK3ZoWJ) (you will need to sign in with your @ncsu.edu account to access it. B. Look through the sources of data I have collected for you and pick at least two. Please read the info.txt file for each data file to understand the networks that are there. C. In your prospectus, write a paragraph describing the networks that you are considering using for your project. Consider: How are they structured? What constitutes the nodes/edges? D. (Optional) If you are interested in using your own data (i.e. collecting your own, or finding other data elsewhere), then discuss this IN ADDITION to selecting two potential datasets in the folder.
+
+### Part 2.
+
+A. Write a paragraph discussing ideas for visualisation and analysis that you may do using these data. Consider what you are interested in – communities, individuals, describing the network itself?
+
+### Part 3.
+
+A. Use the code you have learned so far in class to: a. Bring your at least one of your data choices into RStudio b. Convert it into a network object c. Plot your network
+
+B. Save the image of your network and attach it to the page. (see the picture below on how).
+
+![A screenshot showing how to save plots in RStudio](images/Plots%20in%20R.png)

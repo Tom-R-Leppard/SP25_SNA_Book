@@ -1,0 +1,39 @@
+"0","ego_graphs <- make_ego_graph(grime_08_clean, order = 1)"
+"0","head(ego_graphs)"
+"1","[[1]]
+IGRAPH 9b94ad6 DN-- 2 1 -- 
+"
+"1","+ attr: name (v/c), collab_weight (e/n)
++ edge from 9b94ad6 (vertex names):
+[1] Asher D->Wiley
+
+[[2]]
+IGRAPH 9b94afd DN-- 1 0 -- 
++ attr: name (v/c), collab_weight (e/n)
++ edges from 9b94afd (vertex names):
+
+[[3]]
+IGRAPH 9b94b11 DN-- 1 0 -- 
++ attr: name (v/c), collab_weight (e/n)
++ edges from 9b94b11 (vertex names):
+
+[[4]]
+IGRAPH 9b94b21 DN-- 2 1 -- 
++ attr: name (v/c), collab_weight (e/n)
++ edge from 9b94b21 (vertex names):
+[1] Scorcher->Wiley
+
+[[5]]
+IGRAPH 9b94b2d DN-- 3 2 -- 
++ attr: name (v/c), collab_weight (e/n)
++ edges from 9b94b2d (vertex names):
+[1] Bless Beats->Wiley     Bless Beats->Roll Deep
+
+[[6]]
+IGRAPH 9b94b39 DN-- 3 2 -- 
++ attr: name (v/c), collab_weight (e/n)
++ edges from 9b94b39 (vertex names):
+"
+"1","[1] Flowdan->Wiley  Flowdan->Jammer
+
+"

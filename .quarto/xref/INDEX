@@ -1,0 +1,77 @@
+{
+  "index.qmd": {
+    "index.html": "321ce4f4"
+  },
+  "intro.qmd": {
+    "intro.html": "363f45ef"
+  },
+  "Network Data Structures.qmd": {
+    "Network Data Structures.html": "87db0402"
+  },
+  "Cleaning Network Data - Trimming and Adding.qmd": {
+    "Cleaning Network Data - Trimming and Adding.html": "3a015118"
+  },
+  "Cleaning Network Data - Subgraphs.qmd": {
+    "Cleaning Network Data - Subgraphs.html": "65760f25"
+  },
+  "Node and Edge Attributes.qmd": {
+    "Node and Edge Attributes.html": "cad4b7f8"
+  },
+  "Two Mode Networks - AM.qmd": {
+    "Two Mode Networks - AM.html": "1fbbb39c"
+  },
+  "Two Mode Networks - Edgelists.qmd": {
+    "Two Mode Networks - Edgelists.html": "01c734ae"
+  },
+  "summary.qmd": {
+    "summary.html": "81c91c84"
+  },
+  "references.qmd": {
+    "references.html": "5626c44a"
+  },
+  "Basic Visualisation.qmd": {
+    "Basic Visualisation.html": "6562322a"
+  },
+  "Intermediate Visualisation.qmd": {
+    "Intermediate Visualisation.html": "953bc6ac"
+  },
+  "Advanced Visualisation - Interactive.qmd": {
+    "Advanced Visualisation - Interactive.html": "5def1ffd"
+  },
+  "Advanced Visualisation - Dynamic.qmd": {
+    "Advanced Visualisation - Dynamic.html": "cd34ac59"
+  },
+  "People In Networks.qmd": {
+    "People In Networks.html": "3b432015"
+  },
+  "Communities in Networks.qmd": {
+    "Communities in Networks.html": "9b90b302"
+  },
+  "Networks of People.qmd": {
+    "Networks of People.html": "222d490b"
+  },
+  "Unit 1.qmd": {
+    "Unit 1.html": "b6da1d3b"
+  },
+  "Unit 2.qmd": {
+    "Unit 2.html": "22f277a4"
+  },
+  "Unit 3.qmd": {
+    "Unit 3.html": "ce69be7c"
+  },
+  "A1_My Ego Network.qmd": {
+    "A1_My Ego Network.html": "f4c4bc5c"
+  },
+  "A2_Project Prospectus.qmd": {
+    "A2_Project Prospectus.html": "bebd00e1"
+  },
+  "A3_Data Exploration.qmd": {
+    "A3_Data Exploration.html": "3a2990c9"
+  },
+  "A4_Visualisations.qmd": {
+    "A4_Visualisations.html": "eb4938ee"
+  },
+  "Final Project Instructions.qmd": {
+    "Final Project Instructions.html": "2c5c3d55"
+  }
+}

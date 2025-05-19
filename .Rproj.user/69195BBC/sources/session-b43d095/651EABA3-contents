@@ -1,0 +1,18 @@
+# Unit 2
+
+In this unit, we will cover how to visualise network data. By the end of this unit you will:
+
+1.  Produce basic visualisations
+
+2.  Produce intermediate visualisations that tell a story about your network
+
+3.  Produce interactive or dynamic network visualisations
+
+## Project Milestones
+
+| Milestone (assignments linked) | Explanation |
+|----|----|
+| [Data Exploration](A3_Data%20Exploration.qmd) | Students will give descriptions of the network data they are using. They will discuss possible transformations to the data that they will need to perform before analysing. They may also provide basic visualisations to demonstrate this. |
+| [Visualisations](A4_Visualisations.qmd) | Students will provide multiple visualisations of the network they are studying. This assignment requires students to demonstrate they have learned how to make basic visualization, clean visualization, and more advanced visualisations (i.e. at least one dynamic or interactive version of their network). |
+
+: Enjoy!

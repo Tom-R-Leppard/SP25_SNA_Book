@@ -1,0 +1,5 @@
+# Summary
+
+Well done!
+
+You have now learned how to wrangle, visualise and analyse network data. I hope you have enjoyed the course.

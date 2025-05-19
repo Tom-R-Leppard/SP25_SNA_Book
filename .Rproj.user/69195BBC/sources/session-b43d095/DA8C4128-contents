@@ -1,0 +1,58 @@
+project:
+  type: book
+  output-dir: docs  
+book:
+  title: "Introduction to Network Analysis: An ADAPT Guide"
+  author: "Tom R. Leppard"
+  date: "5/16/2025"
+  cover-image: cover.png
+  cover-image-alt: |
+    A textbook cover with a turtle that has a network on its shell. 
+   
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - part: " Unit 1: Cleaning and Transforming Network Data"
+      chapters:
+        - Unit 1.qmd
+        - Network Data Structures.qmd
+        - Cleaning Network Data - Trimming and Adding.qmd
+        - Cleaning Network Data - Subgraphs.qmd
+        - Node and Edge Attributes.qmd
+        - Two Mode Networks - AM.qmd
+        - Two Mode Networks - Edgelists.qmd
+    - part: " Unit 2: Visualising Network Data"
+      chapters:
+        - Unit 2.qmd
+        - Basic Visualisation.qmd
+        - Intermediate Visualisation.qmd
+        - Advanced Visualisation - Interactive.qmd
+        - Advanced Visualisation - Dynamic.qmd
+    - part: " Unit 3: Analysing Network Data"
+      chapters:
+        - Unit 3.qmd
+        - People In Networks.qmd
+        - Communities in Networks.qmd
+        - Networks of People.qmd
+    - part: "Assignments"
+      chapters:
+        - A1_My Ego Network.qmd
+        - A2_Project Prospectus.qmd
+        - A3_Data Exploration.qmd
+        - A4_Visualisations.qmd
+        - Final Project Instructions.qmd
+    - summary.qmd
+    - references.qmd
+
+format:
+  html:
+    theme:
+      - superhero
+      - brand
+  
+  pdf:
+    documentclass: scrreprt
+
+bibliography: references.bib
+
+editor: visual

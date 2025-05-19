@@ -1,0 +1,2 @@
+"0","grime_08_clean <- delete_edges(grime_08, E(grime_08)[which_loop(grime_08)])"
+"0",""

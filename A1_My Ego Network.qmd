@@ -1,0 +1,30 @@
+# A1 - My Ego Network
+
+Instructions: Follow the steps below and submit either a photograph or document to Moodle assignment portal under Module 1. 
+YOU MUST NAME YOUR FILE LIKE THIS: course_section_semester_assignment_unityID
+For example: DSA295_003_SP25_A1_trleppar
+
+Grading: Full marks are awarded for completion and proper naming. One mark dropped if not named properly, or for each portion incomplete. 
+
+## Assignment: 
+
+You are surrounded by networks. You participate in them and what you do can reinforce them. Here is an activity to exemplify what networks look like. We will focus on social networks – specifically, one of your social networks. 
+
+### Part 1. Visualising your network
+A.	On a piece of paper write/type your name near the bottom. 
+B.	In the middle of the paper (horizontally left to right), list the names of up to 20 people you texted within the last week (consider putting a circle around each name). If you do not text, maybe consider those you spoke to, direct messaged on social media, or those you contacted somehow (up to 20)
+C.	Now draw a line/place arrows (if in word) from your name to each of the people you listed. 
+D.	Consider the people you listed. Are any of them connected to each other somehow? For those in your list that are connected, draw lines/place arrows going from them to their contacts/friends/family members. – NOTE – if none are connected, then please write that. 
+Congratulations, you just drew a social network!!! This is called an ego-network. You are the “ego” (the one answering the questions about the connections between you and others). Those who you listed are called “alters”. The connections you drew are called “ties.” 
+
+### Part 2. Let’s do a quick analysis of you in your network.
+A.	Count  and write the number of ties that you are connected to. 	
+This is called your degree centrality. It is a measure of how popular or “well-connected" an entity is within a network. 
+
+### Part 3. Now let’s analyse your alters. 
+A.	For each person you listed, count the number of ties that they have to others. If there are none, write N/A. 
+
+You have now calculated the degree centrality of each of the alters in your network. Which people in your network are “well connected?” 
+
+WELL DONE!
+

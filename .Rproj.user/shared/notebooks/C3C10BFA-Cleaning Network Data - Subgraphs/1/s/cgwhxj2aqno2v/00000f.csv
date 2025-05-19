@@ -1,0 +1,3 @@
+"0","frequent_collabors_graph <- induced_subgraph(grime_08_clean, vids = unique(c(ends(grime_08_clean, frequent_collabors)[, 1], ends(grime_08_clean, frequent_collabors)[, 2])))"
+"0","plot(frequent_collabors_graph)"
+"0",""

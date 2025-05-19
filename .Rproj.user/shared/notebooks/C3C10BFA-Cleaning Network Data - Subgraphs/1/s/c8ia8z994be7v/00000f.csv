@@ -1,0 +1,4 @@
+"0","second_order_wiley <- make_ego_graph(grime_08_clean, order = 2, nodes = Wiley)[[1]]"
+"0",""
+"0","par(mar = c(0,0,0,0))"
+"0","plot(second_order_wiley)"

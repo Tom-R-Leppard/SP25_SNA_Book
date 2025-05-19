@@ -1,0 +1,20 @@
+# Unit 1
+
+In this unit, we will cover how to transform and wrangle network data. By the end of this unit you will:
+
+1.  Understand how network data is structured
+
+2.  Know how to bring network data into RStudio
+
+3.  Know how to clean network data
+
+4.  Learn the difference between one and two mode networks
+
+## Project Milestones
+
+| Milestone (assignments linked) | Explanation |
+|----|----|
+| [My Ego Network](A1_My%20Ego%20Network.qmd) | Students will draw their own ego network following an assignment in class. |
+| [Project Prospectus](A2_Project%20Prospectus.qmd) | Students are expected to discuss potential project ideas, possible sources of data, and research questions they could explore. |
+
+Enjoy!

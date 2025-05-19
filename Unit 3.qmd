@@ -1,0 +1,19 @@
+# Unit 3
+
+In this unit, we will cover how to analyse network data. By the end of this unit you will:
+
+1.  Study people in networks
+
+2.  Identify communities within networks
+
+3.  Analyse networks of people
+
+4.  Measure symbolic connections between individuals and groups
+
+## Project Milestones
+
+| Milestone (assignments linked) | Explanation |
+|------------------------------------|------------------------------------|
+| [Final Project](Final%20Project%20Instructions.qmd) | Students will perform an exploratory analysis using the data they have been working on all semester long. The aim of this project is for you to do an in-depth exploration which includes descriptions, visualisations, and some primary analysis.   |
+
+Enjoy!
