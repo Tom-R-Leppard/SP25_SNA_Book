@@ -1,45 +1,47 @@
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ```
+
 # A3 - Data Exploration
 
 ## Instructions
-This is a skeleton markdown file that you will use to complete Assignment 3 this semester. Use the chunks (see below) to code in. Where you see ........................ please remove and write your response to the prompt. 
+
+This is a skeleton markdown file that you will use to complete Assignment 3 this semester. Use the chunks (see below) to code in. Where you see ........................ please remove and write your response to the prompt.
+
 ```{r  eval=FALSE}
 ###################### THIS IS A CHUNK #############################
 ```
 
-As usual, follow the steps below and submit your markdown document as a pdf. You will need to knit this to a pdf or knit it to an html then save as a pdf to submit. 
+As usual, follow the steps below and submit your markdown document as a pdf. You will need to knit this to a pdf or knit it to an html then save as a pdf to submit.
 
-YOUR MUST NAME YOUR FILE LIKE THIS: course_section_semester_assignment_unityID
-For example: DSA295_003_SP25_A2_trleppar
+YOUR MUST NAME YOUR FILE LIKE THIS: course_section_semester_assignment_unityID For example: DSA295_003_SP25_A2_trleppar
 
-Grading: Full marks are awarded for completion and proper naming. One mark will be dropped if not named properly, and/or additional marks dropped for each portion incomplete. This assignment will have 5 points per portion (4 questions/prompts to complete) and a total of 20 marks. 
+Grading: Full marks are awarded for completion and proper naming. One mark will be dropped if not named properly, and/or additional marks dropped for each portion incomplete. This assignment will have 5 points per portion (4 questions/prompts to complete) and a total of 20 marks.
 
-## Selecting your network data. 
-Please select one of the datasets that are available to you for your final project. Then, discuss the following. 
+## Selecting your network data.
 
-1) How is this data stored? How do you know this? Discuss the characteristics of your network data using terms we have learned in class. 
-....................................................
+Please select one of the datasets that are available to you for your final project. Then, discuss the following.
 
+1)  How is this data stored? How do you know this? Discuss the characteristics of your network data using terms we have learned in class. ....................................................
 
-2) What interested you in this network? 
-....................................................
+2)  What interested you in this network? ....................................................
 
-## Bringing in your network 
-Use this chunk below to bring in your network data and convert it into a network object using the appropriate method for how your network data are structured. 
+## Bringing in your network
+
+Use this chunk below to bring in your network data and convert it into a network object using the appropriate method for how your network data are structured.
+
 ```{r  eval=FALSE}
 library(igraph)
 my_data <- 
 
 ```
 
-3) Please describe your network. What are the nodes? Edges? One/two mode? Directed/Undirected? 
-....................................................
+3)  Please describe your network. What are the nodes? Edges? One/two mode? Directed/Undirected? ....................................................
 
 ## Describing your network data
-Use this chunk below to create a table showing the number of nodes and edges that are in your network. 
+
+Use this chunk below to create a table showing the number of nodes and edges that are in your network.
+
 ```{r  eval=FALSE}
 num_nodes <- vcount(YOUR GRAPH OBJECT HERE)
 num_edges <- ecount(YOUR GRAPH OBJECT HERE)
@@ -51,18 +53,19 @@ table <- data.frame(
 ```
 
 Please present the table you created. (Consider using the head(), tail(), or print() functions).
+
 ```{r}
 
 ```
 
 ## Visualising the network
-4) Potential Transformations 
-Present a raw visualisation of your network (yes, even if it is ugly!). 
+
+4)  Potential Transformations Present a raw visualisation of your network (yes, even if it is ugly!).
+
 ```{r}
 
 ```
 
-Please discuss any transformations (not just to the visual, but actual data transformations) that you think you may need to make to this network before you go on to analyse it (think about deleting nodes and ties). If you can't think of anything you NEED to do (i.e. trim or add), then what ways do you think you could do (i.e. subgraph)? 
-.....................................................................
+Please discuss any transformations (not just to the visual, but actual data transformations) that you think you may need to make to this network before you go on to analyse it (think about deleting nodes and ties). If you can't think of anything you NEED to do (i.e. trim or add), then what ways do you think you could do (i.e. subgraph)? .....................................................................
 
 WELL DONE!! :)

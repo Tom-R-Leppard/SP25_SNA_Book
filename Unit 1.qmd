@@ -13,7 +13,7 @@ In this unit, we will cover how to transform and wrangle network data. By the en
 ## Project Milestones
 
 | Milestone (assignments linked) | Explanation |
-|--------------------------------------|----------------------------------|
+|----|----|
 | [My Ego Network](A1_My%20Ego%20Network.qmd) | Students will draw their own ego network following an assignment in class. |
 | [Project Prospectus](A2_Project%20Prospectus.qmd) | Students are expected to discuss potential project ideas, possible sources of data, and research questions they could explore. |
 

@@ -3,7 +3,7 @@
     "path": "~/Teaching/SNA/Spring 2025/SNA_SP_25_Book/SP25_SNA_Book/_quarto.yml",
     "project_path": "_quarto.yml",
     "type": "yaml",
-    "hash": "4271742961",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1747673567901.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "2,2",
+        "cursorPosition": "4,77",
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1747687260,
+    "lastKnownWriteTime": 1747696520,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1747687260192,
+    "last_content_update": 1747696520821,
     "read_only": false,
     "read_only_alternatives": []
 }

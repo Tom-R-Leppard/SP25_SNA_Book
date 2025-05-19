@@ -3,7 +3,7 @@
     "path": "~/Teaching/SNA/Spring 2025/SNA_SP_25_Book/SP25_SNA_Book/intro.qmd",
     "project_path": "intro.qmd",
     "type": "quarto_markdown",
-    "hash": "1972268235",
+    "hash": "356410822",
     "contents": "",
     "dirty": false,
     "created": 1747664614149.0,
@@ -17,15 +17,15 @@
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
         "rmdVisualModeLocation": "2552:919.3333129882812",
-        "cursorPosition": "28,26",
-        "scrollLine": "21"
+        "cursorPosition": "11,2",
+        "scrollLine": "14"
     },
     "folds": "",
-    "lastKnownWriteTime": 1747667345,
+    "lastKnownWriteTime": 1747696377,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1747667345542,
+    "last_content_update": 1747696377328,
     "read_only": false,
     "read_only_alternatives": []
 }
