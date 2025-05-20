@@ -1,0 +1,1 @@
+This network object contains the passing data among the starting players for the 2010 World Cup Netherlands team.

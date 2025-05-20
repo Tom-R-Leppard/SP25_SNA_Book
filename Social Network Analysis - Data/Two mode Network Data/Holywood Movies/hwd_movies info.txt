@@ -1,0 +1,1 @@
+This is an affiliation network that contains information on the ten most popular movies (based on IMDB activity) for each year from 1999 to 2014. For each movie, the first ten actors listed under the IMDB field Full Cast are included. Thus, the underlying network data form a bipartite graph, where ties exist between a movie and the top ten actors who starred in that movie.
