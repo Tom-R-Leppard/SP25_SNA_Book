@@ -20,4 +20,8 @@ By the end of this unit you will:
 |------------------------------------|------------------------------------|
 | [Final Project](Final%20Project%20Instructions.qmd) | Students will perform an exploratory analysis using the data they have been working on all semester long. The aim of this project is for you to do an in-depth exploration which includes descriptions, visualisations, and some primary analysis.   |
 
-Enjoy!
+## Workforce Preparation
+
+There is a lot of technical language in Unit 3. If I were to say to you that person X in the network has a higher betweenness centrality than person Y, the chances are that you would not really understand what I am talking about. A key aspect to successful network analysis is translating your analysis into real terms and action-items. While working on your project, think of substantive questions like, who are the most popular people in this network? Are people in this network more or less interactive than those in another network? These are much more actionable than questions like how in this network has the highest degree centrality? Is one network more or less transitive than another? Believe it or not, those are the same questions. However, your boss or stakeholders are much more likely to understand the first set than they are the second set.
+
+Enjoy Unit!

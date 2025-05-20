@@ -2,23 +2,23 @@
   {
     "objectID": "Unit 2.html",
     "href": "Unit 2.html",
-    "title": "9  Unit 2 - Visualising Network Data",
+    "title": "9  Unit 2",
     "section": "",
     "text": "9.1 Learning Elements\nIn this unit, we will cover how to visualise network data. I maintain that visualisations serve two main purposes. One for you, the data scientist and one for your constituents. As such, visualisations can tell you more about your data. Visualising your network might inform you that you need to do some more cleaning (self loops, extraneous nodes etc.). It might even drive some of your questions that need answering about this network. For example, seeing that there are a few highly central figures in the network may influence you to ask specific questions about those individuals. Additionally, you need to create visualisations that engage stakeholders and tell the story of your analysis.\nBy the end of this unit you will:",
     "crumbs": [
       " Unit 2: Visualising Network Data",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Unit 2 - Visualising Network Data</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Unit 2</span>"
     ]
   },
   {
     "objectID": "Unit 2.html#project-milestones",
     "href": "Unit 2.html#project-milestones",
-    "title": "9  Unit 2 - Visualising Network Data",
+    "title": "9  Unit 2",
     "section": "9.2 Project Milestones",
     "text": "9.2 Project Milestones\n\n\n\nMilestone (assignments linked)\nExplanation\n\n\n\n\nData Exploration\nStudents will give descriptions of the network data they are using. They will discuss possible transformations to the data that they will need to perform before analysing. They may also provide basic visualisations to demonstrate this.\n\n\nVisualisations\nStudents will provide multiple visualisations of the network they are studying. This assignment requires students to demonstrate they have learned how to make basic visualization, clean visualization, and more advanced visualisations (i.e. at least one dynamic or interactive version of their network).",
     "crumbs": [
       " Unit 2: Visualising Network Data",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Unit 2 - Visualising Network Data</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Unit 2</span>"
     ]
   },
   {
@@ -37,7 +37,7 @@
     "href": "Unit 3.html#project-milestones",
     "title": "14  Unit 3",
     "section": "14.2 Project Milestones",
-    "text": "14.2 Project Milestones\n\n\n\nMilestone (assignments linked)\nExplanation\n\n\n\n\nFinal Project\nStudents will perform an exploratory analysis using the data they have been working on all semester long. The aim of this project is for you to do an in-depth exploration which includes descriptions, visualisations, and some primary analysis.  \n\n\n\nEnjoy!",
+    "text": "14.2 Project Milestones\n\n\n\nMilestone (assignments linked)\nExplanation\n\n\n\n\nFinal Project\nStudents will perform an exploratory analysis using the data they have been working on all semester long. The aim of this project is for you to do an in-depth exploration which includes descriptions, visualisations, and some primary analysis.",
     "crumbs": [
       " Unit 3: Analysing Network Data",
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>Unit 3</span>"
@@ -256,7 +256,7 @@
     "href": "Intermediate Visualisation.html#node-level-characteristics",
     "title": "11  Visualisations - Intermediate",
     "section": "11.4 Node Level Characteristics",
-    "text": "11.4 Node Level Characteristics\nNext, you can attach data external to the network (i.e. node characteristics) and visualise those. I bring in a separate .csv file that has various variables that pertain to the nodes. These are fake characteristics that I made up.\n\ngrime_nodes &lt;- read.csv(file.choose()) \nhead(grime_nodes)\n\n           node fake_sales sex\n1       Asher D         10   m\n2 Dizzee Rascal         20   m\n3 Lethal Bizzle         50   m\n4         Wiley         70   m\n5   Treble Clef        100   m\n6       Shystie         95   f\n\n\nTake a look at this to see what we have available. 2 variables - fake sales (continuous) and the artist’s sex (categorical - dichotomous)\nNow we can create a network object that has both the network data and the node characteristics. This section uses the vertices = argument which tells R that there are edges and node characteristics as part of the network. I also clean the selfloops from this edgelist.\n\ngrime_full &lt;- graph_from_data_frame(grime_edge_list, vertices = grime_nodes, directed = TRUE)\ngrime_full_clean &lt;- delete.edges(grime_full, E(grime_full)[which_loop(grime_full)])\n\nWe can use these node attributes to visualise more about the network\n\nsex &lt;-ifelse(V(grime_full_clean)$sex == \"f\", \"red\", \"white\")\n\npar(mar = c(0,0,0,0))\nplot(grime_full_clean, vertex.color = sex)\n\n\n\n\n\n\n\n\nWe can also set the vertex characteristics to reflect the continuous variable. In this case, the artists’ fake sales.\n\npar(mar = c(0,0,0,0))\nplot(grime_full_clean, vertex.size = V(grime_full_clean)$fake_sales/100)",
+    "text": "11.4 Node Level Characteristics\nNext, you can attach data external to the network (i.e. node characteristics) and visualise those. I bring in a separate .csv file that has various variables that pertain to the nodes. These are fake characteristics that I made up.\n\ngrime_nodes &lt;- read.csv(file.choose()) # Select Grime 2008 Nodes.csv\nhead(grime_nodes)\n\n           node fake_sales sex\n1       Asher D         10   m\n2 Dizzee Rascal         20   m\n3 Lethal Bizzle         50   m\n4         Wiley         70   m\n5   Treble Clef        100   m\n6       Shystie         95   f\n\n\nTake a look at this to see what we have available. 2 variables - fake sales (continuous) and the artist’s sex (categorical - dichotomous)\nNow we can create a network object that has both the network data and the node characteristics. This section uses the vertices = argument which tells R that there are edges and node characteristics as part of the network. I also clean the selfloops from this edgelist.\n\ngrime_full &lt;- graph_from_data_frame(grime_edge_list, vertices = grime_nodes, directed = TRUE)\ngrime_full_clean &lt;- delete.edges(grime_full, E(grime_full)[which_loop(grime_full)])\n\nWe can use these node attributes to visualise more about the network\n\nsex &lt;-ifelse(V(grime_full_clean)$sex == \"f\", \"red\", \"white\")\n\npar(mar = c(0,0,0,0))\nplot(grime_full_clean, vertex.color = sex)\n\n\n\n\n\n\n\n\nWe can also set the vertex characteristics to reflect the continuous variable. In this case, the artists’ fake sales.\n\npar(mar = c(0,0,0,0))\nplot(grime_full_clean, vertex.size = V(grime_full_clean)$fake_sales/100)",
     "crumbs": [
       " Unit 2: Visualising Network Data",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Visualisations - Intermediate</span>"
@@ -660,23 +660,23 @@
   {
     "objectID": "Unit 1.html",
     "href": "Unit 1.html",
-    "title": "2  Unit 1 - Cleaning and Transforming Network Data",
+    "title": "2  Unit 1",
     "section": "",
     "text": "2.1 Learning Elements\nIn this unit, we will cover how to transform and wrangle network data. Network data aren’t always clean. Nor are they always representative of an entire group. As the researcher, it is up to you to learn best practices of cleaning your data. It is also important for you to know as much as possible about the group you are studying. For your research results to be generalisable to the group you are studying, your data need to truly represent the group you are studying (whether you have sample or population data). This process might include trimming or adding to your network. Or it might include making various subgraphs of your network.\nBy the end of this unit you will:",
     "crumbs": [
       " Unit 1: Cleaning and Transforming Network Data",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Unit 1 - Cleaning and Transforming Network Data</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Unit 1</span>"
     ]
   },
   {
     "objectID": "Unit 1.html#project-milestones",
     "href": "Unit 1.html#project-milestones",
-    "title": "2  Unit 1 - Cleaning and Transforming Network Data",
+    "title": "2  Unit 1",
     "section": "2.2 Project Milestones",
     "text": "2.2 Project Milestones\n\n\n\nMilestone (assignments linked)\nExplanation\n\n\n\n\nMy Ego Network\nStudents will draw their own ego network following an assignment in class.\n\n\nProject Prospectus\nStudents are expected to discuss potential project ideas, possible sources of data, and research questions they could explore.",
     "crumbs": [
       " Unit 1: Cleaning and Transforming Network Data",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Unit 1 - Cleaning and Transforming Network Data</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Unit 1</span>"
     ]
   },
   {
@@ -712,23 +712,23 @@
   {
     "objectID": "Unit 1.html#learning-elements",
     "href": "Unit 1.html#learning-elements",
-    "title": "2  Unit 1 - Cleaning and Transforming Network Data",
+    "title": "2  Unit 1",
     "section": "",
     "text": "Understand how network data is structured\nKnow how to bring network data into RStudio\nClean network data\nLearn the difference between one and two mode networks",
     "crumbs": [
       " Unit 1: Cleaning and Transforming Network Data",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Unit 1 - Cleaning and Transforming Network Data</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Unit 1</span>"
     ]
   },
   {
     "objectID": "Unit 1.html#workforce-preparation",
     "href": "Unit 1.html#workforce-preparation",
-    "title": "2  Unit 1 - Cleaning and Transforming Network Data",
+    "title": "2  Unit 1",
     "section": "2.3 Workforce Preparation",
     "text": "2.3 Workforce Preparation\nAs you engage with Unit 1, be mindful of potential stakeholders. You will learn principles associated with how network data are structured and how to clean them. You will need to communicate the strategies you use in your studies (the cleaning you do etc.) and also the limitations of your study. Remember, think about data as information, not fact or truths. With data we can proximate the truth and make inferences about things that can inform decisions. Part of being a network analyst is knowing how to communicate the strengths and weaknesses of your data and methods to make the most informed decisions.\nEnjoy Unit 1!",
     "crumbs": [
       " Unit 1: Cleaning and Transforming Network Data",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Unit 1 - Cleaning and Transforming Network Data</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Unit 1</span>"
     ]
   },
   {
@@ -822,23 +822,23 @@
   {
     "objectID": "Unit 2.html#learning-elements",
     "href": "Unit 2.html#learning-elements",
-    "title": "9  Unit 2 - Visualising Network Data",
+    "title": "9  Unit 2",
     "section": "",
     "text": "Produce basic (clean), intermediate (storytelling), and more advanced (engaging) visualisations.\nUnderstand that visuals can tell a story about your network.\nLearn about visual accessibility.",
     "crumbs": [
       " Unit 2: Visualising Network Data",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Unit 2 - Visualising Network Data</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Unit 2</span>"
     ]
   },
   {
     "objectID": "Unit 2.html#workforce-preparation",
     "href": "Unit 2.html#workforce-preparation",
-    "title": "9  Unit 2 - Visualising Network Data",
+    "title": "9  Unit 2",
     "section": "9.3 Workforce Preparation",
     "text": "9.3 Workforce Preparation\nVisualisaion can be an effective form of communication. It can also confuse, if not done well. Network data may not be the most intuitive visualistions to look at. Although, their novelty make for an attractive visualisation, people are not as used to interpreting them as they are other charts or graphs. Be mindful, when visualising your networks, of their readability. Use titles that are descriptive. For example, if you alter the node sizes to reflect popular people (highly central nodes) consider a title that describes this.\nEnjoy Unit 2!",
     "crumbs": [
       " Unit 2: Visualising Network Data",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Unit 2 - Visualising Network Data</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Unit 2</span>"
     ]
   },
   {
@@ -847,6 +847,17 @@
     "title": "14  Unit 3",
     "section": "",
     "text": "Learn the basic idea of centrality in networks\nApply community detecting algorithms\nStudy global-level network characteristics\nMeasure symbolic connections between individuals and groups - a principle known as duality",
+    "crumbs": [
+      " Unit 3: Analysing Network Data",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Unit 3</span>"
+    ]
+  },
+  {
+    "objectID": "Unit 3.html#workforce-preparation",
+    "href": "Unit 3.html#workforce-preparation",
+    "title": "14  Unit 3",
+    "section": "14.3 Workforce Preparation",
+    "text": "14.3 Workforce Preparation\nThere is a lot of technical language in Unit 3. If I were to say to you that person X in the network has a higher betweenness centrality than person Y, the chances are that you would not really understand what I am talking about. A key aspect to successful network analysis is translating your analysis into real terms and action-items. While working on your project, think of substantive questions like, who are the most popular people in this network? Are people in this network more or less interactive than those in another network? These are much more actionable than questions like how in this network has the highest degree centrality? Is one network more or less transitive than another? Believe it or not, those are the same questions. However, your boss or stakeholders are much more likely to understand the first set than they are the second set.\nEnjoy Unit!",
     "crumbs": [
       " Unit 3: Analysing Network Data",
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>Unit 3</span>"
