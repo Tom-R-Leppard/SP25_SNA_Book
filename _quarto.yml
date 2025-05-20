@@ -2,7 +2,7 @@ project:
   type: book
   output-dir: docs  
 book:
-  title: "Leaning Social Network Analysis Using Principles of the ADAPT Model"
+  title: "Social Network Analysis: A Guide Using Principles of the ADAPT Model"
   author: "Tom R. Leppard"
   date: "5/16/2025"
   cover-image: cover.png

@@ -1,14 +1,16 @@
 # Unit 3
 
-In this unit, we will cover how to analyse network data. By the end of this unit you will:
+In this unit, we will cover how to analyse network data. There are three basic units of network analysis. You may wish to analyse the individuals in the network (a micro, or the smallest unit of analysis). In this instance, you may want to analyse 'well connected' individuals in the network. The next level up are the communities in the network. There may be latent groups of connected individuals who are more connected internally (to each other) than to others in the network. How segmented a network is, or in which community an individual is in might be of particular interest. Finally, the largest unit of analysis is the network itself. In this instance, you might want to analyse characteristics about the entire group or comparing characteristics across groups.
 
-1.  Study people in networks
+By the end of this unit you will:
 
-2.  Identify communities within networks
+1.  Learn the basic idea of centrality in networks
 
-3.  Analyse networks of people
+2.  Apply community detecting algorithms
 
-4.  Measure symbolic connections between individuals and groups
+3.  Study global-level network characteristics
+
+4.  Measure symbolic connections between individuals and groups - a principle known as duality
 
 ## Project Milestones
 

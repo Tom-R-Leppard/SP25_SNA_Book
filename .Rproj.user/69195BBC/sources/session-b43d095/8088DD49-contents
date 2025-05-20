@@ -1,17 +1,12 @@
 # On The ADAPT Model
-This book is patterned after the ADAPT model championed by North Carolina State University's Data Science and AI Academy. This [model](https://datascienceacademy.ncsu.edu/courses/course-model/) stands for All Campus Data science and AI through Project based Teaching and learning.
+
+This book is patterned after the ADAPT model championed by North Carolina State University's Data Science and AI Academy (DSA). This [model](https://datascienceacademy.ncsu.edu/courses/course-model/) stands for All Campus Data science and AI through Project based Teaching and learning.
 
 At its core, the model is designed to make computational skills accessible to everyone, regardless of their discipline. In this spirit of this model, you’ll see that I use some fun data (e.g., Harry Potter, UK Grime music, etc.) to teach network principles and R skills. I find these appeal to a very broad student body. I also teach based on concepts more than explaining code. Understanding the what and the why behind social network analysis more than explaining every syntactical function, I find, facilitates learning for many.
 
-## ADAPT For Students
-
-Students, all you need to know is that you will be working on a project for the duration of the course. For more details see [the Final Project Instructions](Final%20Project%20Instructions.qmd).
-
-Each unit and assignment is a milestone in your project development. For this project, you may select any social network data that appeals to you. I have collated quite a few from various sources available on a [Google Drive](https://drive.google.com/drive/folders/18BRSRSLjBQcbYOiu59cWZ4fzmmK3ZoWJ) (you will need to sign in with your NCSU email to access it). Alternatively, you may wish to explore other network data (from places like the [network repository](https://networkrepository.com/index.php), [Kaggle](https://www.kaggle.com/) or others).
-
 ## ADAPT For Instructors
 
-The teaching model is a living document that the Data Science and AI team, headed by Rachel Levy, are constantly working on to mold. As previously mentioned, the students are at the core of this model as is the belief that data science acumen can be taught to people from every disciplinary background. In fact, it behooves all to engage with data and become data literate (understanding how to interpret data) in a data-driven world!
+The teaching model is a living document that the Data Science and AI team, headed by Rachel Levy, are constantly working on. As previously mentioned, the students are at the core of this model as is the belief of the DSA that data science acumen can be taught to people from every disciplinary background. In fact, it behooves all to engage with data and become data literate (understanding how to interpret data) in a data-driven world!
 
 I do not go into detail here but suffice it to say that the ADAPT model comprises three parts:
 
@@ -21,4 +16,14 @@ I do not go into detail here but suffice it to say that the ADAPT model comprise
 
 3.  Workforce Preparedness
 
+This book was created from a course taught at the DSA under the direction of the ADAPT model. It's goal is not to serve as an exemplar of the Model, but rather to encourage instructors to engage with the "spirit" of the model. Consider teaching project-based courses that centre the interests of your students - maximising their agency. Further, consider teaching computational skills in such a way as to open its content to all interested partcies.
+
 Throughout this book each of the units and modules are designed with students in mind. The overarching theme of this book is to enact these principles and enable other instructors wishing to utilise this content to do the same.
+
+![ADAPT Model Icon - [DSA](https://datascienceacademy.ncsu.edu/courses/course-model/)](ADAPT%20-%20ICON.png)
+
+## ADAPT For Students
+
+Students, all you need to know is that you will be working on a project for the duration of the course. For more details see [the Final Project Instructions](Final%20Project%20Instructions.qmd).
+
+Each unit and assignment is a milestone in your project development. For this project, you may select any social network data that appeals to you. I have collated quite a few from various sources available on a [Google Drive](https://drive.google.com/drive/folders/18BRSRSLjBQcbYOiu59cWZ4fzmmK3ZoWJ) (you will need to sign in with your NCSU email to access it). Alternatively, you may wish to explore other network data (from places like the [network repository](https://networkrepository.com/index.php), [Kaggle](https://www.kaggle.com/) or others).

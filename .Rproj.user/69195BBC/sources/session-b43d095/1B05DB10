@@ -18,14 +18,15 @@
         "scrollLine": "0",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "rmdVisualModeLocation": "2:0"
+        "rmdVisualModeLocation": "1048:338",
+        "quartoPreviewFormat": "html"
     },
     "folds": "",
-    "lastKnownWriteTime": 1747687616,
+    "lastKnownWriteTime": 1747701648,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1747687616034,
+    "last_content_update": 1747701648934,
     "read_only": false,
     "read_only_alternatives": []
 }

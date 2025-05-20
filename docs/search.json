@@ -1,54 +1,309 @@
 [
   {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "1  On The ADAPT Model",
+    "objectID": "Unit 2.html",
+    "href": "Unit 2.html",
+    "title": "9  Unit 2",
     "section": "",
-    "text": "1.1 ADAPT For Students\nThis book is patterned after the ADAPT model championed by North Carolina State University’s Data Science and AI Academy. This model stands for All Campus Data science and AI through Project based Teaching and learning.\nAt its core, the model is designed to make computational skills accessible to everyone, regardless of their discipline. In this spirit of this model, you’ll see that I use some fun data (e.g., Harry Potter, UK Grime music, etc.) to teach network principles and R skills. I find these appeal to a very broad student body. I also teach based on concepts more than explaining code. Understanding the what and the why behind social network analysis more than explaining every syntactical function, I find, facilitates learning for many.\nStudents, all you need to know is that you will be working on a project for the duration of the course. For more details see the Final Project Instructions.\nEach unit and assignment is a milestone in your project development. For this project, you may select any social network data that appeals to you. I have collated quite a few from various sources available on a Google Drive (you will need to sign in with your NCSU email to access it). Alternatively, you may wish to explore other network data (from places like the network repository, Kaggle or others).",
+    "text": "9.1 Project Milestones\nIn this unit, we will cover how to visualise network data. By the end of this unit you will:",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>On The ADAPT Model</span>"
+      " Unit 2: Visualising Network Data",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Unit 2</span>"
     ]
   },
   {
-    "objectID": "intro.html#adapt-for-instructors",
-    "href": "intro.html#adapt-for-instructors",
-    "title": "1  On The ADAPT Model",
-    "section": "1.2 ADAPT For Instructors",
-    "text": "1.2 ADAPT For Instructors\nThe teaching model is a living document that the Data Science and AI team, headed by Rachel Levy, are constantly working on to mold. As previously mentioned, the students are at the core of this model as is the belief that data science acumen can be taught to people from every disciplinary background. In fact, it behooves all to engage with data and become data literate (understanding how to interpret data) in a data-driven world!\nI do not go into detail here but suffice it to say that the ADAPT model comprises three parts:\n\nProject-based Learning\n10 Common Learning Elements\nWorkforce Preparedness\n\nThroughout this book each of the units and modules are designed with students in mind. The overarching theme of this book is to enact these principles and enable other instructors wishing to utilise this content to do the same.",
+    "objectID": "Unit 2.html#project-milestones",
+    "href": "Unit 2.html#project-milestones",
+    "title": "9  Unit 2",
+    "section": "",
+    "text": "Enjoy!\n\n\nMilestone (assignments linked)\nExplanation\n\n\n\n\nData Exploration\nStudents will give descriptions of the network data they are using. They will discuss possible transformations to the data that they will need to perform before analysing. They may also provide basic visualisations to demonstrate this.\n\n\nVisualisations\nStudents will provide multiple visualisations of the network they are studying. This assignment requires students to demonstrate they have learned how to make basic visualization, clean visualization, and more advanced visualisations (i.e. at least one dynamic or interactive version of their network).",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>On The ADAPT Model</span>"
+      " Unit 2: Visualising Network Data",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Unit 2</span>"
+    ]
+  },
+  {
+    "objectID": "Unit 3.html",
+    "href": "Unit 3.html",
+    "title": "14  Unit 3",
+    "section": "",
+    "text": "14.1 Project Milestones\nIn this unit, we will cover how to analyse network data. By the end of this unit you will:\nEnjoy!",
+    "crumbs": [
+      " Unit 3: Analysing Network Data",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Unit 3</span>"
+    ]
+  },
+  {
+    "objectID": "Unit 3.html#project-milestones",
+    "href": "Unit 3.html#project-milestones",
+    "title": "14  Unit 3",
+    "section": "",
+    "text": "Milestone (assignments linked)\nExplanation\n\n\n\n\nFinal Project\nStudents will perform an exploratory analysis using the data they have been working on all semester long. The aim of this project is for you to do an in-depth exploration which includes descriptions, visualisations, and some primary analysis.",
+    "crumbs": [
+      " Unit 3: Analysing Network Data",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Unit 3</span>"
     ]
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Leaning Social Network Analysis Using Principles of the ADAPT Model",
+    "title": "Social Network Analysis: A Guide Using Principles of the ADAPT Model",
     "section": "",
-    "text": "Preface\nThis book is designed for students taking ’Introduction to Network Analysis, a data science course on social network analysis taught by Tom R. Leppard. Each chapter of the book with take you through the source session-by-session.\nThe book is divided into three sections that mirror the units of the course. First, it starts building your skills cleaning and transforming network data. In this unit you will be learning about network data structured, bringing network data into R and best practices for cleaning network data. Second, it transitions into a unit on network visualisation. This unit builds your skills in basic, intermediate, and advanced network visualisation. The aim of this unit is to help you create clean network visualisations that tell a clear story, and engage your viewers. Finally, the book finishes with some modules on analysing network data. Specifically, a discussion on the units of network analysis, individuals (nodes in the networks), communities (clusters of nodes in the networks), and the network itself. There is much to learn beyond this book, however, by the end of this you will have learned the fundamental principles and will build competence in network analysis.",
+    "text": "Preface\nThis book is designed for students taking ’Introduction to Network Analysis, a data science course on social network analysis taught by Tom R. Leppard. Each chapter of the book with take you through the source session-by-session. It is also designed to demonstrate principles of the Data Science and AI Academy’s ADAPT teaching and learning model (learn more in Chapter 2).\nThe book is divided into three sections that mirror the units of the course. First, it starts building your skills cleaning and transforming network data. In this unit you will be learning about network data structured, bringing network data into R and best practices for cleaning network data. Second, it transitions into a unit on network visualisation. This unit builds your skills in basic, intermediate, and advanced network visualisation. The aim of this unit is to help you create clean network visualisations that tell a clear story, and engage your viewers. Finally, the book finishes with some modules on analysing network data. Specifically, a discussion on the units of network analysis, individuals (nodes in the networks), communities (clusters of nodes in the networks), and the network itself. There is much to learn beyond this book, however, by the end of this you will have learned the fundamental principles and will build competence in network analysis.\nEnjoy!",
     "crumbs": [
       "Preface"
     ]
   },
   {
-    "objectID": "Unit 1.html",
-    "href": "Unit 1.html",
-    "title": "2  Unit 1",
+    "objectID": "Node and Edge Attributes.html",
+    "href": "Node and Edge Attributes.html",
+    "title": "6  Node and Edge Attributes",
     "section": "",
-    "text": "2.1 Project Milestones\nIn this unit, we will cover how to transform and wrangle network data. By the end of this unit you will:\nEnjoy!",
+    "text": "6.1 Getting to know these data\nYour network may have some edge characteristics. What this means is that the network has qualitative or quantitative information regarding the connections between nodes. These could be things that denote a certain type of connection between individuals in the network (romantic vs. friend, positive vs. negative, kinship vs. friend). These qualitatively different categories tell us more about the types of relationships that there are between the nodes in our network. Meanwhile, quantitative information can also tells us more about the information. Quantitative information could include things like frequency of communication. Such information is termed the edges “weight” indicating that there are substantively meaningful differences between the levels of connection (for example interacting only once compared to 10 times).\nAdditionally, your network may have some information about the nodes. Such information could include categorical information (e.g demographics or other categories) or numeric information (e.g. age). This means we can inform our visualisation to portray the information about the nodes.\nAll of this information can be attached to our edgelist. You can also do this on an adjacency matrix but it is not as straightforward. To learn the process, let’s stick with edgelists.\nThis dataset has a lot more information about these individuals and their relationships than others we have used this far. We have one excel spreadsheet (not .csv this time) with two separate sheets, one called vertices and the other called edges. The vertices sheet has information about each individual node in the network while the edges contains both the edges that exist as well as information about them. Let’s read them in and take a look at them\nWe are using a little more specific code on this one using the readxl package to read in a specific sheet from our spreadsheet. Then we can read in each sheet using the followin method.\nvertices.df &lt;- read_excel(\"C:/Users/trleppar/Downloads/node and vertex characteristics.xlsx\", sheet = \"vertices\")\nedges.df &lt;- read_excel(\"C:/Users/trleppar/Downloads/node and vertex characteristics.xlsx\", sheet = \"edges\")\nLet’s take a look at these one at a tine to get an idea of what information we have.\nhead(edges.df)\n\n# A tibble: 6 × 4\n  from  to     freq affinity\n  &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;   \n1 A     B         2 pos     \n2 A     C         1 neg     \n3 A     D         1 pos     \n4 A     E         1 neg     \n5 A     F         3 neg     \n6 E     F         2 pos\nWe have an edgelist between A-F people. In this edgelist we have the frequency of interaction and the affinity (i.e. if they are positive or negative interactions).\nhead(vertices.df)\n\n# A tibble: 6 × 4\n  name    age role  gender\n  &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; \n1 A        20 DJ    F     \n2 B        25 MC    M     \n3 C        21 DJ    F     \n4 D        23 crew  M     \n5 E        24 MC    M     \n6 F        23 MC    F\nWe have their name, age and two categorical variables about them, their role (if they are a DJ or something else) and their sex (Male/Female).\nNow I can create a network object in igraph using the familiar method you are used to - graph_from_data_frame(). However, We want this network to have all the information possible. For this, we don’t just want the edge information, but also the node level information. TO do this, we tell R that the data = the edgelist.df (a familiar step to you pros now!), and the vertex characteristics are stored in the object we created earlier, vertices.df\ngraph &lt;- graph_from_data_frame(d = edges.df, vertices = vertices.df , directed = FALSE)\n\ngraph\n\nIGRAPH 79ba356 UN-- 7 7 -- \n+ attr: name (v/c), age (v/n), role (v/c), gender (v/c), freq (e/n),\n| affinity (e/c)\n+ edges from 79ba356 (vertex names):\n[1] A--B A--C A--D A--E A--F E--F F--G\nNice work! You can see the vertex information is stores as v characteristics (name, age, role and gender. The edge characteristics are stored as e characteristics - freq, affinity. Now lets visualise the network and see what we have.\nplot(graph)\nHere comes the fun part. First, let’s start with the edge characteristics. Rapid fire, we can visualise these in may different ways.",
     "crumbs": [
       " Unit 1: Cleaning and Transforming Network Data",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Unit 1</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Node and Edge Attributes</span>"
     ]
   },
   {
-    "objectID": "Unit 1.html#project-milestones",
-    "href": "Unit 1.html#project-milestones",
-    "title": "2  Unit 1",
-    "section": "",
-    "text": "Milestone (assignments linked)\nExplanation\n\n\n\n\nMy Ego Network\nStudents will draw their own ego network following an assignment in class.\n\n\nProject Prospectus\nStudents are expected to discuss potential project ideas, possible sources of data, and research questions they could explore.",
+    "objectID": "Node and Edge Attributes.html#exploring-edge-characteristics",
+    "href": "Node and Edge Attributes.html#exploring-edge-characteristics",
+    "title": "6  Node and Edge Attributes",
+    "section": "6.2 Exploring Edge Characteristics",
+    "text": "6.2 Exploring Edge Characteristics\nWe will create a few visuals to demonstrate the information about these edges.\nLet’s start with the numeric information we have about the edges. First, we will change the width of the lines between nodes to reflect the frequency of interactions using the edge.width argument and the freq edge characteristic.\n\nplot(graph, edge.width = E(graph)$freq)\n\n\n\n\n\n\n\n\nOr, we can label the nodes with the frequency to tell a similar story. We do this using the edge.labelargument.\n\nplot(graph, edge.label = E(graph)$freq)\n\n\n\n\n\n\n\n\nWhat do these visuals tell you about their relationships compared to the first one?\nNow let’s use the categorical information to tell a slightly different story. Let’s see what we can do to demonstrate the levels of affinity between these individuals. First, we will change the line type to reflect the different levels. To do this, we first create a logical comparison using an ifelse statement. This checks if the affinity attribute of each edge is equal to “pos”. This will return a logical vector (TRUE or FALSE for each edge). If the edge is “pos” then it will return an item of the vector “solid” if it is false (i.e. “neg”), then it will return “dotdash”. We can then visualise this in the network using the edge.lty argument.\n\n#change the line type using edge.lty to match the affinity\ntype_affinity &lt;- ifelse(E(graph)$affinity == \"pos\", \"solid\", \"dotdash\")\n# Plot plus colour\nplot(graph, edge.lty = type_affinity)\n\n\n\n\n\n\n\n\nNow, let’s combine a few approaches. We will use the same ifelsestatement but will apply it to the colours of the edges. We will also change the edge labels to reflect the affinity label alongside the line type.\n\naffinity &lt;- ifelse(E(graph)$affinity == \"pos\", \"green\", \"red\")\nplot(graph, edge.color = affinity, edge.label = E(graph)$affinity, edge.lty = type_affinity)",
     "crumbs": [
       " Unit 1: Cleaning and Transforming Network Data",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Unit 1</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Node and Edge Attributes</span>"
+    ]
+  },
+  {
+    "objectID": "Node and Edge Attributes.html#exploring-vertex-attributes",
+    "href": "Node and Edge Attributes.html#exploring-vertex-attributes",
+    "title": "6  Node and Edge Attributes",
+    "section": "6.3 Exploring Vertex Attributes",
+    "text": "6.3 Exploring Vertex Attributes\nNow let’s turn to the rest of our data and explore the network’s vertex attributes.\nWe will start with the numerical characteristics of the attributes - their age. First, let’s change the labels to show their age.\n\nplot(graph, vertex.label = V(graph)$age)\n\n\n\n\n\n\n\n\nNow, let’s change the colours based on certain parameters that we set using an ifelse() statement.\n\nover_22 &lt;- ifelse(V(graph)$age &gt; 22, \"red\", \"white\") \nplot(graph, vertex.color = over_22, veterx.label.color = \"Black\")\n\n\n\n\n\n\n\n\nNext, let’s work with the categorical variables. First we can change the labels to show these, and then change the colours. See if you can follow the following code chunks and think about what these new networks tell us.\n\nplot(graph, vertex.label =V(graph)$gender)\n\n\n\n\n\n\n\n\n\nplot(graph, vertex.label = V(graph)$role)\n\n\n\n\n\n\n\n\n\ngender &lt;- ifelse(V(graph)$gender == \"M\", \"orange\", \"blue\")\nplot(graph, vertex.color = gender, vertex.label.color = \"white\")\n\n\n\n\n\n\n\n\nWe have done a lot with ifelse statements here. This are great for setting direct parameters or for working with dichotomous categories (i.e. the male/female one we have). However, we may want to create colours for categories that have more than one and then visualise it. We are going to use a differet package, called dplyr to manipulate what we have to create a vertex attribute that reflect colours based on a categorical variable (their role).\n\nlibrary(dplyr)\n\nTo do this, we will return to the original dataframe storing information about the vertex characteristics. Then, we will use the mutate() function to create a new variable that reflect a colour for each role. See if you can follow the logic and look at what we end up with.\n\nvertices.df &lt;- vertices.df %&gt;%\n  mutate(role_colour = ifelse(role == \"DJ\", \"blue\", role)) \nvertices.df &lt;- vertices.df %&gt;%\n  mutate(role_colour = ifelse(role == \"MC\", \"red\", role_colour))\nvertices.df &lt;- vertices.df %&gt;%\n  mutate(role_colour = ifelse(role == \"crew\", \"green\", role_colour))\n\nhead(vertices.df)\n\n# A tibble: 6 × 5\n  name    age role  gender role_colour\n  &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;      \n1 A        20 DJ    F      blue       \n2 B        25 MC    M      red        \n3 C        21 DJ    F      blue       \n4 D        23 crew  M      green      \n5 E        24 MC    M      red        \n6 F        23 MC    F      red        \n\n\nNow, let’s recreate our network object following the above method.\n\ngraph &lt;- graph_from_data_frame(d = edges.df, vertices = vertices.df , directed = FALSE)\n\ngraph\n\nIGRAPH 7a486d6 UN-- 7 7 -- \n+ attr: name (v/c), age (v/n), role (v/c), gender (v/c), role_colour\n| (v/c), freq (e/n), affinity (e/c)\n+ edges from 7a486d6 (vertex names):\n[1] A--B A--C A--D A--E A--F E--F F--G\n\n\nThe network has the new v characteristic that we created - role_colour\nNow we can visualise this network with the different colours for the roles all represented on the visual.\n\nplot(graph, vertex.color = V(graph)$role_colour, vertex.label.color = \"white\")\n\n\n\n\n\n\n\n\nGREAT WORK!",
+    "crumbs": [
+      " Unit 1: Cleaning and Transforming Network Data",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Node and Edge Attributes</span>"
+    ]
+  },
+  {
+    "objectID": "Two Mode Networks - AM.html",
+    "href": "Two Mode Networks - AM.html",
+    "title": "7  Two Mode Networks - Adjacency Matrix",
+    "section": "",
+    "text": "7.1 Getting to Know the Data\nThis script is intended for learning how to work with two-mode network data. It uses some data I put together about Characters from the Harry Potter movies.\nMost of the info came from this site - https://harrypotter.fandom.com/wiki/Dumbledore%27s_Army I.e. I googled “list of prefects at hogwarts” then deferred to that above wiki. Same for phoenix, death eaters etc.\nI then checked each person on google to see what house they were in - some are missing and NA because they are fake characters from the movies or the wiki page.\nhp &lt;- read.csv(file.choose(),header=TRUE,row.names=1) ## select harry_potter_two_mode.csv\n\nhp_mat &lt;- as.matrix(hp)\n\nhead(hp_mat)\n\n                 Phoenix Dumbeldore.s.Army Death.Eaters Inquisitorial.Squad\nAlbus Dumbledore       1                 0            0                   0\nRemus Lupin            1                 0            0                   0\nMolly Weasley          1                 0            0                   0\nSiruis Black           1                 0            0                   0\nSeverus Snape          1                 0            1                   0\nAlastor Moody          1                 0            0                   0\n                 Prefect Gryffindor Ravenclaw Hufflepuff Slytherin\nAlbus Dumbledore       1          1         0          0         0\nRemus Lupin            1          1         0          0         0\nMolly Weasley          0          1         0          0         0\nSiruis Black           0          1         0          0         0\nSeverus Snape          0          0         0          0         1\nAlastor Moody          0          0         0          1         0",
+    "crumbs": [
+      " Unit 1: Cleaning and Transforming Network Data",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Two Mode Networks - Adjacency Matrix</span>"
+    ]
+  },
+  {
+    "objectID": "Two Mode Networks - AM.html#getting-to-know-the-data",
+    "href": "Two Mode Networks - AM.html#getting-to-know-the-data",
+    "title": "7  Two Mode Networks - Adjacency Matrix",
+    "section": "",
+    "text": "7.1.1 Two Mode Adjacency Matrices\nSo, here we have a two mode adjacency matrix. You will notice some things that are similar to you, perhaps the 1/0 nature of a matrix. But this is slightly different. The columns no longer reflect the same names as the rows. Now, instead of an i,j matrix we have an i,g (group) matrix. This means that there is no diagonal. Why? Well, because the names at the top of the matrix (columns) are different from the side (rows). Here then, I is sending to the group. Rather, we talk about this, usually, in terms of affiliation. So, i is affiliated with the group (or not).\nFor R to understand this is a two mode network matrix, we use a slightly different command than a regular matrix. graph_from_biadjacency_matrix() is the current function where R recognises the separate column names as one type of node and the row names as another. For this to truly be a two mode network, they have to be distinct.\n\nhp_aff &lt;- graph_from_biadjacency_matrix(hp_mat)\n\n\nplot(hp_aff)",
+    "crumbs": [
+      " Unit 1: Cleaning and Transforming Network Data",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Two Mode Networks - Adjacency Matrix</span>"
+    ]
+  },
+  {
+    "objectID": "Two Mode Networks - AM.html#visualising-two-mode-networks",
+    "href": "Two Mode Networks - AM.html#visualising-two-mode-networks",
+    "title": "7  Two Mode Networks - Adjacency Matrix",
+    "section": "7.2 Visualising Two Mode Networks",
+    "text": "7.2 Visualising Two Mode Networks\nLet’s make the visualisation much clearer between the two types of nodes.\nI do this by changing the shape and the colour of each type of node. I set a vector with the colours and shapes I want\n\nshapes &lt;- c(\"circle\", \"square\")\ncolors &lt;-c(\"green\", \"orange\")\n\nThen we can plot them based on these design parameters\n\npar(mar =c(5,0,2,0))\nplot(hp_aff, vertex.color=colors[V(hp_aff)$type+1],\n     vertex.shape=shapes[V(hp_aff)$type+1], vertex.label.cex = 0.5, vertex.size = 7, main = \"Harry Potter\", sub = \"Characters Connected to Groups\")\n\n\n\n\n\n\n\n\nHere, I tell R to use the indices I’ve defined in the shapes and colors vectors and apply those to the network using the vertex.shape and vertex.color arguments. Notice that I need to state type + 1 in both of these arguments. It might look a bit unusual at first, but it makes sense once we take a closer look at what R does behind the scenes.\nThe “type” vertex characteristic is stored as TRUE or FALSE. You can verify this by running the code V(hp_aff)$type. This will display a long list of TRUE and FALSE values, which are stored in R as logical values: TRUE is equivalent to 1, and FALSE is equivalent to 0. Meanwhile, the index values for our shapes and colors vectors are stored differently. R always starts indexing at 1. In our colors vector, “green” is stored at index 1 and “orange” at index 2. For the shapes vector, “circle” is stored at index 1 and “square” at index 2.\nThus, there’s a mismatch between how the “type” characteristic is stored (as 1/0) and the way the shapes and colors vectors are indexed (which start from 1). To fix this, we add +1 to the type values, so that FALSE (which is stored as 0) becomes 1, and TRUE (which is stored as 1) becomes 2.\nIn this network, the second mode (which represents the “groups” in the bipartite network) is always considered to be the “TRUE” type. So, this means that the “characters” (the first mode, FALSE or 0) are displayed with green circles, and the “groups” (the second mode, TRUE or 1) are displayed with orange squares.\nLet’s visualise different centrality measures on this two-mode network\n\npar(mar =c(0,0,0,0))\nplot(hp_aff, vertex.color=colors[V(hp_aff)$type+1],\n     vertex.shape=shapes[V(hp_aff)$type+1], vertex.size = betweenness(hp_aff)/100, vertex.label = NA)\n\n\n\n\n\n\n\nplot(hp_aff, vertex.color=colors[V(hp_aff)$type+1],\n     vertex.shape=shapes[V(hp_aff)$type+1], vertex.label = degree(hp_aff), vertex.label.cex = 0.75)\n\n\n\n\n\n\n\n\nThese are great, but do not quite capture the bipartite (two-mode) nature of the network. Igraph has a specific layout option that can help emphasise this.\n\npar(mar =c(0,0,0,0))\nplot(hp_aff, vertex.color=colors[V(hp_aff)$type+1],\n     vertex.shape=shapes[V(hp_aff)$type+1], vertex.label = NA, layout = layout_as_bipartite(hp_aff))",
+    "crumbs": [
+      " Unit 1: Cleaning and Transforming Network Data",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Two Mode Networks - Adjacency Matrix</span>"
+    ]
+  },
+  {
+    "objectID": "Two Mode Networks - Edgelists.html",
+    "href": "Two Mode Networks - Edgelists.html",
+    "title": "8  Two Mode Networks - Edgelists",
+    "section": "",
+    "text": "library(igraph)\n\nThere is a slightly different approach to bringing in Two mode network data from an Edgelist than from an Adjacency matrix. Instead of a two mode matrix, you may have edgelist data in two mode format. ## Two Mode Edgelists First, bring it in and make it a network object.\n\nhp_tm_edgelist &lt;- read.csv(file.choose())\nhead(hp_tm_edgelist)\n\n         character      group\n1 Albus Dumbledore    Phoenix\n2 Albus Dumbledore    Prefect\n3 Albus Dumbledore Gryffindor\n4      Remus Lupin    Phoenix\n5      Remus Lupin    Prefect\n6      Remus Lupin Gryffindor\n\n\nDifferent from the adjacency matrix, this edge list has one type of node in one column and the other type in the second column.\nThis is the same process as any other network. Directed is set to FALSE\n\nhp_tm_net &lt;- graph_from_data_frame(hp_tm_edgelist, directed = FALSE)\n\nLet’s check to see if this is actually a two mode network using bipartite_mapping. This function goes through the edgelist an ensures that the columns have distinct nodes in them (i.e. it is truly a bipartite or two mod network).\n\nbipartite_mapping(hp_tm_net)\n\n$res\n[1] TRUE\n\n$type\n      Albus Dumbledore            Remus Lupin          Molly Weasley \n                 FALSE                  FALSE                  FALSE \n          Siruis Black          Severus Snape          Alastor Moody \n                 FALSE                  FALSE                  FALSE \n    Minerva McGonagall          Rubeus Hagrid   Kingsley Shacklebolt \n                 FALSE                  FALSE                  FALSE \n      Nymphadora Tonks     Mundungus Fletcher         Dedalus Diggle \n                 FALSE                  FALSE                  FALSE \n          Elphias Dode   Aberforth Dumbledore          Arabella Figg \n                 FALSE                  FALSE                  FALSE \n        Emmeline Vance        Sturgis Podmore           Hestia Jones \n                 FALSE                  FALSE                  FALSE \n       Aurthur Weasley           Bill Weasley        Charlie Weasley \n                 FALSE                  FALSE                  FALSE \n      Hermione Granger           Harry Potter              Cho Chang \n                 FALSE                  FALSE                  FALSE \n           Ron Weasley         Lavendar Brown         George Weasley \n                 FALSE                  FALSE                  FALSE \n          Fred Weasley     Neville Longbottom          Colin Creevey \n                 FALSE                  FALSE                  FALSE \n         Luna Lovegood            Dean Thomas             Katie Bell \n                 FALSE                  FALSE                  FALSE \n      Angelina Johnson          Hannah Abbott             Lee Jordon \n                 FALSE                  FALSE                  FALSE \n     Anthony Goldstein         Ernie Macmilan Justin Finch-Fletchley \n                 FALSE                  FALSE                  FALSE \n           Padma Patil        Seamus Finnigan            Susan Bones \n                 FALSE                  FALSE                  FALSE \n    Marietta Edgecombe         Alicia Spinnet         Dennis Creevey \n                 FALSE                  FALSE                  FALSE \n         Ginny Weasley          Parvati Patil          Nigel Wolpert \n                 FALSE                  FALSE                  FALSE \n       Cormac McLaggen           Romilda Vane         Michael Corner \n                 FALSE                  FALSE                  FALSE \n            Terry Boot         Maisy Reynolds                 Leanne \n                 FALSE                  FALSE                  FALSE \n       Zacharias Smith            Luca Caruso           Alice Toplin \n                 FALSE                  FALSE                  FALSE \n          James Potter           Lilly Potter         Peter Petigrew \n                 FALSE                  FALSE                  FALSE \n        Fabian Prewett         Gideon Prewett       Frank Longbottom \n                 FALSE                  FALSE                  FALSE \n      Alice Longbottom            Edgar Bones          Benjy Fenwick \n                 FALSE                  FALSE                  FALSE \n      Caradoc Dearborn        Dorcas Meadowes       Marlene McKinnon \n                 FALSE                  FALSE                  FALSE \n        Fleur Delacour    Bellatrix Lestrange          Lucius Malfoy \n                 FALSE                  FALSE                  FALSE \n        Igor Karkaroff          Regulus Black        Barty Crouch Jr \n                 FALSE                  FALSE                  FALSE \n       Antonin Dolohov         Thorfinn Rowle      Augustus Rookwood \n                 FALSE                  FALSE                  FALSE \n           Evan Rosier         Walden Macnair          Alecto Carrow \n                 FALSE                  FALSE                  FALSE \n         Amycus Carrow              Avery Jnr          Corban Yaxley \n                 FALSE                  FALSE                  FALSE \n            Crabbe Snr           Draco Malfoy                 Gibbon \n                 FALSE                  FALSE                  FALSE \n             Goyle Snr                 Jugson           Mulciber Snr \n                 FALSE                  FALSE                  FALSE \n          Mulciber Jnr               Nott Snr     Rabastan Lestrange \n                 FALSE                  FALSE                  FALSE \n   Rodolphus Lestrange                 Tavers        Pansy Parkinson \n                 FALSE                  FALSE                  FALSE \n   Millicent Bulstrode         Vincent Crabbe          Gregory Goyle \n                 FALSE                  FALSE                  FALSE \n       Graham Montague     Cassius Warrington            Argus Filch \n                 FALSE                  FALSE                  FALSE \n      Dolores Umbridge             Jane Court         Gabriel Truman \n                 FALSE                  FALSE                  FALSE \n        Cedric Diggory    Constance Pickering        Natalie Kathryn \n                 FALSE                  FALSE                  FALSE \n            Tom Riddle           Felix Rosier           Gemma Farley \n                 FALSE                  FALSE                  FALSE \n      Penelope Padgett           Rodrick Lyme          Annalena Murk \n                 FALSE                  FALSE                  FALSE \n         Angelica Cole          Percy Weasley       Freddie Clemmons \n                 FALSE                  FALSE                  FALSE \n           Dani Caroll          Marcus Turner    Penelope Clearwater \n                 FALSE                  FALSE                  FALSE \n        Robert Hillard         Chester Davies                Phoenix \n                 FALSE                  FALSE                   TRUE \n               Prefect             Gryffindor           Death.Eaters \n                  TRUE                   TRUE                   TRUE \n             Slytherin             Hufflepuff              Ravenclaw \n                  TRUE                   TRUE                   TRUE \n     Dumbeldore.s.Army    Inquisitorial.Squad \n                  TRUE                   TRUE \n\n\nIt recognises that there are two types of node in this object, so we can set that as a vertex characteristic.\n\nV(hp_tm_net)$type &lt;- bipartite_mapping(hp_tm_net)$type\n\nNow we have changed it into a two mode network and added the characteristic “type” that we are familiar with from wokring on the adjacecny matrix version.\n\nV(hp_tm_net)$type \n\n  [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE\n [13] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE\n [25] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE\n [37] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE\n [49] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE\n [61] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE\n [73] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE\n [85] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE\n [97] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE\n[109] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE\n[121] FALSE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE\n\n\nYou see the true and false statements, as we expect to see. Since this is the case, we will need to use the same +1 alteration to the arguments in our visualisation.\nWhen we plot it, it looks how we expect!\n\nshapes &lt;- c(\"circle\", \"square\")\ncolors &lt;-c(\"green\", \"orange\")\nplot(hp_tm_net, vertex.color=colors[V(hp_tm_net)$type+1],\n     vertex.shape=shapes[V(hp_tm_net)$type+1], vertex.label = NA)",
+    "crumbs": [
+      " Unit 1: Cleaning and Transforming Network Data",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Two Mode Networks - Edgelists</span>"
+    ]
+  },
+  {
+    "objectID": "Basic Visualisation.html",
+    "href": "Basic Visualisation.html",
+    "title": "10  Network Visualisation - Basic",
+    "section": "",
+    "text": "10.1 Layout\nRandom\nplot(grime_08_clean, layout = layout.random)\nGrid\nplot(grime_08_clean, layout = layout.grid)\nSmall world/Circle\nplot(grime_08_clean, layout = layout.circle)\nLayout by algorithms to demonstrate the relationships a bit better\nplot(grime_08_clean, layout = layout_with_dh(grime_08_clean))\n\n\n\n\n\n\n\nplot(grime_08_clean, layout = layout_with_fr(grime_08_clean))\n\n\n\n\n\n\n\nplot(grime_08_clean, layout = layout_with_kk(grime_08_clean))",
+    "crumbs": [
+      " Unit 2: Visualising Network Data",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Network Visualisation - Basic</span>"
+    ]
+  },
+  {
+    "objectID": "Basic Visualisation.html#changing-colours-of-the-graph",
+    "href": "Basic Visualisation.html#changing-colours-of-the-graph",
+    "title": "10  Network Visualisation - Basic",
+    "section": "10.2 Changing colours of the graph",
+    "text": "10.2 Changing colours of the graph\nVertex colours with verterx.color()\n\nplot(grime_08_clean, vertex.color = \"pink\")\n\n\n\n\n\n\n\n\nEdge colour with edge.color()\n\nplot(grime_08_clean, edge.color = \"pink\")",
+    "crumbs": [
+      " Unit 2: Visualising Network Data",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Network Visualisation - Basic</span>"
+    ]
+  },
+  {
+    "objectID": "Basic Visualisation.html#changing-the-sizes",
+    "href": "Basic Visualisation.html#changing-the-sizes",
+    "title": "10  Network Visualisation - Basic",
+    "section": "10.3 Changing the Sizes",
+    "text": "10.3 Changing the Sizes\nEdge and vertex size\n\nplot(grime_08_clean, vertex.size = 5, edge.arrow.size = 0.5)\n\n\n\n\n\n\n\n\nEdge thickness\n\nplot(grime_08_clean, vertex.size = 5, edge.width = 10)",
+    "crumbs": [
+      " Unit 2: Visualising Network Data",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Network Visualisation - Basic</span>"
+    ]
+  },
+  {
+    "objectID": "Basic Visualisation.html#titles",
+    "href": "Basic Visualisation.html#titles",
+    "title": "10  Network Visualisation - Basic",
+    "section": "10.4 Titles",
+    "text": "10.4 Titles\nMain Title\n\nplot(grime_08_clean, vertex.size = 5, edge.arrow.size = 0.5, main = \"Grime Collaborations 2008\")\n\n\n\n\n\n\n\n\nSub title\n\nplot(grime_08_clean, vertex.size = 5, edge.arrow.size = 0.5, main = \"Grime Collaborations\", sub = \"2008\")",
+    "crumbs": [
+      " Unit 2: Visualising Network Data",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Network Visualisation - Basic</span>"
+    ]
+  },
+  {
+    "objectID": "Basic Visualisation.html#labels",
+    "href": "Basic Visualisation.html#labels",
+    "title": "10  Network Visualisation - Basic",
+    "section": "10.5 Labels",
+    "text": "10.5 Labels\nToggle\n\nplot(grime_08_clean, vertex.label = NA)\n\n\n\n\n\n\n\n\nSize and Offset\n\nplot(grime_08_clean, vertex.label.cex = 0.5, vertex.label.dist = 2)",
+    "crumbs": [
+      " Unit 2: Visualising Network Data",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Network Visualisation - Basic</span>"
+    ]
+  },
+  {
+    "objectID": "Basic Visualisation.html#general-considerations-for-visualizations",
+    "href": "Basic Visualisation.html#general-considerations-for-visualizations",
+    "title": "10  Network Visualisation - Basic",
+    "section": "10.6 General considerations for visualizations",
+    "text": "10.6 General considerations for visualizations\nChanging the aspect ratio by changing the margings of the plot window.\n\nplot(grime_08_clean, vertex.label = NA)\n\n\n\n\n\n\n\npar(mar =c(0,0,0,0))\nplot(grime_08_clean, vertex.label = NA)\n\n\n\n\n\n\n\n\nWe have reduced the margins all down to zero.\nSet a seed to replicate the same layout every time\n\npar(mar =c(0,0,0,0))\nset.seed(123)\nplot(grime_08_clean, vertex.label = NA)\n\n\n\n\n\n\n\n\n\npar(mar =c(0,0,0,0))\nset.seed(123)\nplot(grime_08_clean, vertex.label = NA)\n\n\n\n\n\n\n\n\nThe layout is replicated - useful for recreating visuals you use.",
+    "crumbs": [
+      " Unit 2: Visualising Network Data",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Network Visualisation - Basic</span>"
+    ]
+  },
+  {
+    "objectID": "Basic Visualisation.html#plotting-visuals-next-to-each-other",
+    "href": "Basic Visualisation.html#plotting-visuals-next-to-each-other",
+    "title": "10  Network Visualisation - Basic",
+    "section": "10.7 Plotting visuals next to each other",
+    "text": "10.7 Plotting visuals next to each other\nVertical\n\npar(mfrow = c(2, 1))\npar(mar =c(0,0,0,0))\nset.seed(123)\nplot(grime_08_clean, vertex.label = NA)\nset.seed(123)\npar(mar =c(0,0,0,0))\nplot(grime_08_clean, vertex.label = NA, vertex.size = degree(grime_08_clean))\n\n\n\n\n\n\n\n\nHorizontal\n\npar(mfrow = c(1, 2))\nset.seed(123)\npar(mar =c(0,0,0,0))\nplot(grime_08_clean, vertex.label = NA)\nset.seed(123)\npar(mar =c(0,0,0,0))\nplot(grime_08_clean, vertex.label = NA, vertex.size = degree(grime_08_clean))",
+    "crumbs": [
+      " Unit 2: Visualising Network Data",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Network Visualisation - Basic</span>"
+    ]
+  },
+  {
+    "objectID": "Intermediate Visualisation.html",
+    "href": "Intermediate Visualisation.html",
+    "title": "11  Visualisations - Intermediate",
+    "section": "",
+    "text": "11.1 Visualising Centrality - Node Size\nFirst, I bring in some data on Grime musicians and their collaborations with each other in 2008. Then I clean the network a little bit by deleting the self-loops.\nNow, using data internal to your graph object you can visualise central people in the network using the vertex.size() argument.",
+    "crumbs": [
+      " Unit 2: Visualising Network Data",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Visualisations - Intermediate</span>"
+    ]
+  },
+  {
+    "objectID": "Intermediate Visualisation.html#visualising-centrality---node-size",
+    "href": "Intermediate Visualisation.html#visualising-centrality---node-size",
+    "title": "11  Visualisations - Intermediate",
+    "section": "",
+    "text": "11.1.1 Degree Centrality\n\npar(mar = c(0,0,0,0))\nplot(grime_08_clean, vertex.size = degree(grime_08_clean)*2, edge.arrow.size = 0.5)\n\n\n\n\n\n\n\n\n\n\n11.1.2 Betweenness Centrality\n\npar(mar = c(0,0,0,0))\nplot(grime_08_clean, vertex.size = betweenness(grime_08_clean)*2, edge.arrow.size = 0.5)\n\n\n\n\n\n\n\n\nAlternatively, you can use the labels to demonstrate centrality",
+    "crumbs": [
+      " Unit 2: Visualising Network Data",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Visualisations - Intermediate</span>"
+    ]
+  },
+  {
+    "objectID": "Intermediate Visualisation.html#visualising-centrality---node-labels",
+    "href": "Intermediate Visualisation.html#visualising-centrality---node-labels",
+    "title": "11  Visualisations - Intermediate",
+    "section": "11.2 Visualising Centrality - Node Labels",
+    "text": "11.2 Visualising Centrality - Node Labels\n\n11.2.1 Degree\n\npar(mar = c(0,0,0,0))\nplot(grime_08_clean, vertex.label = degree(grime_08_clean))\n\n\n\n\n\n\n\n\n\n\n11.2.2 Betweenness\n\npar(mar = c(0,0,0,0))\nplot(grime_08_clean, vertex.label = betweenness(grime_08_clean))",
+    "crumbs": [
+      " Unit 2: Visualising Network Data",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Visualisations - Intermediate</span>"
+    ]
+  },
+  {
+    "objectID": "Intermediate Visualisation.html#visualising-relationships",
+    "href": "Intermediate Visualisation.html#visualising-relationships",
+    "title": "11  Visualisations - Intermediate",
+    "section": "11.3 Visualising Relationships",
+    "text": "11.3 Visualising Relationships\nWhat about visualising the nature of the relationships? The edges?\n\npar(mar = c(0,0,0,0))\nplot(grime_08_clean, edge.width = E(grime_08_clean)$collab_weight, edge.arrow.size = 0.5, vertex.size = 6, vertex.label = NA)\n\n\n\n\n\n\n\npar(mar = c(0,0,0,0))\nplot(grime_08_clean, edge.width = E(grime_08_clean)$collab_weight, edge.label = E(grime_08_clean)$collab_weight, edge.arrow.size = 0.5, vertex.size = 6, vertex.label = NA)",
+    "crumbs": [
+      " Unit 2: Visualising Network Data",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Visualisations - Intermediate</span>"
+    ]
+  },
+  {
+    "objectID": "Intermediate Visualisation.html#node-level-characteristics",
+    "href": "Intermediate Visualisation.html#node-level-characteristics",
+    "title": "11  Visualisations - Intermediate",
+    "section": "11.4 Node Level Characteristics",
+    "text": "11.4 Node Level Characteristics\nNext, you can attach data external to the network (i.e. node characteristics) and visualise those. I bring in a separate .csv file that has various variables that pertain to the nodes. These are fake characteristics that I made up.\n\ngrime_nodes &lt;- read.csv(file.choose()) \nhead(grime_nodes)\n\n           node fake_sales sex\n1       Asher D         10   m\n2 Dizzee Rascal         20   m\n3 Lethal Bizzle         50   m\n4         Wiley         70   m\n5   Treble Clef        100   m\n6       Shystie         95   f\n\n\nTake a look at this to see what we have available. 2 variables - fake sales (continuous) and the artist’s sex (categorical - dichotomous)\nNow we can create a network object that has both the network data and the node characteristics. This section uses the vertices = argument which tells R that there are edges and node characteristics as part of the network. I also clean the selfloops from this edgelist.\n\ngrime_full &lt;- graph_from_data_frame(grime_edge_list, vertices = grime_nodes, directed = TRUE)\ngrime_full_clean &lt;- delete.edges(grime_full, E(grime_full)[which_loop(grime_full)])\n\nWe can use these node attributes to visualise more about the network\n\nsex &lt;-ifelse(V(grime_full_clean)$sex == \"f\", \"red\", \"white\")\n\npar(mar = c(0,0,0,0))\nplot(grime_full_clean, vertex.color = sex)\n\n\n\n\n\n\n\n\nWe can also set the vertex characteristics to reflect the continuous variable. In this case, the artists’ fake sales.\n\npar(mar = c(0,0,0,0))\nplot(grime_full_clean, vertex.size = V(grime_full_clean)$fake_sales/100)",
+    "crumbs": [
+      " Unit 2: Visualising Network Data",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Visualisations - Intermediate</span>"
+    ]
+  },
+  {
+    "objectID": "Advanced Visualisation - Interactive.html",
+    "href": "Advanced Visualisation - Interactive.html",
+    "title": "12  Interactive Networks Visualisations",
+    "section": "",
+    "text": "12.1 Interactive networks using visNetwork\nSo far, we have worked only on static visualisations but there are other ways you can present network data that are a little more fun and can be more instructive. In this chapter we are going to work on two interactive networks and discuss the utility of both. There are multiple packages in R that help you put together interactive visualisations using the visnetwork and threejs packages. For a more complete tutorial on some others, take a look at Katya Ognyanova’s website (https://kateto.net/network-visualization).\nFirst, we will be using the visnetwork to create a network visualisation that you can click on, move and view labels one at a time. To do this, we are going to use the data I put together previously that we have used when working on node and edge characteristics. Like in that tutorial, you will need to set your own working directory for the below code to run and pull in each sheet.\nvertices.df &lt;- read_excel(\"C:/Users/trleppar/Downloads/node and vertex characteristics.xlsx\", sheet = \"vertices\")\nedges.df &lt;- read_excel(\"C:/Users/trleppar/Downloads/node and vertex characteristics.xlsx\", sheet = \"edges\")\nLet’s take a look at these objects so you can see how these data are structured. You will see that the vertices.df object has a few node characteristics that help describe those in the network. The edges.df object contains the connections between the nodes in the network and some information about those connections. These will all come into play as we construct our interactive networks based on it.\nhead(vertices.df)\n\n# A tibble: 6 × 4\n  name    age role  gender\n  &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; \n1 A        20 DJ    F     \n2 B        25 MC    M     \n3 C        21 DJ    F     \n4 D        23 crew  M     \n5 E        24 MC    M     \n6 F        23 MC    F     \n\nhead(edges.df)\n\n# A tibble: 6 × 4\n  from  to     freq affinity\n  &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;   \n1 A     B         2 pos     \n2 A     C         1 neg     \n3 A     D         1 pos     \n4 A     E         1 neg     \n5 A     F         3 neg     \n6 E     F         2 pos\nThe visNetwork package requires that our each node has a unique ID. This ID is not separate from the network (i.e. a row number in a dataframe), rather, this unique ID MUST MATCH the names of the vertices. THIS IS IMPORTAT. If you are to create this type of network, you will need both the edge information and the node information. Remember, the latter, the node information, can simply consist of just an id column. So, if you are working with a network that only has a an adjacency matrix or a network, you can create a dataframe that has the other half you need - a dataframe with the node id (names).\nIn our case, we have a network that I have created that has both of these separate dataframes that we can use to create our network. First, we need the aforementioned ID for each node. In this case, we can use the rename() function from the dplyr package to rename the column ‘name’ to id. The vistNetwork package can now detect the unique ids that define each node.\nvertices.df &lt;- vertices.df %&gt;%\n  rename(id = name)\nNow that our data is structured in the correct format, we can use the visnNetwork() argument to create our interactive network! Outside of markdown, if you are working in a script file, this will appear in the viewer window of your Rstudio. Here, however, it will appear in a widget below the code chunk. Play around with the network. You can scroll in and out. Select and move a node around in the network.\nvisNetwork(vertices.df, edges.df)\nThe package visNetwork requires that you have certain variables available to it in order for the visualisation to reflect the information you have. Below, I demonstrate the label, title, and shadow options. Label does what you expect, it labels the nodes. The above visualisation does not have labels because visNetwork did not find a column in the vertices.df that is called label. Title is an option that enables you to click on the node and get more information about it. Shadow shows a small shadow behind the node - you can set this as TRUE or FALSE.\nBelow, I set the label as the id. To do this, I have to ensure that R recognises these as strings or characters. Hense I use the as.character() function. Then, I set the title of the node to reflect the node’s gender. Then, for fun, I like the shadows!!\nvertices.df$label &lt;- as.character(vertices.df$id)\nvertices.df$title &lt;- vertices.df$gender\nvertices.df$shadow &lt;- TRUE\nhead(vertices.df)\n\n# A tibble: 6 × 7\n  id      age role  gender label title shadow\n  &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt; &lt;lgl&gt; \n1 A        20 DJ    F      A     F     TRUE  \n2 B        25 MC    M      B     M     TRUE  \n3 C        21 DJ    F      C     F     TRUE  \n4 D        23 crew  M      D     M     TRUE  \n5 E        24 MC    M      E     M     TRUE  \n6 F        23 MC    F      F     F     TRUE\nThe object now has these columns in it! Let’s see the visual that it creates!\nvisNetwork(vertices.df, edges.df)\nHere is a more complete visualisation using other options available to you with the visNetwork() function. The width = 100% ensures that the visualisation fills the space in the widget. The height option also does something similar. The background, main, submain, and footer options show other ways you can alter the visualisation. Fun, right??\nvisNetwork(vertices.df, edges.df, background=\"orange\",\n           main=\"TITLE HERE\", submain=\"SUB HERE!\")\nOne final thing that we can do is change the colours of the nodes to represent the communities they are a part of. I use the loivain algorithm with the igraph package. To do this, I create a igraph object from both data frames, run the clustering. Then I designate the “group” characteristic of the vertices data frame using the membership from the clustering object. The new visual\nedges &lt;- graph_from_data_frame(d = edges.df, vertices = vertices.df, directed = F)\nclust &lt;- cluster_louvain(edges)\nvertices.df$group &lt;- as.factor(clust$membership)\n\n\nvisNetwork(vertices.df, edges.df)%&gt;%\n  visOptions(highlightNearest = T, nodesIdSelection = T)",
+    "crumbs": [
+      " Unit 2: Visualising Network Data",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Interactive Networks Visualisations</span>"
+    ]
+  },
+  {
+    "objectID": "Advanced Visualisation - Interactive.html#d-interctive-networks-with-threejs",
+    "href": "Advanced Visualisation - Interactive.html#d-interctive-networks-with-threejs",
+    "title": "12  Interactive Networks Visualisations",
+    "section": "12.2 3D interctive networks with threejs",
+    "text": "12.2 3D interctive networks with threejs\nIf you thought the visNetwork visualisation was cool… wait till you see these ones!!\nHere we will cover a second package, threejs and create some slightly different interactive visualisations. For this one, let’s use different network data. You need an network object created in igraph. We could use the data we have been using so far by creating an igraph object the way we have been doing so ar. However, to mix things up, let’s use our familiar Grime network.\nHere I bring in the Grime 2008 edgelist, clean it and store it in an object called grime_08_clean. This process if familiar to you now. You are pros!\n\ngrime_edge_list &lt;- read.csv(file.choose(), header = TRUE)\n\ngrime_08 &lt;- graph_from_data_frame(d= grime_edge_list, directed = TRUE)\nplot(grime_08)\n\n\n\n\n\n\n\ngrime_08_clean &lt;- delete.edges(grime_08, E(grime_08)[which_loop(grime_08)])\n\nHere we can create an objext that threejs recognises. The function we need to use is the graphjs() that will convert your network into a 3D interactive network a bit like a molecular or planetary model. You should be able to do this with any one-mode network. In this chunk I create an object that has the 3D network called grime_08_3d. Then, I visualise it.\n\ngrime_08_3d &lt;- graphjs(grime_08_clean)\n\ngrime_08_3d\n\n\n\n\n\nWe can make this visualisation a little cleaner by deleting the isolates. To do this, I use the delete_vertices() argument from the igraph package. Then, I recreate an object, now called grime_08_isol_3d. I also add a title to our visualisation.\n\ngrime_isol &lt;- delete_vertices(grime_08_clean,  which(degree(grime_08_clean)==0))\n\ngrime_08_isol_3d &lt;- graphjs(grime_isol, main=\"Grime 2008!\")\ngrime_08_isol_3d\n\n\n\n\n\nOkay, this is great, but we can tell a bit more of a story here. Let’s use something we are familiar with, a node attribute, to help us pull out a bit more of a story from this visualisation. I want to highlight highly central nodes in this network and change their colour if they are highly central (let’s say a degree above 3). Once again, the package threejs looks for specific characteristics of your network to visualise. One of these is the characteristic “color”. In the chunk below, I use the set_vertex_attr() function from igraph to create an attribute called color that threejs can recognise. Then, I use an ifelse() statement to set the colour of highly central attributes to red and others white. For sake of comparison, I copy the grime_isol object we worked on above, to a new object called grime_isol_colour. Although, you could set the vertex attribute to the object directly. I can also set the size of the node here to further its readability. The package threejs recognises the option ‘size’ as being the size of the node in the visualisation.\n\ngrime_isol_colour &lt;- grime_isol\n\ngrime_isol_colour &lt;- set_vertex_attr(grime_isol, \"color\", value = ifelse(degree(grime_isol) &gt; 3, \"red\", \"white\"))\n\nV(grime_isol_colour)$size &lt;- 5\n\ngrime_08_isol_3d_col &lt;- graphjs(grime_isol_colour, main=\"Major Collaborators in Grime 2008!\", bg = \"black\")\ngrime_08_isol_3d_col\n\n\n\n\n\nIf you would like to save this widget, you can do so using the savewidget() function from the htmltools package. Then you can call upon it using the browseURL function. However, in order to make this work well in a html format, you will need to use the browsable() function on the object. The chunk below should open an html page with your network (remove the #).\n\ngrime_08_isol_3d_col &lt;- browsable(grime_08_isol_3d_col)\n\n# saveWidget(grime_08_isol_3d_col, file=\"grime_2008_JS.html\")\n# browseURL(\"grime_2008_JS.html\")\n\nFinally, you can further represent elements of your graph in the 3D network. For example, you can change the colours of the nodes to reflect the membership of which community they are in. In this chunk, I use the infomap community detection algorithm to identify which communities the nodes are in. Then, I create a new node level characteristic called “color” that captures which community they are in. If you have many communities, you may need to use a colour palette package like vidris or RColorBrewer,\n\ngrime_coms &lt;- grime_isol\ncl &lt;- cluster_infomap(grime_coms)\nV(grime_coms)$color &lt;- cl$membership\n\ngrime_coms3D &lt;- graphjs(grime_coms,   edge.color = \"gray\",  bg = \"white\", main = \"Communities in Grime 2008\")\ngrime_coms3D",
+    "crumbs": [
+      " Unit 2: Visualising Network Data",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Interactive Networks Visualisations</span>"
+    ]
+  },
+  {
+    "objectID": "Advanced Visualisation - Interactive.html#closing-thoughts-on-interactive-networks",
+    "href": "Advanced Visualisation - Interactive.html#closing-thoughts-on-interactive-networks",
+    "title": "12  Interactive Networks Visualisations",
+    "section": "12.3 Closing Thoughts on Interactive Networks",
+    "text": "12.3 Closing Thoughts on Interactive Networks\nI think these networks are cool. However, I really think they are a bit of a gimmick! Their utility is limited at best. For example, they only really work in online spaces while are completely useless in print. The click functions and maneuverable attributes of these graphs are fun to play around with, perhaps useful in grabbing the imagination of readers. However, many academic uses for network analysis is much easier to present using static graphs. Still… they are loads of fun!",
+    "crumbs": [
+      " Unit 2: Visualising Network Data",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Interactive Networks Visualisations</span>"
+    ]
+  },
+  {
+    "objectID": "Advanced Visualisation - Dynamic.html",
+    "href": "Advanced Visualisation - Dynamic.html",
+    "title": "13  Dynamic Network Visualisations",
+    "section": "",
+    "text": "library(igraph)\n\nYou might be interested in networks that change over time. Rather than a cross-section of relationships, you may have multiple networks that are taken at different time points. These are called discrete longitudinal networks. They are discrete because each network represents a discrete, distinct, point in time. For example, you may have monthly phone call data between people and their family. You may have yearly romantic affiliations between a group of people. The point is, the time stamps are distinct and standardised (yearly, monthly, daily etc.) and the relationships may change over time. There is such a thing as continuous longitudinal network data, but we will just focus on discrete networks for now.\nIn other tutorials we have been using collaboration data between Grime musicians. Well, we can measure this over time! This next chunk should seem familiar to you, they bring in and clean up edgelists of collaborations every two years from 2008-2014 (four time stamps).\n\n# 2008\nedge_list &lt;- read.csv(file.choose(), header = TRUE)\ngrime_08&lt;- graph_from_data_frame(d=edge_list, directed = TRUE)\n##Removing Loops\ngrime_08 &lt;- delete_edges(grime_08, E(grime_08)[is.loop(grime_08)])\n\n\n# 2010\nedge_list_10 &lt;- read.csv(file.choose(), header = TRUE)\ngrime_10&lt;- graph_from_data_frame(d=edge_list_10, directed = TRUE)\n##Removing Loops\ngrime_10 &lt;- delete_edges(grime_10, E(grime_10)[is.loop(grime_10)])\n\n# 2012\nedge_list_12 &lt;- read.csv(file.choose(), header = TRUE)\ngrime_12&lt;- graph_from_data_frame(d=edge_list_12, directed = TRUE)\n##Removing Loops\ngrime_12 &lt;- delete_edges(grime_12, E(grime_12)[is.loop(grime_12)])\n\n# 2014\nedge_list_14 &lt;- read.csv(file.choose(), header = TRUE)\ngrime_14&lt;- graph_from_data_frame(d=edge_list_14, directed = TRUE)\n##Removing Loops\ngrime_14 &lt;- delete_edges(grime_14, E(grime_14)[is.loop(grime_14)])\n\nNow we have the networks in, we need to switch gears a little over to another package that allows us to you create an object known as a network list. Like it sounds, it is a list of networks. We use the package intergraph to swap from igraph over to an object type “Network” that the packages Networkdynamic and ndtv recognise as they are the ones we will use for our visualisaitons. We also detach igraph since we are no longer using that package. We want to detach it so R does not get confused if there are functions that are similarly worded across packages.\n\nlibrary(intergraph)\ngrime_net_1 &lt;- asNetwork(grime_08)\ngrime_net_2 &lt;- asNetwork(grime_10)\ngrime_net_3 &lt;- asNetwork(grime_12)\ngrime_net_4 &lt;- asNetwork(grime_14)\n\nIf you take a look at these networks, the appear a little different from our usual igraph object but have the same information stored.\n\ngrime_net_1\n\n Network attributes:\n  vertices = 40 \n  directed = TRUE \n  hyper = FALSE \n  loops = FALSE \n  multiple = FALSE \n  bipartite = FALSE \n  total edges= 28 \n    missing edges= 0 \n    non-missing edges= 28 \n\n Vertex attribute names: \n    vertex.names \n\n Edge attribute names: \n    collab_weight \n\n\nRight, now the fun stuff. We need to bring in our new packages and then create our dynamic network object using the networkdynamic() function.\n\ndetach(\"package:igraph\", unload=TRUE)\nlibrary(networkDynamic)\nlibrary(ndtv)\n\nnet_dynamic_4periods &lt;- networkDynamic(network.list = list(grime_net_1, \n                                                           grime_net_2, \n                                                           grime_net_3,\n                                                           grime_net_4), vertex.pid = \"vertex.names\")\n\nNeither start or onsets specified, assuming start=0\nOnsets and termini not specified, assuming each network in network.list should have a discrete spell of length 1\nArgument base.net not specified, using first element of network.list instead\nInitialized network of size 91 inferred from number of unique vertex.pids\nCreated net.obs.period to describe network\n Network observation period info:\n  Number of observation spells: 1 \n  Maximal time range observed: 0 until 4 \n  Temporal mode: discrete \n  Time unit: step \n  Suggested time increment: 1 \n\n\nNote that you have to state the vertex.names as the id. There are artists in these networks that come and go (known as joiners or leavers). setting the vertex.pid ensures that R recognises all artists based on these unique identifiers.\nLet’s take a look at this new dynamic network object.\n\nnet_dynamic_4periods\n\nNetworkDynamic properties:\n  distinct change times: 5 \n  maximal time range: 0 until  4 \n\nIncludes optional net.obs.period attribute:\n Network observation period info:\n  Number of observation spells: 1 \n  Maximal time range observed: 0 until 4 \n  Temporal mode: discrete \n  Time unit: step \n  Suggested time increment: 1 \n\n Network attributes:\n  vertices = 91 \n  directed = TRUE \n  hyper = FALSE \n  loops = FALSE \n  multiple = FALSE \n  bipartite = FALSE \n  vertex.pid = vertex.names \n  net.obs.period: (not shown)\n  total edges= 188 \n    missing edges= 0 \n    non-missing edges= 188 \n\n Vertex attribute names: \n    active vertex.names \n\n Edge attribute names: \n    active \n\n\nThis object tells us all about the network over time. Pay special attention to the time range. We have four networks and this ojbect confirms that there are four time periods (0 - 4).\nYou can make this a data frame to observe changes in tie formation. Pay attention to the onset and terminus columns. These indicate when ties form and dissolve. Head and tail columns indicate a “to” and “from” logic.\n\nnet_dynamic_4periods_dat &lt;- as.data.frame(net_dynamic_4periods)\nhead(net_dynamic_4periods_dat)\n\n  onset terminus tail head onset.censored terminus.censored duration edge.id\n1     0        1    1   89          FALSE             FALSE        1       1\n2     0        1   69   89          FALSE             FALSE        1       2\n3     0        1    9   89          FALSE             FALSE        1       3\n4     0        1   24   89          FALSE             FALSE        1       4\n5     0        1   81   89          FALSE             FALSE        1       5\n6     0        1   26   89          FALSE             FALSE        1       6\n\n\nNow we can start making some visualisations. First, we can create a time prism of the networks.\n\ncompute.animation(net_dynamic_4periods)\n\nslice parameters:\n  start:0\n  end:4\n  interval:1\n  aggregate.dur:1\n  rule:latest\n\ntimePrism(net_dynamic_4periods,at=c(0,1, 2,3),\n          displaylabels=FALSE,planes = TRUE,\n          label.cex=0.5)\n\n\n\n\n\n\n\n\nWith this network object, we are ready to look at the changes over time and present a movie using the render.d3movie() function from ndtv. I suggest using the output.mode = ‘htmlWidget’ option so it keeps the video in your rstudio environment. Alternatively, you could use the launchBrowser= T option to open up an internet page with your video. To do this, you need to specify the filename. For example, filename=“Grime-Network.html”.\n\nrender.d3movie(net_dynamic_4periods, output.mode = 'htmlWidget')\n\n\n\n\n\nThe play buttons on the bottom right operate the video. You can alter the speed of the transitions between the time points by using the options menu on the top right.\nYou can alter the appearance of the movie in a similar way as you can change the colours and other elements of the network.\n\nrender.d3movie(net_dynamic_4periods, usearrows = F, displaylabels = F, bg=\"black\", vertex.border=\"white\", vertex.col =  \"blue\", edge.col = \"orange\", output.mode = 'htmlWidget')",
+    "crumbs": [
+      " Unit 2: Visualising Network Data",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Dynamic Network Visualisations</span>"
     ]
   },
   {
@@ -82,6 +337,346 @@
     "crumbs": [
       " Unit 3: Analysing Network Data",
       "<span class='chapter-number'>15</span>  <span class='chapter-title'>People in Networks</span>"
+    ]
+  },
+  {
+    "objectID": "Communities in Networks.html",
+    "href": "Communities in Networks.html",
+    "title": "16  Communities In Networks",
+    "section": "",
+    "text": "16.1 The Process\nWithin your network you may have subgroups. In a class of students, there are often smaller homework groups, study groups, friendship groups, etc.. What is the demographic composition of these groups? Do subgroups appear more in some settings compared to others? What happens to these groups over time? To answer these types of questions you need a specific analytic tool, community detection.\nAt its core, community detection is a method used to analyse the sub components(groups) of your graph. It literally detects whether there are smaller groups within a network. Using mathematically informed algorithms, various community detection approaches produce measurements of how many sub groups there are in your graph and how cohesive those subgroups are.\nFor this tutorial I am using the Grime collaboration network data that we have been using a lot. I am going to bring in the data from 2008 and clean up the graph a bit before we dive in. This network is directed, but for the sake of the tutorial, I bring it in as an undirected graph then swap. You will read why.\nLet’s get familiar with how to perform community detection. In this section, I will be using the Louvain algorithm since it is one of the more commonly known and comprehensible. To do so, use the cluster_lourvain() command. Please note, your network may not work with Louvain because it only works with undirected networks (hence why I brought the Grime network in as undirected).\nI strongly recommend putting that information into an object. Then we can take a look at what is has in it.\nlouv &lt;- cluster_louvain(grime_08_clean)\n\nlouv\n\nIGRAPH clustering multi level, groups: 17, mod: 0.61\n+ groups:\n  $`1`\n  [1] \"Asher D\"        \"Scorcher\"       \"Flowdan\"        \"Tinchy Stryder\"\n  [5] \"Frisco\"         \"Kano\"           \"Wiley\"          \"Lauren Mason\"  \n  \n  $`2`\n  [1] \"Dizzee Rascal\"\n  \n  $`3`\n  [1] \"Lethal Bizzle\"\n  \n  + ... omitted several groups/vertices",
+    "crumbs": [
+      " Unit 3: Analysing Network Data",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Communities In Networks</span>"
+    ]
+  },
+  {
+    "objectID": "Communities in Networks.html#the-process",
+    "href": "Communities in Networks.html#the-process",
+    "title": "16  Communities In Networks",
+    "section": "",
+    "text": "16.1.1 Understanding the Metrics\nThe two main things you will want to take from these algorithms are the modularity and the membership. Modularity is a score of how separated, or modular, the network is indicating how cohesive the groups are compared to the whole network. Put simply, modularity measures the density of each group compared to the density inside the group. The statistic is measured from -1/2 to +1 with metrics closer to 1 indicating higher modularity. It is a measurement that compares what we expect to see if the graph were completely random with what is actually observed. Use modularity().\nMeanwhile, membership is a vector showing which group each node is classed in. This will come in very handy for you if you want to export this information or use it for visualisations. Use membership().\n\nmodularity(louv)\n\n[1] 0.6084184\n\nmembership(louv)\n\n        Asher D   Dizzee Rascal   Lethal Bizzle        Scorcher     Bless Beats \n              1               2               3               1               4 \n        Flowdan  Tinchy Stryder          Frisco            Kano     Treble Clef \n              1               1               1               1               5 \n        Shystie          Blacks         Badness         Chronik         Tempa T \n              6               7               7               7               7 \nNewham Generals          Skepta             JME            Chip             BBK \n              7               7               7               8               4 \nVirus Syndicate          Ghetts        Mercston        Double S        Griminal \n              9              10              11               8               8 \n        Ice Kid Nu Brand Flexxx       Wretch 32           Wiley  Bossman Birdie \n              8              12               8               1              13 \n    The Streets            Sway    Tinie Tempah           Giggs          Jammer \n             14              15              16              17               7 \n      Roll Deep          Devlin        P Money     Lauren Mason     Milli Major \n              4              10               8               1              13 \n\n\n\n\n16.1.2 Visualisation Tips for community detection\nThere are two main ways to visualise communities in the network. First is to change the colours of the nodes to match the community they are in. To do this, you utilise the vertex.color() argument in the plot() command\n\npar(mar = c(0,0,0,0))\nplot(grime_08_clean, vertex.color = louv$membership, vertex.label = NA)\n\n\n\n\n\n\n\n\nSecond, you can use polygons to demonstrate the boundaries of the communities. To do this, you plot the clustering object alongside the graph object.\n\npar(mar = c(0,0,0,0))\nplot(louv, grime_08_clean, vertex.label = NA)\n\n\n\n\n\n\n\n\nNotice the red edges? Good! This visualisation demonstrates nodes that bridge across communities.\nAnother thing to notice is that some of the isolates share colours with others in the network. This is because Rstudio only uses a set number of colours by default. It may be misleading in your report if you include isolates in your network since it appears as if they are in the same community. This is false!!! You may want to clean your network a bit more when presenting these visuals, then.\n\n\n16.1.3 Clean your graph\nOne main thing you need to think about when detecting communities in your graph is its structure/composition. How your graph is structured might strongly impact the findings you get from your community detection.\nIN 2008, there were a lot og Grime artists who did not collaborate with anyone else (isolates). If we were to run a community detection algorithm on the graph with all the isolates still in the graph, they would be included in the algorithms mathematics.\nFor example, I am using going to re-run the analysis I did above using the Louvain algorithm with and without the isolates and you will see what a difference it makes visually. To do this, I will delete the isolates from the network and the plot it.\n\ngrime_isol &lt;-delete_vertices(grime_08_clean, which(degree(grime_08_clean)==0))\npar(mar = c(0,0,0,0))\nplot(grime_isol)\n\n\n\n\n\n\n\n\nNow take the louvain on this network and take a look at it.\n\nlouv_isol &lt;- cluster_louvain(grime_isol)\n\nlouv_isol\n\nIGRAPH clustering multi level, groups: 6, mod: 0.61\n+ groups:\n  $`1`\n  [1] \"Asher D\"        \"Scorcher\"       \"Flowdan\"        \"Tinchy Stryder\"\n  [5] \"Frisco\"         \"Kano\"           \"Wiley\"          \"Lauren Mason\"  \n  \n  $`2`\n  [1] \"Bless Beats\" \"BBK\"         \"Roll Deep\"  \n  \n  $`3`\n  [1] \"Blacks\"          \"Badness\"         \"Chronik\"         \"Tempa T\"        \n  [5] \"Newham Generals\" \"Skepta\"          \"JME\"             \"Jammer\"         \n  + ... omitted several groups/vertices\n\n\nThe number of groups has reduced from 17 to 6. This shows that the first algorithm counted the isolates as groups. This becomes even more apparent when we plot the network.\nNotice, however, that modularity does not change.\n\npar(mfrow = c(1, 2))\npar(mar =c(0,0,0,0))\nset.seed(123)\nplot(louv_isol, grime_isol, vertex.label = NA)\nset.seed(123)\nplot(grime_isol, vertex.color = louv_isol$membership, vertex.label = NA)\n\n\n\n\n\n\n\n\nNow we do not have the isolates in, it is a much less confusing (noisy) visualisation.",
+    "crumbs": [
+      " Unit 3: Analysing Network Data",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Communities In Networks</span>"
+    ]
+  },
+  {
+    "objectID": "Communities in Networks.html#comparing-algorithms",
+    "href": "Communities in Networks.html#comparing-algorithms",
+    "title": "16  Communities In Networks",
+    "section": "16.2 Comparing algorithms",
+    "text": "16.2 Comparing algorithms\nAs a researcher, you may want to try different algorithms to determine which tells the story of your network. This section shows you four different algorithms. As the scientist, the onus is on you to ensure you understand what the algorithms do and why they may produce slightly different results.\n\nwt &lt;- cluster_walktrap(grime_isol)\nle &lt;- cluster_leading_eigen(grime_isol)\nedge &lt;- cluster_edge_betweenness(grime_isol)\n\npar(mfrow = c(2, 2))\npar(mar =c(0,0,3,0))\nset.seed(123)\nplot(louv_isol, grime_isol, main = \"Louvain\", vertex.label = NA)\nset.seed(123)\nplot(edge, grime_isol, main = \"Edge Betweenness\", vertex.label = NA)\nset.seed(123)\nplot(wt, grime_isol, main = \"Walktrap\", vertex.label = NA)\nset.seed(123)\nplot(le, grime_isol, main = \"Leading Eigenvector\", vertex.label = NA)\n\n\n\n\n\n\n\n\nIn this case, we have consensus across multiple algorithms. This is rare, but should build more confidence in your analysis.",
+    "crumbs": [
+      " Unit 3: Analysing Network Data",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Communities In Networks</span>"
+    ]
+  },
+  {
+    "objectID": "Communities in Networks.html#analysing-the-communities.",
+    "href": "Communities in Networks.html#analysing-the-communities.",
+    "title": "16  Communities In Networks",
+    "section": "16.3 Analysing the communities.",
+    "text": "16.3 Analysing the communities.\nOne thing you can do with the community detection is to describe their nature.A basic example is just to take a look at their characteristics like average the nodal degree in each community to see if certain groups have higher degree than others. In the following chunk, I make a data frame in an object called node data. This data frame has the membership from the louvain algorithm and the nodes’ degree. Then, I present a variable (not saved in the dataframe) called mean_degree which presents the mean degree of each community.\n\nnode_data &lt;- data.frame(\n  deg = degree(grime_isol),\n  subgroup = louv_isol$membership\n)\n\nnode_data %&gt;%\n     group_by(subgroup) %&gt;%\n     summarise(mean_degree = mean(deg, na.rm = TRUE))\n\n# A tibble: 6 × 2\n  subgroup mean_degree\n     &lt;dbl&gt;       &lt;dbl&gt;\n1        1        2.12\n2        2        1.67\n3        3        2.12\n4        4        2.17\n5        5        1   \n6        6        1   \n\n\nWhat does this new table tell you about each community?\nYou can do many different descriptive analyses of these communities. Let’s say you have some node-level characteristics like their gender. you can examine the percentage of men/women in each community to see if gender may be associated with one group more than another.",
+    "crumbs": [
+      " Unit 3: Analysing Network Data",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Communities In Networks</span>"
+    ]
+  },
+  {
+    "objectID": "Communities in Networks.html#final-thoughts",
+    "href": "Communities in Networks.html#final-thoughts",
+    "title": "16  Communities In Networks",
+    "section": "16.4 Final Thoughts",
+    "text": "16.4 Final Thoughts\nYou need to remember that there are a lot of algorithms that can be used. Each algorithm identifies groups within your network based on a certain characteristic. For example, some algorithms like Louvain seek to maximise the modularity of groups finding the communities that are more densely connected to each other compared to the network as a whole. Meanwhile, Walktrap uses random walks across the graph to determine which nodes occur more frequently together on each others random walk. The co-occurrence of nodes across random walks indicates that they are likely in the same community.\nSo, you need to be cautious when selecting what community detection algorithm you are going to use and understand them. When reporting, you will want to report your findings as they relate to the community detection algorithm that you are using otherwise your results could be misleading. For example, if you use the Walktrap but report that the communities are more densely connected to each other than the whole network (clearly a Louvain-related explanation) this may or may not actually be true because Walktrap is not directly measuring community vs. network density.\nThe tendency for researchers is to try multiple algorithms and find one that either produces the nicest visualisation, or produces the highest metrics. I strongly recommend not doing this but rather thinking deeply about why there might be differences across measurements. This in itself could be a finding!",
+    "crumbs": [
+      " Unit 3: Analysing Network Data",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Communities In Networks</span>"
+    ]
+  },
+  {
+    "objectID": "Networks of People.html",
+    "href": "Networks of People.html",
+    "title": "17  Networks of People",
+    "section": "",
+    "text": "17.1 Density\nThere are two elements to analyse networks, the nodes and the networks. In this chapter, we will cover some of the fundamental network measures. As usual, we won’t get too technical into the mathematics behind each measure, but focus on the substantive interpretations.\nWhat is a network measure, then? Rather than describing an individual in the group, we can describe characteristics of the group itself based on the relationships that exist between the individuals in the group. Network measures focus on different elements of the network and tell slightly different stories depending on the measure. Some may indicate how interactive the group is (i.e. how much people interact) while others may indicate the extent to which ties in the group are mutual or unrequited.\nThere are three major uses for network measures. First, the story that these measures tell us data scientists can help us compile a story about the group we are interested in. By combining a number of these measures, we can produce a robust picture of what interaction looks like in these groups. Second, measuring the characteristics of a network can provide context for further study. For example, let’s say we are actually interested in a specific individual in a network, we may first want to understand what the whole group looks like before we measure them. Third, we may have multiple groups that we want to compare, or the same group over time. For example, let’s say we wanted to explore student connections in a classroom over time. We may collect network data at different time points in the semester. The measurements we take from those time point could help us answer how student interactions shift and change throughout the semester. Alternatively, we may wish to examine student interactions across different types of classes (i.e. large lecture vs. small seminar classes). If we collect network data across types of classes, we could compare network measurements to see if student connections are more or less dense in certain types of classes than others. Cool right?\nHere, I will introduce you to some classic network measures using the 2008 Grime data that you are all familiar with now. Then, I will bring in more Grime data and demonstrate the types of stories we can tell about this group over time.\nLet’s bring in our usual 2008 Grime data and then clean it up a bit (delete the selfloops).\nThe first measurement we will cover is density. A graphs’ density relates to the number of possible ties compared to the number of observed ties. In a nutshell, it a measurement that shows the proportion of observed ties compared to the number of ties possible in the network. A fully dense network suggests that everyone who could be connected is. Meanwhile, a very sparse network suggests that very few people are connected. We use density as a measure of interactivity or connectivity in a group.\nThe basic maths is a ratio where: Density Ratio = observed edges / number of possible edges. Bare in mind that an undirected graph has half the number of possible ties that a directed version of the same graph has.\nDensity is measured from 0 to 1 and can be interpreted as the proportion of observed ties in the network compared to the total possible ties. It divides the number of observed ties by the number of possible ties in a graph. A network with a density of 1 has all possible ties while a density of 0 has none of the possible ties. Be mindful here, direction matters here. If a graph is directed then there are twice as many possible ties than in an undirected network. So, you may see a network that looks well connected but may have a low density. This may be because it is a directed network with a low reciprocity (i.e. there may not be many of the possible return ties).\ndense &lt;- edge_density(grime_08_clean)\n#View it\ndense\n\n[1] 0.01794872",
+    "crumbs": [
+      " Unit 3: Analysing Network Data",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Networks of People</span>"
+    ]
+  },
+  {
+    "objectID": "Networks of People.html#reciprocity",
+    "href": "Networks of People.html#reciprocity",
+    "title": "17  Networks of People",
+    "section": "17.2 Reciprocity",
+    "text": "17.2 Reciprocity\nReciprocity is a measure of how balanced a network is. Another way of thinking about reciprocity is in terms of tie symmetry. It is a measure of graph symmetry or the mutual connections between individuals in the graph. In directed graphs edges between nodes are not necessarily mutual. One person may send something to another but not receive something in return. Reciprocity is a way to measure the proportion of mutual vs. unrequited connections. The most basic measure of reciprocity is the ratio. It observes the number of mutual ties (A-&gt;B, B-&gt;A) divided by the total number of edges.\nThe basic maths behind it is as follows: Reciprocity ratio = number of mutual dyads(observed) / Total Number of edges(possible)\nThis provides a scale between 0 and 1 with 1 indicating a perfectly reciprocal network. When measuring reciprocity, I always ignore loops because, in my mind, you cannot send and receive something from yourself. This, however, could be a network-specific thing. I struggle to think of any networks where loops are particularly useful.\n\nrecip &lt;- reciprocity(grime_08_clean, ignore.loops = TRUE, mode = \"ratio\")\n#View it\nrecip\n\n[1] 0.03703704",
+    "crumbs": [
+      " Unit 3: Analysing Network Data",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Networks of People</span>"
+    ]
+  },
+  {
+    "objectID": "Networks of People.html#transitivity",
+    "href": "Networks of People.html#transitivity",
+    "title": "17  Networks of People",
+    "section": "17.3 Transitivity",
+    "text": "17.3 Transitivity\nTransitivity, also known as the clustering coefficient, is a measure of how tightly knit a network is. At its core, transitivity captures the tendency for triangles to form within a network — in other words, how likely it is that a node’s neighbors are also connected to each other. If person A is connected to both B and C, then in a highly transitive network, it is likely that B and C are also connected, forming a triangle. This reflects the idea that “a friend of a friend is also a friend.”\nWhile density measures how connected a network is at the global level — looking at how many ties exist relative to how many could possibly exist — transitivity focuses more on local structure. It considers the relationships among a node’s immediate neighbors, revealing how clustered those connections are.\nTransitivity is typically measured as the proportion of observed closed triplets (three nodes all connected to each other, forming a triangle) to the total number of connected triplets (any set of three nodes where at least two connections exist — whether or not they form a full triangle). The formula multiplies the number of triangles by three because each triangle contains three such triplets, one centered at each node.\nThe transitivity score ranges between 0 and 1. A score of 1 indicates that all possible triangles are present — every node’s neighbors are fully connected to one another. A score of 0 means there are no such triangles, and the network has no clustering. In this way, transitivity gives a sense of how cohesive the local connections are within the broader network.\n\ntransitivity &lt;- transitivity(grime_08_clean)\n#View it\ntransitivity\n\n[1] 0",
+    "crumbs": [
+      " Unit 3: Analysing Network Data",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Networks of People</span>"
+    ]
+  },
+  {
+    "objectID": "Networks of People.html#centraisation",
+    "href": "Networks of People.html#centraisation",
+    "title": "17  Networks of People",
+    "section": "17.4 Centraisation",
+    "text": "17.4 Centraisation\nThe final measure I want to introduce you to is called centralisation. We have covered measures of centrality which are concerned with individuals. Measures of centralisation use similar logic but describe the graph. They capture the extent to which the network is centred around one or a few individuals. You can well imagine that a star graph (a graph where all pendula are connected to a central node) is highly centralised. Meanwhile, a full graph may be less centrlaised.\nThere are different measures of centralization that use nodal centrality to describe the network. For example, centralization.degree() measures the extent to which the network is centered around highly connected nodes (those with many neighbors), while centralization.betweenness() measures the extent to which the network relies on influential nodes (those that control the flow of information between other nodes).\nMeasures of centralisation have a range of 0- 1 (starting t see a theme here - many of these network measures are proportions). Degree centralisation score of 0 means that all the nodes have the same degree centrality (i.e. the grpah is completely uniform). A score of 1 means that one node in the network has the maximum possible degree (i.e. all others are connected to them and only them). Similar logic applies to other forms of centralisation. I will show you only degree, and betweenness but you could also try closeness and eigenvector.\nThese functions give you three different elements. The $res demonstrates the scores (degree, between or closeness) for each node in the network. The $centralisation item is the scaled score (the proportion). This is the one we care most about. The $theoretical_max shows the raw, unscaled, theoretical max value for the centralisation score. If you are pulling many scores together to compare them, you may want to pull out just the $centralization score.\n\ncentr_degree(grime_08_clean)\n\n$res\n [1]  1  0  0  1  2  2  1  2  1  0  0  1  1  1  1  1  1  1  4  1  0  1  0  1  3\n[26]  2  0  2  8  1  0  0  0  0 10  2  1  1  1  1\n\n$centralization\n[1] 0.1130835\n\n$theoretical_max\n[1] 3042\n\ncentr_betw(grime_08_clean)\n\n$res\n [1] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 0 0 0 0 0 2 0 0 0 7 0 0 0 0 0 0 0 0 0\n[39] 0 0\n\n$centralization\n[1] 0.004619537\n\n$theoretical_max\n[1] 57798\n\n\nI want you to pause for a moment and think about the network we are analysing. It has isolates. How might they be impacting these measures? You may consider removing the isolates for this type of analysis. REMEMBER, though, you MUST talk about your measurements related to what you are measuring. You can’t remove isolates and say that this group has a degree centralisation score of… which means they rely highly on one person….that would be wrong. You would have to say that you removed those without connections to obtain that score. Therefore, you’re actually talking about those with connections to others, not the whole group. You as the scientist must make the decision!\nTake a look at the following once I remove the isolates.\n\ngrime_08_isol &lt;- delete.vertices(grime_08_clean, which(degree(grime_08_clean) == 0)) \n\ncentr_degree(grime_08_isol)\n\n$res\n [1]  1  1  2  2  1  2  1  1  1  1  1  1  1  1  4  1  1  1  3  2  2  8  1 10  2\n[26]  1  1  1  1\n\n$centralization\n[1] 0.1492347\n\n$theoretical_max\n[1] 1568\n\ncentr_betw(grime_08_isol)\n\n$res\n [1] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 0 0 0 2 0 0 7 0 0 0 0 0 0 0\n\n$centralization\n[1] 0.008975813\n\n$theoretical_max\n[1] 21168\n\n\nThe values have changed!Both have increased suggesting that the isolates were impacting the original measures. Again, your decision as to whether you keep or remove isolates.",
+    "crumbs": [
+      " Unit 3: Analysing Network Data",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Networks of People</span>"
+    ]
+  },
+  {
+    "objectID": "Networks of People.html#example",
+    "href": "Networks of People.html#example",
+    "title": "17  Networks of People",
+    "section": "17.5 Example",
+    "text": "17.5 Example\nRight, let’s have some fun with this. I am going to read in some more Grime network years.\n\ngrime_2010 &lt;- read.csv(file.choose(), header = TRUE)\ngrime_2012 &lt;- read.csv(file.choose(), header = TRUE)\ngrime_2014 &lt;- read.csv(file.choose(), header = TRUE)\ngrime_2016 &lt;- read.csv(file.choose(), header = TRUE)\n#cleaning the loops\ngrime_2010_edge &lt;- graph_from_data_frame(d= grime_2010, directed = TRUE)\ngrime_2010_edge &lt;- delete.edges(grime_2010_edge, E(grime_2010_edge)[which_loop(grime_2010_edge)])\n\ngrime_2012_edge &lt;- graph_from_data_frame(d= grime_2012, directed = TRUE)\ngrime_2012_edge &lt;- delete.edges(grime_2012_edge, E(grime_2012_edge)[which_loop(grime_2012_edge)])\n\ngrime_2014_edge &lt;- graph_from_data_frame(d= grime_2014, directed = TRUE)\ngrime_2014_edge &lt;- delete.edges(grime_2014_edge, E(grime_2014_edge)[which_loop(grime_2014_edge)])\n\ngrime_2016_edge &lt;- graph_from_data_frame(d= grime_2016, directed = TRUE)\ngrime_2016_edge &lt;- delete.edges(grime_2016_edge, E(grime_2016_edge)[which_loop(grime_2016_edge)])\n\nLet’s get the density of each of these networks so we can compare them. I am going to create objects based on the time stamps with T1, T2.. etc.\n\ndense_T1 &lt;- edge_density(grime_08_clean)\ndense_T2 &lt;- edge_density(grime_2010_edge)\ndense_T3 &lt;- edge_density(grime_2012_edge)\ndense_T4 &lt;- edge_density(grime_2014_edge)\ndense_T5 &lt;- edge_density(grime_2016_edge)\n\nNow we are going to make some data frames and then bind them together to create a large dataset with these density measures.\n\nt1 &lt;- data.frame(\ndensity = dense_T1,\nyear = 2008,\nid = 1\n)\nt2 &lt;- data.frame(\ndensity = dense_T2,\nyear = 2010,\nid = 2\n)\nt3 &lt;- data.frame(\ndensity = dense_T3,\nyear = 2012,\nid = 3\n)\nt4 &lt;- data.frame(\ndensity = dense_T4,\nyear = 2014,\nid = 4\n)\nt5 &lt;- data.frame(\ndensity = dense_T5,\nyear = 2016,\nid = 5\n)\n\ndensity_graph &lt;- rbind(t1, t2, t3, t4, t5)\nprint(density_graph)\n\n      density year id\n1 0.017948718 2008  1\n2 0.014509804 2010  2\n3 0.010802469 2012  3\n4 0.009697326 2014  4\n5 0.008009153 2016  5\n\n\nWe are all good to go! What I am going to do is present this information in a simple line graph of how the density of the plot changes over time. To do this, we will need another package - ggplot2.\n\nlibrary(ggplot2)\n\nggplot(density_graph, aes(x = year, y = density)) + geom_line(linewidth = 2)+ ylab(\"Network Density\") + xlab(\"Year\")\n\n\n\n\n\n\n\n\nWhat can you see in this graph? Really, the story is that Grime is quite sparse. At T1 it is sparse and it continues to get more sparse as the years continue. This gives you an idea of what types of things you can do with all these measures of networks of people.",
+    "crumbs": [
+      " Unit 3: Analysing Network Data",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Networks of People</span>"
+    ]
+  },
+  {
+    "objectID": "A1_My Ego Network.html",
+    "href": "A1_My Ego Network.html",
+    "title": "18  A1 - My Ego Network",
+    "section": "",
+    "text": "18.1 Assignment:\nInstructions: Follow the steps below and submit either a photograph or document to Moodle assignment portal under Module 1. YOU MUST NAME YOUR FILE LIKE THIS: course_section_semester_assignment_unityID For example: DSA295_003_SP25_A1_trleppar\nGrading: Full marks are awarded for completion and proper naming. One mark dropped if not named properly, or for each portion incomplete.\nYou are surrounded by networks. You participate in them and what you do can reinforce them. Here is an activity to exemplify what networks look like. We will focus on social networks – specifically, one of your social networks.",
+    "crumbs": [
+      "Assignments",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>A1 - My Ego Network</span>"
+    ]
+  },
+  {
+    "objectID": "A1_My Ego Network.html#assignment",
+    "href": "A1_My Ego Network.html#assignment",
+    "title": "18  A1 - My Ego Network",
+    "section": "",
+    "text": "18.1.1 Part 1. Visualising your network\n\nOn a piece of paper write/type your name near the bottom.\nIn the middle of the paper (horizontally left to right), list the names of up to 20 people you texted within the last week (consider putting a circle around each name). If you do not text, maybe consider those you spoke to, direct messaged on social media, or those you contacted somehow (up to 20)\nNow draw a line/place arrows (if in word) from your name to each of the people you listed.\nConsider the people you listed. Are any of them connected to each other somehow? For those in your list that are connected, draw lines/place arrows going from them to their contacts/friends/family members. – NOTE – if none are connected, then please write that. Congratulations, you just drew a social network!!! This is called an ego-network. You are the “ego” (the one answering the questions about the connections between you and others). Those who you listed are called “alters”. The connections you drew are called “ties.”\n\n\n\n18.1.2 Part 2. Let’s do a quick analysis of you in your network.\n\nCount and write the number of ties that you are connected to.\nThis is called your degree centrality. It is a measure of how popular or “well-connected” an entity is within a network.\n\n\n\n18.1.3 Part 3. Now let’s analyse your alters.\n\nFor each person you listed, count the number of ties that they have to others. If there are none, write N/A.\n\nYou have now calculated the degree centrality of each of the alters in your network. Which people in your network are “well connected?”\nWELL DONE!",
+    "crumbs": [
+      "Assignments",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>A1 - My Ego Network</span>"
+    ]
+  },
+  {
+    "objectID": "A2_Project Prospectus.html",
+    "href": "A2_Project Prospectus.html",
+    "title": "19  A2_Project Prospectus",
+    "section": "",
+    "text": "19.1 Assignment:\nInstructions: Follow the steps below and submit your assigment to Moodle assignment portal under Module 2. YOU MUST NAME YOUR FILE LIKE THIS: course_section_semester_assignment_unityID For example: DSA295_003_SP25_A2_trleppar\nGrading: Full marks are awarded for completion and proper naming. One mark dropped if not named properly, or for each portion incomplete.\nThe final project is to provide a big report on a network of your choice. This report will have three parts, transformation, visualization, and analysis. This assignment is designed to get you thinking about your final project. Follow the steps in this assignment and turn in a prospectus on your project.",
+    "crumbs": [
+      "Assignments",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>A2_Project Prospectus</span>"
+    ]
+  },
+  {
+    "objectID": "A2_Project Prospectus.html#assignment",
+    "href": "A2_Project Prospectus.html#assignment",
+    "title": "19  A2_Project Prospectus",
+    "section": "",
+    "text": "19.1.1 Part 1. Explore possible sources of data\nA. Visit my Google drive folder (you will need to sign in with your (ncsu.edu?) account to access it. B. Look through the sources of data I have collected for you and pick at least two. Please read the info.txt file for each data file to understand the networks that are there. C. In your prospectus, write a paragraph describing the networks that you are considering using for your project. Consider: How are they structured? What constitutes the nodes/edges? D. (Optional) If you are interested in using your own data (i.e. collecting your own, or finding other data elsewhere), then discuss this IN ADDITION to selecting two potential datasets in the folder.\n\n\n19.1.2 Part 2.\nA. Write a paragraph discussing ideas for visualisation and analysis that you may do using these data. Consider what you are interested in – communities, individuals, describing the network itself?\n\n\n19.1.3 Part 3.\nA. Use the code you have learned so far in class to: a. Bring your at least one of your data choices into RStudio b. Convert it into a network object c. Plot your network\nB. Save the image of your network and attach it to the page. (see the picture below on how).\n\n\n\nA screenshot showing how to save plots in RStudio",
+    "crumbs": [
+      "Assignments",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>A2_Project Prospectus</span>"
+    ]
+  },
+  {
+    "objectID": "A3_Data Exploration.html",
+    "href": "A3_Data Exploration.html",
+    "title": "20  A3 - Data Exploration",
+    "section": "",
+    "text": "20.1 Instructions\nThis is a skeleton markdown file that you will use to complete Assignment 3 this semester. Use the chunks (see below) to code in. Where you see …………………… please remove and write your response to the prompt.\n###################### THIS IS A CHUNK #############################\nAs usual, follow the steps below and submit your markdown document as a pdf. You will need to knit this to a pdf or knit it to an html then save as a pdf to submit.\nYOUR MUST NAME YOUR FILE LIKE THIS: course_section_semester_assignment_unityID For example: DSA295_003_SP25_A2_trleppar\nGrading: Full marks are awarded for completion and proper naming. One mark will be dropped if not named properly, and/or additional marks dropped for each portion incomplete. This assignment will have 5 points per portion (4 questions/prompts to complete) and a total of 20 marks.",
+    "crumbs": [
+      "Assignments",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>A3 - Data Exploration</span>"
+    ]
+  },
+  {
+    "objectID": "A3_Data Exploration.html#selecting-your-network-data.",
+    "href": "A3_Data Exploration.html#selecting-your-network-data.",
+    "title": "20  A3 - Data Exploration",
+    "section": "20.2 Selecting your network data.",
+    "text": "20.2 Selecting your network data.\nPlease select one of the datasets that are available to you for your final project. Then, discuss the following.\n\nHow is this data stored? How do you know this? Discuss the characteristics of your network data using terms we have learned in class. …………………………………………….\nWhat interested you in this network? …………………………………………….",
+    "crumbs": [
+      "Assignments",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>A3 - Data Exploration</span>"
+    ]
+  },
+  {
+    "objectID": "A3_Data Exploration.html#bringing-in-your-network",
+    "href": "A3_Data Exploration.html#bringing-in-your-network",
+    "title": "20  A3 - Data Exploration",
+    "section": "20.3 Bringing in your network",
+    "text": "20.3 Bringing in your network\nUse this chunk below to bring in your network data and convert it into a network object using the appropriate method for how your network data are structured.\n\nlibrary(igraph)\nmy_data &lt;- \n\n\nPlease describe your network. What are the nodes? Edges? One/two mode? Directed/Undirected? …………………………………………….",
+    "crumbs": [
+      "Assignments",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>A3 - Data Exploration</span>"
+    ]
+  },
+  {
+    "objectID": "A3_Data Exploration.html#describing-your-network-data",
+    "href": "A3_Data Exploration.html#describing-your-network-data",
+    "title": "20  A3 - Data Exploration",
+    "section": "20.4 Describing your network data",
+    "text": "20.4 Describing your network data\nUse this chunk below to create a table showing the number of nodes and edges that are in your network.\n\nnum_nodes &lt;- vcount(YOUR GRAPH OBJECT HERE)\nnum_edges &lt;- ecount(YOUR GRAPH OBJECT HERE)\n\ntable &lt;- data.frame( \n  nodes = num_nodes,\n  edges = num_edges\n  )\n\nPlease present the table you created. (Consider using the head(), tail(), or print() functions).",
+    "crumbs": [
+      "Assignments",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>A3 - Data Exploration</span>"
+    ]
+  },
+  {
+    "objectID": "A3_Data Exploration.html#visualising-the-network",
+    "href": "A3_Data Exploration.html#visualising-the-network",
+    "title": "20  A3 - Data Exploration",
+    "section": "20.5 Visualising the network",
+    "text": "20.5 Visualising the network\n\nPotential Transformations Present a raw visualisation of your network (yes, even if it is ugly!).\n\nPlease discuss any transformations (not just to the visual, but actual data transformations) that you think you may need to make to this network before you go on to analyse it (think about deleting nodes and ties). If you can’t think of anything you NEED to do (i.e. trim or add), then what ways do you think you could do (i.e. subgraph)? ……………………………………………………………\nWELL DONE!! :)",
+    "crumbs": [
+      "Assignments",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>A3 - Data Exploration</span>"
+    ]
+  },
+  {
+    "objectID": "A4_Visualisations.html",
+    "href": "A4_Visualisations.html",
+    "title": "21  A4 - Visualisation",
+    "section": "",
+    "text": "21.1 Instructions\nThis is a skeleton markdown file that you will use to complete Assignment 3 this semester. Use the chunks (see below) to code in. Where you see …………………… please remove and write your response to the prompt.\n###################### THIS IS A CHUNK #############################\nAs usual, follow the steps below and submit your markdown document as a pdf. You will need to knit this to a pdf or knit it to an html then save as a pdf to submit.\nYOUR MUST NAME YOUR FILE LIKE THIS: course_section_semester_assignment_unityID For example: DSA295_003_SP25_A2_trleppar\nGrading: Full marks are awarded for completion and proper naming. One mark will be dropped if not named properly, and/or additional marks dropped for each portion incomplete. This assignment will have 5 points per portion (4 prompts to complete) and a total of 20 marks.",
+    "crumbs": [
+      "Assignments",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>A4 - Visualisation</span>"
+    ]
+  },
+  {
+    "objectID": "A4_Visualisations.html#place-your-library-here.-you-will-need-to-list-each-one-you-will-use",
+    "href": "A4_Visualisations.html#place-your-library-here.-you-will-need-to-list-each-one-you-will-use",
+    "title": "21  A4 - Visualisation",
+    "section": "21.2 Place your library() here. You will need to list each one you will use!",
+    "text": "21.2 Place your library() here. You will need to list each one you will use!",
+    "crumbs": [
+      "Assignments",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>A4 - Visualisation</span>"
+    ]
+  },
+  {
+    "objectID": "A4_Visualisations.html#bringing-in-your-data",
+    "href": "A4_Visualisations.html#bringing-in-your-data",
+    "title": "21  A4 - Visualisation",
+    "section": "21.3 Bringing in your data",
+    "text": "21.3 Bringing in your data\nBy this time, you’re a dab hand at bringing in your network data. Please bring in your network, convert it to a network object and view that object. Just a reminder, to view the network, just list the name of the network. If my igraph object (network object) is called ‘graph’ I can simply code graph in the chunk and I will view it.\nClean and or transform your network data if you need/want to and provide a raw (unaltered) visualisation using the plot() function.",
+    "crumbs": [
+      "Assignments",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>A4 - Visualisation</span>"
+    ]
+  },
+  {
+    "objectID": "A4_Visualisations.html#basic-visualisation",
+    "href": "A4_Visualisations.html#basic-visualisation",
+    "title": "21  A4 - Visualisation",
+    "section": "21.4 Basic visualisation",
+    "text": "21.4 Basic visualisation\nIn class, we have covered multiple basic visualizations. Using the markdown files and your notes from our class about basic network visualisation, I want you to demonstrate your skill in basic network visualisation.\nPlease alter the labels by either changing their size or toggling them.\nChange the colours of the network (nodes or edges).\nPresent a basic visualisation, you feel appears clean.\nDiscuss what alterations you have done to the network and why you did them. …………………………",
+    "crumbs": [
+      "Assignments",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>A4 - Visualisation</span>"
+    ]
+  },
+  {
+    "objectID": "A4_Visualisations.html#intermediate-visualisation",
+    "href": "A4_Visualisations.html#intermediate-visualisation",
+    "title": "21  A4 - Visualisation",
+    "section": "21.5 Intermediate visualisation",
+    "text": "21.5 Intermediate visualisation\nYou have learned how to tell a story through network visualisation. These stories centre prominent and influential nodes in the network.\nPresent a CLEAN network visual demonstrating popular (degree) nodes in your network.\nPresent a CLEAN network visual demonstrating influential (betweenness) nodes in your network.\nPresent them side-by-side sing the par() function. Consider presenting sub or main titles so I can tell which is which.\nBriefly (1 - 2 sentences) discuss the stories that your visualisations tell. E.g. who are/are they many or few popular/influential nodes? …………………………",
+    "crumbs": [
+      "Assignments",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>A4 - Visualisation</span>"
+    ]
+  },
+  {
+    "objectID": "A4_Visualisations.html#advanced-visualisation",
+    "href": "A4_Visualisations.html#advanced-visualisation",
+    "title": "21  A4 - Visualisation",
+    "section": "21.6 Advanced visualisation",
+    "text": "21.6 Advanced visualisation\nYou have learned how to create interactive, or animated network visualisations.\nPlease produce one advanced network visualisation. Bare in mind that you will need to leave the visual as a widget in this markdown.\nBriefly (1 - 2 sentences) discuss this visualisation. In what contexts may this visualisation be useful?",
+    "crumbs": [
+      "Assignments",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>A4 - Visualisation</span>"
+    ]
+  },
+  {
+    "objectID": "Final Project Instructions.html",
+    "href": "Final Project Instructions.html",
+    "title": "22  Final Project Instructions",
+    "section": "",
+    "text": "22.1 Example Layout and Instructions\nIn this final project you will explore the data that have been working on all semester long. The aim of this project is for you to do an in-depth exploration which includes descriptions, visualisations, and some primary analysis. The learning outcomes for this is to demonstrate your skill in transforming (10 points), visualising (10 points) and analysing (20 points) network data.\nThe first two parts of the assignment, the transformation and visualisation of your data, are your exploration. Here, I want you to be paying attention to the nature of your data and how the network is structured. This should inform the last portion of the project - the analysis. Based on your exlporation, what types of questions are you asking about your data? What are some hypotheses you may have about people in the network or the network itself? You will need to write about these thoughts as part of your project to demonstrate your ability to explore network data and generate ideas on how to/what to analyse.\nThe “rubric” for this assignment is like all of our others - completion. Please fulfill all outlined prompts. Thus far, you have had assignments on exploring, transforming and visualising your network. Therefore, these components are worth only a small portion of the final marks of this assignment. Here is the breakdown:\nPart 1: Transforming (10 points) Part 2: Visualising (10 points) Part 3: Analysing (20 points) Total points = 40.\nAs usual, make a markdown document and submit is as a pdf.\nHere are some instructions for you to follow. Please refer to the “final project example.html” document on Moodle as an example final project for you to draw on for inspiration.",
+    "crumbs": [
+      "Assignments",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Final Project Instructions</span>"
+    ]
+  },
+  {
+    "objectID": "Final Project Instructions.html#part-1-data-transformation",
+    "href": "Final Project Instructions.html#part-1-data-transformation",
+    "title": "22  Final Project Instructions",
+    "section": "23.1 Part 1: Data Transformation",
+    "text": "23.1 Part 1: Data Transformation\nIn this section you must bring in, clean and transform your network data.\nNOTE: If your network data are already clean you MUST transform the network some how. For example, create a subgraph, delete/add nodes/edges even if it does not make much sense. Just create a random object and do it. The point is you demonstrate the skill. ## Part 2: Data Visualisation In this section, please produce at least one basic, intermediate, and advanced network visualisation. Beneath each one, please describe (1-2 sentences) the visualisation you have created discussing any observations you make about the network.",
+    "crumbs": [
+      "Assignments",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Final Project Instructions</span>"
+    ]
+  },
+  {
+    "objectID": "Final Project Instructions.html#part-3",
+    "href": "Final Project Instructions.html#part-3",
+    "title": "22  Final Project Instructions",
+    "section": "23.2 Part 3:",
+    "text": "23.2 Part 3:\nHere, you must speculate on your explorations above. You have transformed and visualised your network data. What questions are you now going to ask about them? Based on your exploration, do you hypothesise certain things about the network or the people therein?\nIn this you must analyse and generate a report on your network. In your analysis, please discuss and present deliverables (tables, visualisations etc.) about the people in the network, the network itself, and communities within the network.\nBe creative about what analysis you would like to perform. You can combine skills here too. For example, visualise things as you analyse people/nodes in the networks. Or, you may identify a community of highly central people. You may then create a subgraph of a community you are interested in. Be creative!\nOne final note, remember that this is a report. You need to write this report as if I do not understand anything about networks, network data, or R. Be clear about what you are doing. Tie together how your exploration of the data led you to perform this analysis. For example, maybe the visualisations suggested that the network was very fragmented, or highly centralised. This may have led you to want to study certain people or perform certain analyses.\nFinal tips: When writing your markdown, use the following header guidelines: # Header ## Subheader ### Third-level header\nGOOD LUCK!",
+    "crumbs": [
+      "Assignments",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Final Project Instructions</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "23  Summary",
+    "section": "",
+    "text": "Well done!\nYou have now learned how to wrangle, visualise and analyse network data. I hope you have enjoyed the course.",
+    "crumbs": [
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "Unit 1.html",
+    "href": "Unit 1.html",
+    "title": "2  Unit 1",
+    "section": "",
+    "text": "2.1 Project Milestones\nIn this unit, we will cover how to transform and wrangle network data. By the end of this unit you will:\nEnjoy!",
+    "crumbs": [
+      " Unit 1: Cleaning and Transforming Network Data",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Unit 1</span>"
+    ]
+  },
+  {
+    "objectID": "Unit 1.html#project-milestones",
+    "href": "Unit 1.html#project-milestones",
+    "title": "2  Unit 1",
+    "section": "",
+    "text": "Milestone (assignments linked)\nExplanation\n\n\n\n\nMy Ego Network\nStudents will draw their own ego network following an assignment in class.\n\n\nProject Prospectus\nStudents are expected to discuss potential project ideas, possible sources of data, and research questions they could explore.",
+    "crumbs": [
+      " Unit 1: Cleaning and Transforming Network Data",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Unit 1</span>"
     ]
   }
 ]
