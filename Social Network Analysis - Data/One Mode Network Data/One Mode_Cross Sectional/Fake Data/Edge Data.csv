@@ -1,8 +1,0 @@
-from,to,freq,affinity
-A,B,2,pos
-A,C,1,neg
-A,D,1,pos
-A,E,1,neg
-A,F,3,neg
-E,F,2,pos
-F,G,4,pos
