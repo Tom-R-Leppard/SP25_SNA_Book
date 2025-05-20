@@ -4,7 +4,7 @@
     "href": "Unit 2.html",
     "title": "9  Unit 2",
     "section": "",
-    "text": "9.1 Project Milestones\nIn this unit, we will cover how to visualise network data. By the end of this unit you will:",
+    "text": "9.1 Project Milestones\nIn this unit, we will cover how to visualise network data. I maintain that visualisations serve two main purposes. One for you, the data scientist and one for your constituents. As such, visualisations can tell you more about your data. Visualising your network might inform you that you need to do some more cleaning (self loops, extraneous nodes etc.). It might even drive some of your questions that need answering about this network. For example, seeing that there are a few highly central figures in the network may influence you to ask specific questions about those individuals. Additionally, you need to create visualisations that engage stakeholders and tell the story of your analysis.\nBy the end of this unit you will:",
     "crumbs": [
       " Unit 2: Visualising Network Data",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Unit 2</span>"
@@ -26,7 +26,7 @@
     "href": "Unit 3.html",
     "title": "14  Unit 3",
     "section": "",
-    "text": "14.1 Project Milestones\nIn this unit, we will cover how to analyse network data. By the end of this unit you will:\nEnjoy!",
+    "text": "14.1 Project Milestones\nIn this unit, we will cover how to analyse network data. There are three basic units of network analysis. You may wish to analyse the individuals in the network (a micro, or the smallest unit of analysis). In this instance, you may want to analyse ‘well connected’ individuals in the network. The next level up are the communities in the network. There may be latent groups of connected individuals who are more connected internally (to each other) than to others in the network. How segmented a network is, or in which community an individual is in might be of particular interest. Finally, the largest unit of analysis is the network itself. In this instance, you might want to analyse characteristics about the entire group or comparing characteristics across groups.\nBy the end of this unit you will:\nEnjoy!",
     "crumbs": [
       " Unit 3: Analysing Network Data",
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>Unit 3</span>"
@@ -662,7 +662,7 @@
     "href": "Unit 1.html",
     "title": "2  Unit 1",
     "section": "",
-    "text": "2.1 Project Milestones\nIn this unit, we will cover how to transform and wrangle network data. By the end of this unit you will:\nEnjoy!",
+    "text": "2.1 Project Milestones\nIn this unit, we will cover how to transform and wrangle network data. Network data aren’t always clean. Nor are they always representative of an entire group. As the researcher, it is up to you to learn best practices of cleaning your data. It is also important for you to know as much as possible about the group you are studying. For your research results to be generalisable to the group you are studying, your data need to truly represent the group you are studying (whether you have sample or population data). This process might include trimming or adding to your network. Or it might include making various subgraphs of your network.\nBy the end of this unit you will:\nEnjoy!",
     "crumbs": [
       " Unit 1: Cleaning and Transforming Network Data",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Unit 1</span>"
