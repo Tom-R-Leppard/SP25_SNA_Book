@@ -1,4 +1,6 @@
-# Unit 1
+# Unit 1 - Cleaning and Transforming Network Data
+
+## Learning Elements 
 
 In this unit, we will cover how to transform and wrangle network data. Network data aren't always clean. Nor are they always representative of an entire group. As the researcher, it is up to you to learn best practices of cleaning your data. It is also important for you to know as much as possible about the group you are studying. For your research results to be generalisable to the group you are studying, your data need to truly represent the group you are studying (whether you have sample or population data). This process might include trimming or adding to your network. Or it might include making various subgraphs of your network.
 
@@ -19,4 +21,8 @@ By the end of this unit you will:
 | [My Ego Network](A1_My%20Ego%20Network.qmd) | Students will draw their own ego network following an assignment in class. |
 | [Project Prospectus](A2_Project%20Prospectus.qmd) | Students are expected to discuss potential project ideas, possible sources of data, and research questions they could explore. |
 
-Enjoy!
+## Workforce Preparation
+
+As you engage with Unit 1, be mindful of potential stakeholders. You will learn principles associated with how network data are structured and how to clean them. You will need to communicate the strategies you use in your studies (the cleaning you do etc.) and also the limitations of your study. Remember, think about data as information, not fact or truths. With data we can proximate the truth and make inferences about things that can inform decisions. Part of being a network analyst is knowing how to communicate the strengths and weaknesses of your data and methods to make the most informed decisions.
+
+Enjoy Unit 1!

@@ -7,8 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>7&nbsp; Two Mode Networks - Adjacency Matrix – SOCIAL NETWORKS 
- Leaning Social Network Analysis Using Principles of the ADAPT Model</title>
+<title>7&nbsp; Two Mode Networks - Adjacency Matrix – Social Network Analysis: A Guide Using Principles of the ADAPT Model</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -131,7 +130,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">SOCIAL NETWORKS Leaning Social Network Analysis Using Principles of the ADAPT Model</a> 
+      <a href="./">Social Network Analysis: A Guide Using Principles of the ADAPT Model</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -165,7 +164,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Unit 1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Unit 1</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Unit 1 - Cleaning and Transforming Network Data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -218,7 +217,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Unit 2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Unit 2</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Unit 2 - Visualising Network Data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -384,7 +383,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Most of the info came from this site - https://harrypotter.fandom.com/wiki/Dumbledore%27s_Army I.e. I googled “list of prefects at hogwarts” then deferred to that above wiki. Same for phoenix, death eaters etc.</p>
 <p>I then checked each person on google to see what house they were in - some are missing and NA because they are fake characters from the movies or the wiki page.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>hp <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.choose</span>(),<span class="at">header=</span><span class="cn">TRUE</span>,<span class="at">row.names=</span><span class="dv">1</span>) <span class="do">## select harry_potter_two_mode.csv</span></span>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>hp <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.choose</span>(),<span class="at">header=</span><span class="cn">TRUE</span>,<span class="at">row.names=</span><span class="dv">1</span>) <span class="do">## select harry_potter_two_mode_AM.csv</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>hp_mat <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(hp)</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>

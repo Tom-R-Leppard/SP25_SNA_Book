@@ -10,7 +10,7 @@ The final project is to provide a big report on a network of your choice. This r
 
 ### Part 1. Explore possible sources of data
 
-A. Visit my [Google drive folder](https://drive.google.com/drive/folders/18BRSRSLjBQcbYOiu59cWZ4fzmmK3ZoWJ) (you will need to sign in with your @ncsu.edu account to access it. B. Look through the sources of data I have collected for you and pick at least two. Please read the info.txt file for each data file to understand the networks that are there. C. In your prospectus, write a paragraph describing the networks that you are considering using for your project. Consider: How are they structured? What constitutes the nodes/edges? D. (Optional) If you are interested in using your own data (i.e. collecting your own, or finding other data elsewhere), then discuss this IN ADDITION to selecting two potential datasets in the folder.
+A. Visit the [Github repo](https://github.com/Tom-R-Leppard/SP25_SNA_Book/tree/main/Social%20Network%20Analysis%20-%20Data). B. Look through the sources of data I have collected for you and pick at least two. Please read the info.txt file for each data file to understand the networks that are there. C. In your prospectus, write a paragraph describing the networks that you are considering using for your project. Consider: How are they structured? What constitutes the nodes/edges? D. (Optional) If you are interested in using your own data (i.e. collecting your own, or finding other data elsewhere), then discuss this IN ADDITION to selecting two potential datasets in the folder.
 
 ### Part 2.
 

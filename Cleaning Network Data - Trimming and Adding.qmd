@@ -13,7 +13,7 @@ This script is intended to help you to clean up network data that you have colle
 If your data are stored in an adjacency matrix, then isolates are those with no 1s in the matrix. Ensuring that R recognises them as isolated is very simple. Bring in the data, and then convert it into a matrix. Any that are isolated will show as isolates.
 
 ```{r}
-hog_crush_matrix <- read.csv(file.choose(), row.names = 1, header = TRUE)
+hog_crush_matrix <- read.csv(file.choose(), row.names = 1, header = TRUE) # select Hogwarts Crushes matrix.csv
 crush_matrix <- as.matrix(hog_crush_matrix)
 hog_crush_net_mat <- graph_from_adjacency_matrix(crush_matrix, mode = "directed", diag = FALSE)
 plot(hog_crush_net_mat)
@@ -22,7 +22,7 @@ plot(hog_crush_net_mat)
 However, things are not as straightforward when you are working with edgelists.With this structure, you have only two columns, one for senders and the other for receivers. If there is an individual in the group who neither sends nor receives, what do you do with them? One way of recording such isolates in an edgelist is list them as connected to themselves (known as a self loop). Take a look at this edgelist and you will see that these individuals are connected to themselves
 
 ```{r}
-hog_crush_correct <- read.csv(file.choose(), header=TRUE) # select Hogwarts Crushes Edgelist_CORRECT.csv
+hog_crush_correct <- read.csv(file.choose(), header=TRUE) # select Hogwarts Crushes Edgelist_SELFLOOPS.csv
 
 #Take a look at the data
 hog_crush_correct
@@ -45,7 +45,7 @@ plot(Crush_correct_net)
 Another way to deal with isolates from an edgelist is to list noone in the "to" column. In other words, you list the name of the person in your network but leave the cell next to them blank. However, this approach also has additional steps to take before it is clean and ready to go.
 
 ```{r}
-hog_crush_wrong <- read.csv(file.choose(), header=TRUE) # select Crushes Edgelist_INCORRECT.csv
+hog_crush_wrong <- read.csv(file.choose(), header=TRUE) # select Hogwarts Crushes Edgelist_EMPTY NODE.csv
 ```
 
 Take a look at the edgeist now it is in and you will see I added a few more characters to this group: Madeye, Flitwick, McGonagal, and Voldemort. They are all listed in the "Crusher" (from) column but have no connection to anyone in the "crush" column. This makes sense, since we know little about their romances from the Harry Potter Saga.

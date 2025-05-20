@@ -16,7 +16,7 @@ At its core, community detection is a method used to analyse the sub components(
 For this tutorial I am using the Grime collaboration network data that we have been using a lot. I am going to bring in the data from 2008 and clean up the graph a bit before we dive in. This network is directed, but for the sake of the tutorial, I bring it in as an undirected graph then swap. You will read why.
 
 ```{r}
-grime_edge_list <- read.csv(file.choose(), header = TRUE)
+grime_edge_list <- read.csv(file.choose(), header = TRUE) # GRIME_EDGE_LIST_2008 _GRIME ONLY
 
 grime_08 <- graph_from_data_frame(d= grime_edge_list, directed = FALSE)
 grime_08_clean <- delete.edges(grime_08, E(grime_08)[which_loop(grime_08)])

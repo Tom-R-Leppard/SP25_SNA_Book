@@ -17,7 +17,7 @@ Most of the info came from this site - https://harrypotter.fandom.com/wiki/Dumbl
 I then checked each person on google to see what house they were in - some are missing and NA because they are fake characters from the movies or the wiki page.
 
 ```{r}
-hp <- read.csv(file.choose(),header=TRUE,row.names=1) ## select harry_potter_two_mode.csv
+hp <- read.csv(file.choose(),header=TRUE,row.names=1) ## select harry_potter_two_mode_AM.csv
 
 hp_mat <- as.matrix(hp)
 

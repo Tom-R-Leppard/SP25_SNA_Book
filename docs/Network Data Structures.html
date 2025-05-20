@@ -7,8 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Introducing Network Data Structures – SOCIAL NETWORKS 
- Leaning Social Network Analysis Using Principles of the ADAPT Model</title>
+<title>3&nbsp; Introducing Network Data Structures – Social Network Analysis: A Guide Using Principles of the ADAPT Model</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -131,7 +130,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">SOCIAL NETWORKS Leaning Social Network Analysis Using Principles of the ADAPT Model</a> 
+      <a href="./">Social Network Analysis: A Guide Using Principles of the ADAPT Model</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -165,7 +164,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Unit 1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Unit 1</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Unit 1 - Cleaning and Transforming Network Data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -218,7 +217,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Unit 2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Unit 2</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Unit 2 - Visualising Network Data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -383,7 +382,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This is a network of romantic affiliations based on students from the Harry Potter saga. Note the column names reflect this.</p>
 <p>PAUSE AND THINK: Is this a directed or an undirected network? What can you see to indicate whether it is or is not?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>my_edge <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.choose</span>(), <span class="at">header =</span> <span class="cn">TRUE</span>)</span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>my_edge <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.choose</span>(), <span class="at">header =</span> <span class="cn">TRUE</span>) <span class="co"># select Hogwarts Crushes Edgelist_SELFLOOPS.csv</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(my_edge)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -402,40 +401,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Your data may be stored as an adjacency matrix. An adjacency matrix is a datasheet that uses a numerical system (usually a binary system 0 and 1 for unweighted networks) to denote the ties that exist between cells in the spreadsheet. 0 indicates no tie and 1 indicates a tie. In a weigted network, the number may be higher than 1 (i.e.&nbsp;to indicate the number of interactions, the distance, or other weight).</p>
 <p>The most important element of an adjacency matrix is that the first row and the first column have the list of nodes. Each cell is an individual node and this node is mirrored on the other side of the matrix. For example, cell A2 is the same as B1. These two lines (the first row and column) must have the same names in them in order for R to recognise it as a network. In other words, an adjacecny matrix has all the possible dyads (pairs) in the network with 1s and 0s to indicate whether they share a tie. Note that A1 should always be left empty.</p>
 <p>One final characteristic of an adjacency matrix is the line where the same cell overlaps. This is called the diagonal. Cell A2 and B1 are the same name, the coordinates whether those cells meet (B2) can indicate whether that node is connected to itself. The same is true all the way down the diagonal of the matrix. The researcher (YOU) must decide whether self loops/ties make sense given the characteristics/parameters of the network when you collect network data. For example, in a network of sending text messages, it may not make sense.</p>
-<p>This code chunk shows you how to bring in a .csv with network data stored as an adjacency matrix. These data are affiliation data between Harry Potter Characters based on their houses in Hogwarts. A 1 represents that they share a house-affiliation tie with the other character (i.e.&nbsp;they are in the same school house). Note, the row.names = 1 option is used here to ensure R recognises row 1 as none names not connections.</p>
+<p>This code chunk shows you how to bring in a .csv with network data stored as an adjacency matrix. These data are the same data as before - crushes between Harry Potter Characters. Note, the row.names = 1 option is used here to ensure R recognises row 1 as names not connections.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>my_adj  <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.choose</span>(), <span class="at">row.names=</span><span class="dv">1</span>) </span>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>my_adj  <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.choose</span>(), <span class="at">row.names=</span><span class="dv">1</span>) <span class="co"># select Hogwarts Crushes matrix.csv</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(my_adj)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>                 Harry.Potter Draco.Malfoy Hermione.Granger Ron.Weasley
-Harry.Potter                0            0                1           1
-Draco.Malfoy                0            0                0           0
-Hermione.Granger            1            0                0           1
-Ron.Weasley                 1            0                1           0
-Ginny.Weasley               1            0                1           1
-Lily.Potter                 1            0                1           1
-                 Ginny.Weasley Lily.Potter James.Potter Severus.Snape
-Harry.Potter                 1           1            1             0
-Draco.Malfoy                 0           0            0             1
-Hermione.Granger             1           1            1             0
-Ron.Weasley                  1           1            1             0
-Ginny.Weasley                0           1            1             0
-Lily.Potter                  1           0            1             0
-                 Sirius.Black Lavender.Brown Nymphadora.Tonks Remus.Lupin
-Harry.Potter                1              1                0           1
-Draco.Malfoy                0              0                0           0
-Hermione.Granger            1              1                0           1
-Ron.Weasley                 1              1                0           1
-Ginny.Weasley               1              1                0           1
-Lily.Potter                 1              1                0           1
-                 Cho.Chang Cedric.Diggory Teddy.Lupin James.Sirius.Potter
-Harry.Potter             0              0           0                   1
-Draco.Malfoy             0              0           0                   0
-Hermione.Granger         0              0           0                   1
-Ron.Weasley              0              0           0                   1
-Ginny.Weasley            0              0           0                   1
-Lily.Potter              0              0           0                   1</code></pre>
+<pre><code>                 Harry.Potter Ron.Weasley Hermione.Granger Ginny.Weasley
+Harry Potter                0           0                0             1
+Ron Weasley                 0           0                1             0
+Hermione Granger            0           1                0             0
+Ginny Weasley               1           0                0             0
+Lily Potter                 0           0                0             0
+James Potter                0           0                0             0
+                 Lily.Potter James.Potter Severus.Snape Nymphadora.Tonks
+Harry Potter               0            0             0                0
+Ron Weasley                0            0             0                0
+Hermione Granger           0            0             0                0
+Ginny Weasley              0            0             0                0
+Lily Potter                0            1             0                0
+James Potter               1            0             0                0
+                 Remus.Lupin Lavender.Brown Cho.Chang Cedric.Diggory
+Harry Potter               0              0         1              0
+Ron Weasley                0              1         0              0
+Hermione Granger           0              0         0              0
+Ginny Weasley              0              0         0              0
+Lily Potter                0              0         0              0
+James Potter               0              0         0              0</code></pre>
 </div>
 </div>
 
@@ -862,8 +854,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./Unit 1.html" class="pagination-link" aria-label="Unit 1">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Unit 1</span></span>
+      <a href="./Unit 1.html" class="pagination-link" aria-label="Unit 1 - Cleaning and Transforming Network Data">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Unit 1 - Cleaning and Transforming Network Data</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

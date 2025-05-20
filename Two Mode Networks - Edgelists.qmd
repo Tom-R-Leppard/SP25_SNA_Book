@@ -11,7 +11,7 @@ library(igraph)
 There is a slightly different approach to bringing in Two mode network data from an Edgelist than from an Adjacency matrix. Instead of a two mode matrix, you may have edgelist data in two mode format. \## Two Mode Edgelists First, bring it in and make it a network object.
 
 ```{r}
-hp_tm_edgelist <- read.csv(file.choose())
+hp_tm_edgelist <- read.csv(file.choose()) # select harry_potter_two_mode_edgelist.csv
 head(hp_tm_edgelist)
 ```
 

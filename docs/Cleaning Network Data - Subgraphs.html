@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-<head>
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
 
-<meta charset="utf-8" />
-<meta name="generator" content="quarto-1.6.42" />
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5  Cleaning Network Data - Subgraphs – SOCIAL NETWORKS 
- Leaning Social Network Analysis Using Principles of the ADAPT Model</title>
+<title>5&nbsp; Cleaning Network Data - Subgraphs – Social Network Analysis: A Guide Using Principles of the ADAPT Model</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -59,7 +56,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
-<!-- htmldependencies:E3FAD763 -->
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./Node and Edge Attributes.html" rel="next">
+<link href="./Cleaning Network Data - Trimming and Adding.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-3198439fe3c44997ed1f79ff0c76d733.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -91,22 +106,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body>
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn"
-      data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" 
-      aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation"
-      onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <h1 class="quarto-secondary-nav-title no-breadcrumbs"></h1>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" role="link"
-        aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation"
-        onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Unit 1.html">Unit 1: Cleaning and Transforming Network Data</a></li><li class="breadcrumb-item"><a href="./Cleaning Network Data - Subgraphs.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Cleaning Network Data - Subgraphs</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -120,10 +130,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="/">
-      SOCIAL NETWORKS 
- Leaning Social Network Analysis Using Principles of the ADAPT Model
-      </a> 
+      <a href="./">Social Network Analysis: A Guide Using Principles of the ADAPT Model</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -135,20 +142,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>1</span>  <span class='chapter-title'>On The ADAPT Model</span></span></a>
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">On The ADAPT Model</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1"  role="navigation" aria-expanded="true">
- <span class="menu-text"> Unit 1: Cleaning and Transforming Network Data</span></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Unit 1: Cleaning and Transforming Network Data</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -156,52 +163,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/Unit 1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>2</span>  <span class='chapter-title'>Unit 1</span></span></a>
+  <a href="./Unit 1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Unit 1 - Cleaning and Transforming Network Data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/Network Data Structures.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>3</span>  <span class='chapter-title'>Introducing Network Data Structures</span></span></a>
+  <a href="./Network Data Structures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introducing Network Data Structures</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/Cleaning Network Data - Trimming and Adding.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>4</span>  <span class='chapter-title'>Cleaning Network Data - Trimming and Adding</span></span></a>
+  <a href="./Cleaning Network Data - Trimming and Adding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Cleaning Network Data - Trimming and Adding</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/Cleaning Network Data - Subgraphs.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class='chapter-number'>5</span>  <span class='chapter-title'>Cleaning Network Data - Subgraphs</span></span></a>
+  <a href="./Cleaning Network Data - Subgraphs.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Cleaning Network Data - Subgraphs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/Node and Edge Attributes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>6</span>  <span class='chapter-title'>Node and Edge Attributes</span></span></a>
+  <a href="./Node and Edge Attributes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Node and Edge Attributes</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/Two Mode Networks - AM.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>7</span>  <span class='chapter-title'>Two Mode Networks - Adjacency Matrix</span></span></a>
+  <a href="./Two Mode Networks - AM.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Two Mode Networks - Adjacency Matrix</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/Two Mode Networks - Edgelists.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>8</span>  <span class='chapter-title'>Two Mode Networks - Edgelists</span></span></a>
+  <a href="./Two Mode Networks - Edgelists.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Two Mode Networks - Edgelists</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2"  role="navigation" aria-expanded="true">
- <span class="menu-text"> Unit 2: Visualising Network Data</span></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Unit 2: Visualising Network Data</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -209,40 +216,40 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/Unit 2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>9</span>  <span class='chapter-title'>Unit 2</span></span></a>
+  <a href="./Unit 2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Unit 2 - Visualising Network Data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/Basic Visualisation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>10</span>  <span class='chapter-title'>Network Visualisation - Basic</span></span></a>
+  <a href="./Basic Visualisation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Network Visualisation - Basic</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/Intermediate Visualisation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>11</span>  <span class='chapter-title'>Visualisations - Intermediate</span></span></a>
+  <a href="./Intermediate Visualisation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Visualisations - Intermediate</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/Advanced Visualisation - Interactive.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>12</span>  <span class='chapter-title'>Interactive Networks Visualisations</span></span></a>
+  <a href="./Advanced Visualisation - Interactive.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Interactive Networks Visualisations</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/Advanced Visualisation - Dynamic.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>13</span>  <span class='chapter-title'>Dynamic Network Visualisations</span></span></a>
+  <a href="./Advanced Visualisation - Dynamic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Dynamic Network Visualisations</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3"  role="navigation" aria-expanded="true">
- <span class="menu-text"> Unit 3: Analysing Network Data</span></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Unit 3: Analysing Network Data</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -250,33 +257,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/Unit 3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>14</span>  <span class='chapter-title'>Unit 3</span></span></a>
+  <a href="./Unit 3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Unit 3</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/People In Networks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>15</span>  <span class='chapter-title'>People in Networks</span></span></a>
+  <a href="./People In Networks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">People in Networks</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/Communities in Networks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>16</span>  <span class='chapter-title'>Communities In Networks</span></span></a>
+  <a href="./Communities in Networks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Communities In Networks</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/Networks of People.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>17</span>  <span class='chapter-title'>Networks of People</span></span></a>
+  <a href="./Networks of People.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Networks of People</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4"  role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Assignments</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -285,62 +292,69 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/A1_My Ego Network.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>18</span>  <span class='chapter-title'>A1 - My Ego Network</span></span></a>
+  <a href="./A1_My Ego Network.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">A1 - My Ego Network</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/A2_Project Prospectus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>19</span>  <span class='chapter-title'>A2_Project Prospectus</span></span></a>
+  <a href="./A2_Project Prospectus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">A2_Project Prospectus</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/A3_Data Exploration.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>20</span>  <span class='chapter-title'>A3 - Data Exploration</span></span></a>
+  <a href="./A3_Data Exploration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">A3 - Data Exploration</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/A4_Visualisations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>21</span>  <span class='chapter-title'>A4 - Visualisation</span></span></a>
+  <a href="./A4_Visualisations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">A4 - Visualisation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/Final Project Instructions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>22</span>  <span class='chapter-title'>Final Project Instructions</span></span></a>
+  <a href="./Final Project Instructions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Final Project Instructions</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class='chapter-number'>23</span>  <span class='chapter-title'>Summary</span></span></a>
+  <a href="./summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/references.html" class="sidebar-item-text sidebar-link">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" ></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <div id="quarto-toc-target"></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#specific-subgraphs" id="toc-specific-subgraphs" class="nav-link active" data-scroll-target="#specific-subgraphs"><span class="header-section-number">5.1</span> Specific Subgraphs</a></li>
+  <li><a href="#ego-graphs" id="toc-ego-graphs" class="nav-link" data-scroll-target="#ego-graphs"><span class="header-section-number">5.2</span> Ego Graphs</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Unit 1.html">Unit 1: Cleaning and Transforming Network Data</a></li><li class="breadcrumb-item"><a href="./Cleaning Network Data - Subgraphs.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Cleaning Network Data - Subgraphs</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>  <span class="chapter-title">Cleaning Network Data - Subgraphs</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Cleaning Network Data - Subgraphs</span></h1>
 </div>
 
 
@@ -356,93 +370,86 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#specific-subgraphs" id="toc-specific-subgraphs"><span class="header-section-number">5.1</span> Specific Subgraphs</a></li>
-  <li><a href="#ego-graphs" id="toc-ego-graphs"><span class="header-section-number">5.2</span> Ego Graphs</a></li>
-  </ul>
-</nav>
+
 <div class="cell">
-<div class="sourceCode" id="cb1"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(igraph)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(igraph)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Bringing in the data and cleaning out the self loops.</p>
 <div class="cell">
-<div class="sourceCode" id="cb2"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>grime_edge_list <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.choose</span>(), <span class="at">header =</span> <span class="cn">TRUE</span>)</span>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>grime_edge_list <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.choose</span>(), <span class="at">header =</span> <span class="cn">TRUE</span>) <span class="co"># select GRIME_EDGE_LIST_2008 _GRIME ONLY.csv</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>grime_08 <span class="ot">&lt;-</span> <span class="fu">graph_from_data_frame</span>(<span class="at">d=</span> grime_edge_list, <span class="at">directed =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>grime_08 <span class="ot">&lt;-</span> <span class="fu">graph_from_data_frame</span>(<span class="at">d=</span> grime_edge_list, <span class="at">directed =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb3"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>grime_08_clean <span class="ot">&lt;-</span> <span class="fu">delete_edges</span>(grime_08, <span class="fu">E</span>(grime_08)[<span class="fu">which_loop</span>(grime_08)])</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>grime_08_clean <span class="ot">&lt;-</span> <span class="fu">delete_edges</span>(grime_08, <span class="fu">E</span>(grime_08)[<span class="fu">which_loop</span>(grime_08)])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>You may want to create subgraphs of the network that you have. There are two basic ways that you can think about this. You may be interested in a specific group of people and how they relate to each other, or you may be interested in a specific person and find out who they are connected to.</p>
 <section id="specific-subgraphs" class="level2" data-number="5.1">
-<h2 data-number="5.1"><span class="header-section-number">5.1</span> Specific Subgraphs</h2>
+<h2 data-number="5.1" class="anchored" data-anchor-id="specific-subgraphs"><span class="header-section-number">5.1</span> Specific Subgraphs</h2>
 <p>First, a subgraph to see a specific set of people and how/whether they are connected</p>
 <p>You may have a list of individual nodes that you are interested in and you want to see how they related to each other. You can do this by creating a vector with the names of thise nodes, then use the subgraph function().</p>
 <div class="cell">
-<div class="sourceCode" id="cb4"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>sub_people <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;Wiley&#39;</span>, <span class="st">&#39;Jammer&#39;</span>, <span class="st">&#39;Flowdan&#39;</span>, <span class="st">&#39;Ice Kid&#39;</span>)</span>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>sub_people <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'Wiley'</span>, <span class="st">'Jammer'</span>, <span class="st">'Flowdan'</span>, <span class="st">'Ice Kid'</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>sub_net <span class="ot">&lt;-</span> <span class="fu">subgraph</span>(grime_08_clean, sub_people) </span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>))</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(sub_net)</span></code></pre></div>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(sub_net)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure>
-<p><img src="Cleaning-Network-Data---Subgraphs_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672" /></p>
+<figure class="figure">
+<p><img src="Cleaning-Network-Data---Subgraphs_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
 <section id="ego-graphs" class="level2" data-number="5.2">
-<h2 data-number="5.2"><span class="header-section-number">5.2</span> Ego Graphs</h2>
-<p>Next, you may want to see ego networks from those in your network. In other words, smaller networks showing only the connections of each individual artist. To do this, you can use the make_ego_graph() argument. This creates a list of ego graphs from your entire network. Note, the order = 1 argument refers to the number of steps away from the ego (focal node). Since mine is set to 1, this only caputres the ego’s immidiate neighbours (i.e. only those directly connected to ego).</p>
+<h2 data-number="5.2" class="anchored" data-anchor-id="ego-graphs"><span class="header-section-number">5.2</span> Ego Graphs</h2>
+<p>Next, you may want to see ego networks from those in your network. In other words, smaller networks showing only the connections of each individual artist. To do this, you can use the make_ego_graph() argument. This creates a list of ego graphs from your entire network. Note, the order = 1 argument refers to the number of steps away from the ego (focal node). Since mine is set to 1, this only caputres the ego’s immidiate neighbours (i.e.&nbsp;only those directly connected to ego).</p>
 <div class="cell">
-<div class="sourceCode" id="cb5"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>ego_graphs <span class="ot">&lt;-</span> <span class="fu">make_ego_graph</span>(grime_08_clean, <span class="at">order =</span> <span class="dv">1</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(ego_graphs)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>ego_graphs <span class="ot">&lt;-</span> <span class="fu">make_ego_graph</span>(grime_08_clean, <span class="at">order =</span> <span class="dv">1</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(ego_graphs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]
-IGRAPH ed093d7 DN-- 2 1 -- 
+IGRAPH ea1fb6d DN-- 2 1 -- 
 + attr: name (v/c), collab_weight (e/n)
-+ edge from ed093d7 (vertex names):
++ edge from ea1fb6d (vertex names):
 [1] Asher D-&gt;Wiley
 
 [[2]]
-IGRAPH ed093f8 DN-- 1 0 -- 
+IGRAPH ea1fb81 DN-- 1 0 -- 
 + attr: name (v/c), collab_weight (e/n)
-+ edges from ed093f8 (vertex names):
++ edges from ea1fb81 (vertex names):
 
 [[3]]
-IGRAPH ed09407 DN-- 1 0 -- 
+IGRAPH ea1fb8a DN-- 1 0 -- 
 + attr: name (v/c), collab_weight (e/n)
-+ edges from ed09407 (vertex names):
++ edges from ea1fb8a (vertex names):
 
 [[4]]
-IGRAPH ed09412 DN-- 2 1 -- 
+IGRAPH ea1fb93 DN-- 2 1 -- 
 + attr: name (v/c), collab_weight (e/n)
-+ edge from ed09412 (vertex names):
++ edge from ea1fb93 (vertex names):
 [1] Scorcher-&gt;Wiley
 
 [[5]]
-IGRAPH ed0941c DN-- 3 2 -- 
+IGRAPH ea1fb9c DN-- 3 2 -- 
 + attr: name (v/c), collab_weight (e/n)
-+ edges from ed0941c (vertex names):
++ edges from ea1fb9c (vertex names):
 [1] Bless Beats-&gt;Wiley     Bless Beats-&gt;Roll Deep
 
 [[6]]
-IGRAPH ed09429 DN-- 3 2 -- 
+IGRAPH ea1fba4 DN-- 3 2 -- 
 + attr: name (v/c), collab_weight (e/n)
-+ edges from ed09429 (vertex names):
++ edges from ea1fba4 (vertex names):
 [1] Flowdan-&gt;Wiley  Flowdan-&gt;Jammer</code></pre>
 </div>
 </div>
 <p>You can also specify exactly which node’s network you want to see. Let’s say there was a person of interest in your network that you specifically want to see. To do this, you can do the folliwing using the node’s name to single them out.</p>
 <p>This chunk returns a lsit of edges connected to Wiley (the name of my node of interest).</p>
 <div class="cell">
-<div class="sourceCode" id="cb7"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">E</span>(grime_08_clean)[[<span class="fu">.inc</span>(<span class="st">&#39;Wiley&#39;</span>)]]</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">E</span>(grime_08_clean)[[<span class="fu">.inc</span>(<span class="st">'Wiley'</span>)]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>+ 8/28 edges from ecfa064 (vertex names):
+<pre><code>+ 8/28 edges from ea12474 (vertex names):
              tail         head tid hid collab_weight
 1         Asher D        Wiley   1  29             1
 2        Scorcher        Wiley   4  29             4
@@ -456,43 +463,43 @@ IGRAPH ed09429 DN-- 3 2 --
 </div>
 <p>I can also plot these. To do so, I make an object with the name ‘Wiley’ and then make an ego graph based on that name only. The [[1]] simply tells R to get only the first one in the list that make_ego_graph() creates. In this case, Wiley.</p>
 <div class="cell">
-<div class="sourceCode" id="cb9"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>Wiley <span class="ot">&lt;-</span> <span class="st">&quot;Wiley&quot;</span></span>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>Wiley <span class="ot">&lt;-</span> <span class="st">"Wiley"</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>ego_wiley <span class="ot">&lt;-</span> <span class="fu">make_ego_graph</span>(grime_08_clean, <span class="at">order =</span> <span class="dv">1</span>, <span class="at">nodes =</span> Wiley)[[<span class="dv">1</span>]]</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>))</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(ego_wiley)</span></code></pre></div>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(ego_wiley)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure>
-<p><img src="Cleaning-Network-Data---Subgraphs_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672" /></p>
+<figure class="figure">
+<p><img src="Cleaning-Network-Data---Subgraphs_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>You can also select an ego network with more information. The second order ego network includes the connections of Wiley’s neighbours.</p>
 <div class="cell">
-<div class="sourceCode" id="cb10"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>second_order_wiley <span class="ot">&lt;-</span> <span class="fu">make_ego_graph</span>(grime_08_clean, <span class="at">order =</span> <span class="dv">2</span>, <span class="at">nodes =</span> Wiley)[[<span class="dv">1</span>]]</span>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>second_order_wiley <span class="ot">&lt;-</span> <span class="fu">make_ego_graph</span>(grime_08_clean, <span class="at">order =</span> <span class="dv">2</span>, <span class="at">nodes =</span> Wiley)[[<span class="dv">1</span>]]</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>))</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(second_order_wiley)</span></code></pre></div>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(second_order_wiley)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure>
-<p><img src="Cleaning-Network-Data---Subgraphs_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672" /></p>
+<figure class="figure">
+<p><img src="Cleaning-Network-Data---Subgraphs_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Pro tip: If you are working with ego networks like this, especially when you get passed the first order network (including friends of friends) it is good practice to do something to differentiate the ego from their neighbours. Once simple way it to change their colour.</p>
 <div class="cell">
-<div class="sourceCode" id="cb11"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">V</span>(second_order_wiley)<span class="sc">$</span>ego <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(<span class="fu">V</span>(second_order_wiley)<span class="sc">$</span>name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;Wiley&quot;</span>), <span class="st">&quot;red&quot;</span>, <span class="st">&quot;white&quot;</span>)</span>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">V</span>(second_order_wiley)<span class="sc">$</span>ego <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(<span class="fu">V</span>(second_order_wiley)<span class="sc">$</span>name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Wiley"</span>), <span class="st">"red"</span>, <span class="st">"white"</span>)</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">3</span>,<span class="dv">0</span>))</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(second_order_wiley, <span class="at">vertex.color =</span> <span class="fu">V</span>(second_order_wiley)<span class="sc">$</span>ego, <span class="at">main =</span> <span class="st">&quot;Wiley&#39;s Second Order Ego Network&quot;</span>)</span></code></pre></div>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(second_order_wiley, <span class="at">vertex.color =</span> <span class="fu">V</span>(second_order_wiley)<span class="sc">$</span>ego, <span class="at">main =</span> <span class="st">"Wiley's Second Order Ego Network"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure>
-<p><img src="Cleaning-Network-Data---Subgraphs_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672" /></p>
+<figure class="figure">
+<p><img src="Cleaning-Network-Data---Subgraphs_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -500,10 +507,10 @@ IGRAPH ed09429 DN-- 3 2 --
 <p>Finally, one other way to can subset a network is by a set parameter you may have. For example, you may want to see a network of frequent collaborators (more than 1 collab).</p>
 <p>The following returns a vector with collaborators who work together more than once.</p>
 <div class="cell">
-<div class="sourceCode" id="cb12"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>frequent_collabors <span class="ot">&lt;-</span> <span class="fu">E</span>(grime_08_clean)[[collab_weight <span class="sc">&gt;</span> <span class="dv">1</span>]]</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>frequent_collabors</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>frequent_collabors <span class="ot">&lt;-</span> <span class="fu">E</span>(grime_08_clean)[[collab_weight <span class="sc">&gt;</span> <span class="dv">1</span>]]</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>frequent_collabors</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>+ 8/28 edges from ecfa064 (vertex names):
+<pre><code>+ 8/28 edges from ea12474 (vertex names):
              tail   head tid hid collab_weight
 2        Scorcher  Wiley   4  29             4
 4         Flowdan  Wiley   6  29             3
@@ -517,26 +524,22 @@ IGRAPH ed09429 DN-- 3 2 --
 </div>
 <p>You can then turn this vector of edges into a igraph object to plot</p>
 <div class="cell">
-<div class="sourceCode" id="cb14"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>frequent_collabors_graph <span class="ot">&lt;-</span> <span class="fu">induced_subgraph</span>(grime_08_clean, <span class="at">vids =</span> <span class="fu">unique</span>(<span class="fu">c</span>(<span class="fu">ends</span>(grime_08_clean, frequent_collabors)[, <span class="dv">1</span>], <span class="fu">ends</span>(grime_08_clean, frequent_collabors)[, <span class="dv">2</span>])))</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(frequent_collabors_graph)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>frequent_collabors_graph <span class="ot">&lt;-</span> <span class="fu">induced_subgraph</span>(grime_08_clean, <span class="at">vids =</span> <span class="fu">unique</span>(<span class="fu">c</span>(<span class="fu">ends</span>(grime_08_clean, frequent_collabors)[, <span class="dv">1</span>], <span class="fu">ends</span>(grime_08_clean, frequent_collabors)[, <span class="dv">2</span>])))</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(frequent_collabors_graph)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure>
-<p><img src="Cleaning-Network-Data---Subgraphs_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="672" /></p>
+<figure class="figure">
+<p><img src="Cleaning-Network-Data---Subgraphs_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<div id="quarto-navigation-envelope" class="hidden">
-<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyLXRpdGxl">SOCIAL NETWORKS Leaning Social Network Analysis Using Principles of the ADAPT Model</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXItdGl0bGU=">SOCIAL NETWORKS Leaning Social Network Analysis Using Principles of the ADAPT Model</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uZXh0"><span class="chapter-number">6</span>  <span class="chapter-title">Node and Edge Attributes</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1wcmV2"><span class="chapter-number">4</span>  <span class="chapter-title">Cleaning Network Data - Trimming and Adding</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9pbmRleC5odG1sUHJlZmFjZQ==">Preface</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9pbnRyby5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz4xPC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPk9uLVRoZS1BREFQVC1Nb2RlbDwvc3Bhbj4="><span class="chapter-number">1</span>  <span class="chapter-title">On The ADAPT Model</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMQ==">Unit 1: Cleaning and Transforming Network Data</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9Vbml0IDEuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+Mjwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5Vbml0LTE8L3NwYW4+"><span class="chapter-number">2</span>  <span class="chapter-title">Unit 1</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9OZXR3b3JrIERhdGEgU3RydWN0dXJlcy5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz4zPC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPkludHJvZHVjaW5nLU5ldHdvcmstRGF0YS1TdHJ1Y3R1cmVzPC9zcGFuPg=="><span class="chapter-number">3</span>  <span class="chapter-title">Introducing Network Data Structures</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9DbGVhbmluZyBOZXR3b3JrIERhdGEgLSBUcmltbWluZyBhbmQgQWRkaW5nLmh0bWw8c3Bhbi1jbGFzcz0nY2hhcHRlci1udW1iZXInPjQ8L3NwYW4+LS08c3Bhbi1jbGFzcz0nY2hhcHRlci10aXRsZSc+Q2xlYW5pbmctTmV0d29yay1EYXRhLS0tVHJpbW1pbmctYW5kLUFkZGluZzwvc3Bhbj4="><span class="chapter-number">4</span>  <span class="chapter-title">Cleaning Network Data - Trimming and Adding</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9DbGVhbmluZyBOZXR3b3JrIERhdGEgLSBTdWJncmFwaHMuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+NTwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5DbGVhbmluZy1OZXR3b3JrLURhdGEtLS1TdWJncmFwaHM8L3NwYW4+"><span class="chapter-number">5</span>  <span class="chapter-title">Cleaning Network Data - Subgraphs</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9Ob2RlIGFuZCBFZGdlIEF0dHJpYnV0ZXMuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+Njwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5Ob2RlLWFuZC1FZGdlLUF0dHJpYnV0ZXM8L3NwYW4+"><span class="chapter-number">6</span>  <span class="chapter-title">Node and Edge Attributes</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9Ud28gTW9kZSBOZXR3b3JrcyAtIEFNLmh0bWw8c3Bhbi1jbGFzcz0nY2hhcHRlci1udW1iZXInPjc8L3NwYW4+LS08c3Bhbi1jbGFzcz0nY2hhcHRlci10aXRsZSc+VHdvLU1vZGUtTmV0d29ya3MtLS1BZGphY2VuY3ktTWF0cml4PC9zcGFuPg=="><span class="chapter-number">7</span>  <span class="chapter-title">Two Mode Networks - Adjacency Matrix</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9Ud28gTW9kZSBOZXR3b3JrcyAtIEVkZ2VsaXN0cy5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz44PC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPlR3by1Nb2RlLU5ldHdvcmtzLS0tRWRnZWxpc3RzPC9zcGFuPg=="><span class="chapter-number">8</span>  <span class="chapter-title">Two Mode Networks - Edgelists</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMg==">Unit 2: Visualising Network Data</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9Vbml0IDIuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+OTwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5Vbml0LTI8L3NwYW4+"><span class="chapter-number">9</span>  <span class="chapter-title">Unit 2</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9CYXNpYyBWaXN1YWxpc2F0aW9uLmh0bWw8c3Bhbi1jbGFzcz0nY2hhcHRlci1udW1iZXInPjEwPC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPk5ldHdvcmstVmlzdWFsaXNhdGlvbi0tLUJhc2ljPC9zcGFuPg=="><span class="chapter-number">10</span>  <span class="chapter-title">Network Visualisation - Basic</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9JbnRlcm1lZGlhdGUgVmlzdWFsaXNhdGlvbi5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz4xMTwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5WaXN1YWxpc2F0aW9ucy0tLUludGVybWVkaWF0ZTwvc3Bhbj4="><span class="chapter-number">11</span>  <span class="chapter-title">Visualisations - Intermediate</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9BZHZhbmNlZCBWaXN1YWxpc2F0aW9uIC0gSW50ZXJhY3RpdmUuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+MTI8L3NwYW4+LS08c3Bhbi1jbGFzcz0nY2hhcHRlci10aXRsZSc+SW50ZXJhY3RpdmUtTmV0d29ya3MtVmlzdWFsaXNhdGlvbnM8L3NwYW4+"><span class="chapter-number">12</span>  <span class="chapter-title">Interactive Networks Visualisations</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9BZHZhbmNlZCBWaXN1YWxpc2F0aW9uIC0gRHluYW1pYy5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz4xMzwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5EeW5hbWljLU5ldHdvcmstVmlzdWFsaXNhdGlvbnM8L3NwYW4+"><span class="chapter-number">13</span>  <span class="chapter-title">Dynamic Network Visualisations</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMw==">Unit 3: Analysing Network Data</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9Vbml0IDMuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+MTQ8L3NwYW4+LS08c3Bhbi1jbGFzcz0nY2hhcHRlci10aXRsZSc+VW5pdC0zPC9zcGFuPg=="><span class="chapter-number">14</span>  <span class="chapter-title">Unit 3</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9QZW9wbGUgSW4gTmV0d29ya3MuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+MTU8L3NwYW4+LS08c3Bhbi1jbGFzcz0nY2hhcHRlci10aXRsZSc+UGVvcGxlLWluLU5ldHdvcmtzPC9zcGFuPg=="><span class="chapter-number">15</span>  <span class="chapter-title">People in Networks</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9Db21tdW5pdGllcyBpbiBOZXR3b3Jrcy5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz4xNjwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5Db21tdW5pdGllcy1Jbi1OZXR3b3Jrczwvc3Bhbj4="><span class="chapter-number">16</span>  <span class="chapter-title">Communities In Networks</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9OZXR3b3JrcyBvZiBQZW9wbGUuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+MTc8L3NwYW4+LS08c3Bhbi1jbGFzcz0nY2hhcHRlci10aXRsZSc+TmV0d29ya3Mtb2YtUGVvcGxlPC9zcGFuPg=="><span class="chapter-number">17</span>  <span class="chapter-title">Networks of People</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tNA==">Assignments</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9BMV9NeSBFZ28gTmV0d29yay5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz4xODwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5BMS0tLU15LUVnby1OZXR3b3JrPC9zcGFuPg=="><span class="chapter-number">18</span>  <span class="chapter-title">A1 - My Ego Network</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9BMl9Qcm9qZWN0IFByb3NwZWN0dXMuaHRtbDxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+MTk8L3NwYW4+LS08c3Bhbi1jbGFzcz0nY2hhcHRlci10aXRsZSc+QTJfUHJvamVjdC1Qcm9zcGVjdHVzPC9zcGFuPg=="><span class="chapter-number">19</span>  <span class="chapter-title">A2_Project Prospectus</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9BM19EYXRhIEV4cGxvcmF0aW9uLmh0bWw8c3Bhbi1jbGFzcz0nY2hhcHRlci1udW1iZXInPjIwPC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPkEzLS0tRGF0YS1FeHBsb3JhdGlvbjwvc3Bhbj4="><span class="chapter-number">20</span>  <span class="chapter-title">A3 - Data Exploration</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9BNF9WaXN1YWxpc2F0aW9ucy5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz4yMTwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5BNC0tLVZpc3VhbGlzYXRpb248L3NwYW4+"><span class="chapter-number">21</span>  <span class="chapter-title">A4 - Visualisation</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9GaW5hbCBQcm9qZWN0IEluc3RydWN0aW9ucy5odG1sPHNwYW4tY2xhc3M9J2NoYXB0ZXItbnVtYmVyJz4yMjwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5GaW5hbC1Qcm9qZWN0LUluc3RydWN0aW9uczwvc3Bhbj4="><span class="chapter-number">22</span>  <span class="chapter-title">Final Project Instructions</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9zdW1tYXJ5Lmh0bWw8c3Bhbi1jbGFzcz0nY2hhcHRlci1udW1iZXInPjIzPC9zcGFuPi0tPHNwYW4tY2xhc3M9J2NoYXB0ZXItdGl0bGUnPlN1bW1hcnk8L3NwYW4+"><span class="chapter-number">23</span>  <span class="chapter-title">Summary</span></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9yZWZlcmVuY2VzLmh0bWxSZWZlcmVuY2Vz">References</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWJyZWFkY3J1bWJzLS1Vbml0LTE6LUNsZWFuaW5nLWFuZC1UcmFuc2Zvcm1pbmctTmV0d29yay1EYXRh">Unit 1: Cleaning and Transforming Network Data</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWJyZWFkY3J1bWJzLTxzcGFuLWNsYXNzPSdjaGFwdGVyLW51bWJlcic+NTwvc3Bhbj4tLTxzcGFuLWNsYXNzPSdjaGFwdGVyLXRpdGxlJz5DbGVhbmluZy1OZXR3b3JrLURhdGEtLS1TdWJncmFwaHM8L3NwYW4+"><span class="chapter-number">5</span>  <span class="chapter-title">Cleaning Network Data - Subgraphs</span></span></p>
-</div>
-<div id="quarto-meta-markdown" class="hidden">
-<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW1ldGF0aXRsZQ=="><span class="chapter-number">5</span>  <span class="chapter-title">Cleaning Network Data - Subgraphs</span> – SOCIAL NETWORKS Leaning Social Network Analysis Using Principles of the ADAPT Model</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLXR3aXR0ZXJjYXJkdGl0bGU="><span class="chapter-number">5</span>  <span class="chapter-title">Cleaning Network Data - Subgraphs</span> – SOCIAL NETWORKS Leaning Social Network Analysis Using Principles of the ADAPT Model</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW9nY2FyZHRpdGxl"><span class="chapter-number">5</span>  <span class="chapter-title">Cleaning Network Data - Subgraphs</span> – SOCIAL NETWORKS Leaning Social Network Analysis Using Principles of the ADAPT Model</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW1ldGFzaXRlbmFtZQ==">SOCIAL NETWORKS Leaning Social Network Analysis Using Principles of the ADAPT Model</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLXR3aXR0ZXJjYXJkZGVzYw=="></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW9nY2FyZGRkZXNj"></span></p>
-</div>
+
+
 </section>
 
 </main> <!-- /main -->
-<script id = "quarto-html-after-body" type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -955,18 +958,19 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a  href="/Cleaning Network Data - Trimming and Adding.html" class="pagination-link" aria-label="Cleaning Network Data - Trimming and Adding">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class='chapter-number'>4</span>  <span class='chapter-title'>Cleaning Network Data - Trimming and Adding</span></span>
+      <a href="./Cleaning Network Data - Trimming and Adding.html" class="pagination-link" aria-label="Cleaning Network Data - Trimming and Adding">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Cleaning Network Data - Trimming and Adding</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a  href="/Node and Edge Attributes.html" class="pagination-link" aria-label="Node and Edge Attributes">
-        <span class="nav-page-text"><span class='chapter-number'>6</span>  <span class='chapter-title'>Node and Edge Attributes</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./Node and Edge Attributes.html" class="pagination-link" aria-label="Node and Edge Attributes">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Node and Edge Attributes</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
 
-</body>
 
-</html>
+
+
+</body></html>

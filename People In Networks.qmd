@@ -13,7 +13,7 @@ Before we begin, let's bring in the Grime data we have been using so far. We kno
 ```{r}
 library(igraph)
 
-grime_edge_list <- read.csv(file.choose(), header = TRUE)
+grime_edge_list <- read.csv(file.choose(), header = TRUE) # select GRIME_EDGE_LIST_2008 _GRIME ONLY.csv
 
 grime_08 <- graph_from_data_frame(d= grime_edge_list, directed = TRUE)
 plot(grime_08)

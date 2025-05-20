@@ -7,8 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>6&nbsp; Node and Edge Attributes – SOCIAL NETWORKS 
- Leaning Social Network Analysis Using Principles of the ADAPT Model</title>
+<title>6&nbsp; Node and Edge Attributes – Social Network Analysis: A Guide Using Principles of the ADAPT Model</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -131,7 +130,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">SOCIAL NETWORKS Leaning Social Network Analysis Using Principles of the ADAPT Model</a> 
+      <a href="./">Social Network Analysis: A Guide Using Principles of the ADAPT Model</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -165,7 +164,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Unit 1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Unit 1</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Unit 1 - Cleaning and Transforming Network Data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -218,7 +217,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Unit 2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Unit 2</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Unit 2 - Visualising Network Data</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -382,53 +381,48 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>All of this information can be attached to our edgelist. You can also do this on an adjacency matrix but it is not as straightforward. To learn the process, let’s stick with edgelists.</p>
 <section id="getting-to-know-these-data" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="getting-to-know-these-data"><span class="header-section-number">6.1</span> Getting to know these data</h2>
-<p>This dataset has a lot more information about these individuals and their relationships than others we have used this far. We have one excel spreadsheet (not .csv this time) with two separate sheets, one called vertices and the other called edges. The vertices sheet has information about each individual node in the network while the edges contains both the edges that exist as well as information about them. Let’s read them in and take a look at them</p>
-<p>We are using a little more specific code on this one using the readxl package to read in a specific sheet from our spreadsheet. Then we can read in each sheet using the followin method.</p>
+<p>This dataset has a lot more information about these individuals and their relationships than others we have used this far. We have two excel spreadsheets (.csv) one called vertices and the other called edges. The vertices sheet has information about each individual node in the network while the edges contains both the edges that exist as well as information about them. Let’s read them in and take a look at them</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>vertices.df <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"C:/Users/trleppar/Downloads/node and vertex characteristics.xlsx"</span>, <span class="at">sheet =</span> <span class="st">"vertices"</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>edges.df <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"C:/Users/trleppar/Downloads/node and vertex characteristics.xlsx"</span>, <span class="at">sheet =</span> <span class="st">"edges"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>vertices.df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.choose</span>()) <span class="co"># select Node data.csv</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>edges.df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.choose</span>()) <span class="co"># select Edge data.csv</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Let’s take a look at these one at a tine to get an idea of what information we have.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(edges.df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 4
-  from  to     freq affinity
-  &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;   
-1 A     B         2 pos     
-2 A     C         1 neg     
-3 A     D         1 pos     
-4 A     E         1 neg     
-5 A     F         3 neg     
-6 E     F         2 pos     </code></pre>
+<pre><code>  from to freq affinity
+1    A  B    2      pos
+2    A  C    1      neg
+3    A  D    1      pos
+4    A  E    1      neg
+5    A  F    3      neg
+6    E  F    2      pos</code></pre>
 </div>
 </div>
 <p>We have an edgelist between A-F people. In this edgelist we have the frequency of interaction and the affinity (i.e.&nbsp;if they are positive or negative interactions).</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(vertices.df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 4
-  name    age role  gender
-  &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
-1 A        20 DJ    F     
-2 B        25 MC    M     
-3 C        21 DJ    F     
-4 D        23 crew  M     
-5 E        24 MC    M     
-6 F        23 MC    F     </code></pre>
+<pre><code>  name age role gender
+1    A  20   DJ      F
+2    B  25   MC      M
+3    C  21   DJ      F
+4    D  23 crew      M
+5    E  24   MC      M
+6    F  23   MC      F</code></pre>
 </div>
 </div>
 <p>We have their name, age and two categorical variables about them, their role (if they are a DJ or something else) and their sex (Male/Female).</p>
-<p>Now I can create a network object in igraph using the familiar method you are used to - graph_from_data_frame(). However, We want this network to have all the information possible. For this, we don’t just want the edge information, but also the node level information. TO do this, we tell R that the data = the edgelist.df (a familiar step to you pros now!), and the vertex characteristics are stored in the object we created earlier, vertices.df</p>
+<p>Now I can create a network object in igraph using the familiar method you are used to - graph_from_data_frame(). However, We want this network to have all the information possible. For this, we don’t just want the edge information, but also the node level information. To do this, we tell R that the data = the edgelist.df (a familiar step to you pros now!), and the vertex characteristics are stored in the object we created earlier, vertices.df</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>graph <span class="ot">&lt;-</span> <span class="fu">graph_from_data_frame</span>(<span class="at">d =</span> edges.df, <span class="at">vertices =</span> vertices.df , <span class="at">directed =</span> <span class="cn">FALSE</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>graph</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>IGRAPH 79ba356 UN-- 7 7 -- 
+<pre><code>IGRAPH f2faab9 UN-- 7 7 -- 
 + attr: name (v/c), age (v/n), role (v/c), gender (v/c), freq (e/n),
 | affinity (e/c)
-+ edges from 79ba356 (vertex names):
++ edges from f2faab9 (vertex names):
 [1] A--B A--C A--D A--E A--F E--F F--G</code></pre>
 </div>
 </div>
@@ -459,7 +453,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>Or, we can label the nodes with the frequency to tell a similar story. We do this using the edge.labelargument.</p>
+<p>Or, we can label the nodes with the frequency to tell a similar story. We do this using the edge.label argument.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(graph, <span class="at">edge.label =</span> <span class="fu">E</span>(graph)<span class="sc">$</span>freq)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -485,9 +479,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>Now, let’s combine a few approaches. We will use the same ifelsestatement but will apply it to the colours of the edges. We will also change the edge labels to reflect the affinity label alongside the line type.</p>
+<p>Now, let’s combine a few approaches. We will use the same ifelse statement but will apply it to the colours of the edges. We will also change the edge labels to reflect the affinity label alongside the line type.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>affinity <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(<span class="fu">E</span>(graph)<span class="sc">$</span>affinity <span class="sc">==</span> <span class="st">"pos"</span>, <span class="st">"green"</span>, <span class="st">"red"</span>)</span>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>affinity <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(<span class="fu">E</span>(graph)<span class="sc">$</span>affinity <span class="sc">==</span> <span class="st">"pos"</span>, <span class="st">"blue"</span>, <span class="st">"red"</span>)</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(graph, <span class="at">edge.color =</span> affinity, <span class="at">edge.label =</span> <span class="fu">E</span>(graph)<span class="sc">$</span>affinity, <span class="at">edge.lty =</span> type_affinity)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
@@ -556,7 +550,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>We have done a lot with ifelse statements here. This are great for setting direct parameters or for working with dichotomous categories (i.e.&nbsp;the male/female one we have). However, we may want to create colours for categories that have more than one and then visualise it. We are going to use a differet package, called dplyr to manipulate what we have to create a vertex attribute that reflect colours based on a categorical variable (their role).</p>
+<p>We have done a lot with ifelse statements here. This are great for setting direct parameters or for working with dichotomous categories (i.e.&nbsp;the male/female one we have). However, we may want to create colours for categories that have more than one and then visualise it. We are going to use a different package, called dplyr to manipulate what we have to create a vertex attribute that reflect colours based on a categorical variable (their role).</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -565,21 +559,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>vertices.df <span class="ot">&lt;-</span> vertices.df <span class="sc">%&gt;%</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">role_colour =</span> <span class="fu">ifelse</span>(role <span class="sc">==</span> <span class="st">"DJ"</span>, <span class="st">"blue"</span>, role)) </span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>vertices.df <span class="ot">&lt;-</span> vertices.df <span class="sc">%&gt;%</span></span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">role_colour =</span> <span class="fu">ifelse</span>(role <span class="sc">==</span> <span class="st">"MC"</span>, <span class="st">"red"</span>, role_colour))</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">role_colour =</span> <span class="fu">ifelse</span>(role <span class="sc">==</span> <span class="st">"MC"</span>, <span class="st">"ivory"</span>, role_colour))</span>
 <span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>vertices.df <span class="ot">&lt;-</span> vertices.df <span class="sc">%&gt;%</span></span>
 <span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">role_colour =</span> <span class="fu">ifelse</span>(role <span class="sc">==</span> <span class="st">"crew"</span>, <span class="st">"green"</span>, role_colour))</span>
 <span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(vertices.df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 5
-  name    age role  gender role_colour
-  &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;      
-1 A        20 DJ    F      blue       
-2 B        25 MC    M      red        
-3 C        21 DJ    F      blue       
-4 D        23 crew  M      green      
-5 E        24 MC    M      red        
-6 F        23 MC    F      red        </code></pre>
+<pre><code>  name age role gender role_colour
+1    A  20   DJ      F        blue
+2    B  25   MC      M       ivory
+3    C  21   DJ      F        blue
+4    D  23 crew      M       green
+5    E  24   MC      M       ivory
+6    F  23   MC      F       ivory</code></pre>
 </div>
 </div>
 <p>Now, let’s recreate our network object following the above method.</p>
@@ -588,10 +580,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>graph</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>IGRAPH 7a486d6 UN-- 7 7 -- 
+<pre><code>IGRAPH f3764bb UN-- 7 7 -- 
 + attr: name (v/c), age (v/n), role (v/c), gender (v/c), role_colour
 | (v/c), freq (e/n), affinity (e/c)
-+ edges from 7a486d6 (vertex names):
++ edges from f3764bb (vertex names):
 [1] A--B A--C A--D A--E A--F E--F F--G</code></pre>
 </div>
 </div>

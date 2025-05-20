@@ -23,7 +23,7 @@ This is a network of romantic affiliations based on students from the Harry Pott
 PAUSE AND THINK: Is this a directed or an undirected network? What can you see to indicate whether it is or is not?
 
 ```{r}
-my_edge <- read.csv(file.choose(), header = TRUE)
+my_edge <- read.csv(file.choose(), header = TRUE) # select Hogwarts Crushes Edgelist_SELFLOOPS.csv
 
 head(my_edge)
 ```
@@ -36,10 +36,10 @@ The most important element of an adjacency matrix is that the first row and the 
 
 One final characteristic of an adjacency matrix is the line where the same cell overlaps. This is called the diagonal. Cell A2 and B1 are the same name, the coordinates whether those cells meet (B2) can indicate whether that node is connected to itself. The same is true all the way down the diagonal of the matrix. The researcher (YOU) must decide whether self loops/ties make sense given the characteristics/parameters of the network when you collect network data. For example, in a network of sending text messages, it may not make sense.
 
-This code chunk shows you how to bring in a .csv with network data stored as an adjacency matrix. These data are affiliation data between Harry Potter Characters based on their houses in Hogwarts. A 1 represents that they share a house-affiliation tie with the other character (i.e. they are in the same school house). Note, the row.names = 1 option is used here to ensure R recognises row 1 as none names not connections.
+This code chunk shows you how to bring in a .csv with network data stored as an adjacency matrix. These data are the same data as before - crushes between Harry Potter Characters. Note, the row.names = 1 option is used here to ensure R recognises row 1 as names not connections.
 
 ```{r}
-my_adj  <- read.csv(file.choose(), row.names=1) 
+my_adj  <- read.csv(file.choose(), row.names=1) # select Hogwarts Crushes matrix.csv
 
 head(my_adj)
 ```

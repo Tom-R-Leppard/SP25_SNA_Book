@@ -27,6 +27,18 @@
             "title": "Literate programming",
             "type": "article-journal",
             "volume": "27"
+        },
+        {
+            "URL": "https://datascienceacademy.ncsu.edu/courses/course-model/",
+            "author": [
+                {
+                    "family": "DSA"
+                }
+            ],
+            "id": "DSA",
+            "language": "en-US",
+            "title": "ADAPT course model",
+            "type": ""
         }
     ],
     "project_biblios": [
