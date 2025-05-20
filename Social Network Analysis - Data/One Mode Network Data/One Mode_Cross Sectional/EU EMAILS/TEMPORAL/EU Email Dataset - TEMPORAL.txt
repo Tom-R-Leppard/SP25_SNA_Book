@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 Taken from: https://snap.stanford.edu/data/email-Eu-core-temporal.html
@@ -31,4 +32,39 @@ Dataset statistics (email-Eu-core-temporal-Dept4)
 Nodes	142
 Temporal Edges	48141
 Edges in static graph	1375
+=======
+
+
+Taken from: https://snap.stanford.edu/data/email-Eu-core-temporal.html
+
+The network was generated using email data from a large European research institution. We have anonymized information about all incoming and outgoing email between members of the research institution. The e-mails only represent communication between institution members (the core), and the dataset does not contain incoming messages from or outgoing messages to the rest of the world. A directed edge (u, v, t) means that person u sent an e-mail to person v at time t. A separate edge is created for each recipient of the e-mail. We also have four sub-networks corresponding to the communication between members of four different departments at the institution. Node IDs in the sub-networks do not correspond to the same node ID in the entire network.
+
+The static version of this network is the same as the largest weakly connected component of the email-Eu-core network (although the node IDs are not the same).
+
+
+Dataset statistics (email-Eu-core-temporal)
+Nodes	986
+Temporal Edges	332334
+Edges in static graph	24929
+Time span	803 days
+Dataset statistics (email-Eu-core-temporal-Dept1)
+Nodes	309
+Temporal Edges	61046
+Edges in static graph	3031
+Time span	803 days
+Dataset statistics (email-Eu-core-temporal-Dept2)
+Nodes	162
+Temporal Edges	46772
+Edges in static graph	1772
+Time span	803 days
+Dataset statistics (email-Eu-core-temporal-Dept3)
+Nodes	89
+Temporal Edges	12216
+Edges in static graph	1506
+Time span	802 days
+Dataset statistics (email-Eu-core-temporal-Dept4)
+Nodes	142
+Temporal Edges	48141
+Edges in static graph	1375
+>>>>>>> ddd8143eb7ff8ec084dc93d898e06ddac9104947
 Time span	803 days

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Name,house,fake_magic_score,,,
 Harry Potter,g,10,,,
 Ron Weasley,g,6,,,
@@ -14,3 +15,21 @@ Cedric Diggory,h,4,,,s
 McGonagal,g,9,,,
 Voldemort,s,10,,,
 Flitwick,r,8,,,
+=======
+Name,house,fake_magic_score,,,
+Harry Potter,g,10,,,
+Ron Weasley,g,6,,,
+Hermione Granger,g,9,,,
+Ginny Weasley,g,8,,,
+Lily Potter,g,6,,,
+James Potter,g,7,,,
+Severus Snape,s,10,,,
+Nymphadora Tonks,h,7,,,
+Remus Lupin,g,8,,,
+Lavender Brown,g,4,,,
+Cho Chang,r,3,,,
+Cedric Diggory,h,4,,,s
+McGonagal,g,9,,,
+Voldemort,s,10,,,
+Flitwick,r,8,,,
+>>>>>>> ddd8143eb7ff8ec084dc93d898e06ddac9104947

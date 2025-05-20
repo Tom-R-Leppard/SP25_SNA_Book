@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 These data are taken from the Spotify profiles of Grime artists. 
 
 
 Edges represent collaborations between the artists. They are directional indicating who's profile was the collaboration occurred. In this case, an out degree edge indicates an artist appeared on another's profile. An indegree indicates that the featuring artist appeared on the host's profile. 
 
+=======
+These data are taken from the Spotify profiles of Grime artists. 
+
+
+Edges represent collaborations between the artists. They are directional indicating who's profile was the collaboration occurred. In this case, an out degree edge indicates an artist appeared on another's profile. An indegree indicates that the featuring artist appeared on the host's profile. 
+
+>>>>>>> ddd8143eb7ff8ec084dc93d898e06ddac9104947
 There are five time points in these data (2008 - 2016) every two years. 

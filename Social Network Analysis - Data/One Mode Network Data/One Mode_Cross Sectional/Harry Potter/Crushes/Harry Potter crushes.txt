@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 Harry Potter Crush network. 
 
 This is a handcoded network based on the romantic connections between characters from the Harry Potter series. This is a directed network stored as an edgelist. 
 
+=======
+Harry Potter Crush network. 
+
+This is a handcoded network based on the romantic connections between characters from the Harry Potter series. This is a directed network stored as an edgelist. 
+
+>>>>>>> ddd8143eb7ff8ec084dc93d898e06ddac9104947
 The attributes file include some made up information about these characters. Magic score is a score ranking from 0-10 where 10 indicates high magic abilities. House represents what known Hogwarts house the character is a part of. 

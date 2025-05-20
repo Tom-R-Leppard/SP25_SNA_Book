@@ -133,7 +133,7 @@ To do this, we will return to the original dataframe storing information about t
 vertices.df <- vertices.df %>%
   mutate(role_colour = ifelse(role == "DJ", "blue", role)) 
 vertices.df <- vertices.df %>%
-  mutate(role_colour = ifelse(role == "MC", "ivory", role_colour))
+  mutate(role_colour = ifelse(role == "MC", "pink", role_colour))
 vertices.df <- vertices.df %>%
   mutate(role_colour = ifelse(role == "crew", "green", role_colour))
 

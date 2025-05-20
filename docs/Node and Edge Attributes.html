@@ -419,10 +419,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>graph</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>IGRAPH f2faab9 UN-- 7 7 -- 
+<pre><code>IGRAPH 21d45a4 UN-- 7 7 -- 
 + attr: name (v/c), age (v/n), role (v/c), gender (v/c), freq (e/n),
 | affinity (e/c)
-+ edges from f2faab9 (vertex names):
++ edges from 21d45a4 (vertex names):
 [1] A--B A--C A--D A--E A--F E--F F--G</code></pre>
 </div>
 </div>
@@ -559,7 +559,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>vertices.df <span class="ot">&lt;-</span> vertices.df <span class="sc">%&gt;%</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">role_colour =</span> <span class="fu">ifelse</span>(role <span class="sc">==</span> <span class="st">"DJ"</span>, <span class="st">"blue"</span>, role)) </span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>vertices.df <span class="ot">&lt;-</span> vertices.df <span class="sc">%&gt;%</span></span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">role_colour =</span> <span class="fu">ifelse</span>(role <span class="sc">==</span> <span class="st">"MC"</span>, <span class="st">"ivory"</span>, role_colour))</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">role_colour =</span> <span class="fu">ifelse</span>(role <span class="sc">==</span> <span class="st">"MC"</span>, <span class="st">"pink"</span>, role_colour))</span>
 <span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>vertices.df <span class="ot">&lt;-</span> vertices.df <span class="sc">%&gt;%</span></span>
 <span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">role_colour =</span> <span class="fu">ifelse</span>(role <span class="sc">==</span> <span class="st">"crew"</span>, <span class="st">"green"</span>, role_colour))</span>
 <span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a></span>
@@ -567,11 +567,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-stdout">
 <pre><code>  name age role gender role_colour
 1    A  20   DJ      F        blue
-2    B  25   MC      M       ivory
+2    B  25   MC      M        pink
 3    C  21   DJ      F        blue
 4    D  23 crew      M       green
-5    E  24   MC      M       ivory
-6    F  23   MC      F       ivory</code></pre>
+5    E  24   MC      M        pink
+6    F  23   MC      F        pink</code></pre>
 </div>
 </div>
 <p>Now, let’s recreate our network object following the above method.</p>
@@ -580,10 +580,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>graph</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>IGRAPH f3764bb UN-- 7 7 -- 
+<pre><code>IGRAPH 227603b UN-- 7 7 -- 
 + attr: name (v/c), age (v/n), role (v/c), gender (v/c), role_colour
 | (v/c), freq (e/n), affinity (e/c)
-+ edges from f3764bb (vertex names):
++ edges from 227603b (vertex names):
 [1] A--B A--C A--D A--E A--F E--F F--G</code></pre>
 </div>
 </div>
