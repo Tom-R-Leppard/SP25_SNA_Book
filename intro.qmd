@@ -18,12 +18,12 @@ I do not go into detail here but suffice it to say that the ADAPT model comprise
 
 This book was created from a course taught at the DSA under the direction of the ADAPT model. It's goal is not to serve as an exemplar of the Model, but rather to encourage instructors to engage with the "spirit" of the model. Consider teaching project-based courses that centre the interests of your students - maximising their agency. Further, consider teaching computational skills in such a way as to open its content to all interested parties.
 
-Each of the units and modules in this book are designed with students in mind. I discuss each elements of the ADAPT model in the Unit introduction chapters. The purpose of this book is to enact these principles and enable other instructors wishing to teach social network analysis to do the same.
+Each of the units and modules in this book are designed with students in mind. I discuss each elements of the ADAPT model in the Unit introduction chapters. The purpose of this book is to enact these principles and enable other instructors wishing to teach social network analysis to do the same. All data used in this book is available in the [Github repo](https://github.com/Tom-R-Leppard/SP25_SNA_Book/tree/main/Social%20Network%20Analysis%20-%20Data). Alternatively, you may wish to use other data.
 
 ![ADAPT Model Icon - [DSA](https://datascienceacademy.ncsu.edu/courses/course-model/)](ADAPT%20-%20ICON.png)
 
 ## ADAPT For Students
 
-Students, all you need to know is that you will be working on a project for the duration of the course. For more details see [the Final Project Instructions](Final%20Project%20Instructions.qmd).
+Students, you need to know is that you will be working on a project for the duration of the course. For more details see [the Final Project Instructions](Final%20Project%20Instructions.qmd).
 
-Each unit and assignment is a milestone in your project development. For this project, you may select any social network data that appeals to you. I have collated quite a few from various sources available on a [Google Drive](https://drive.google.com/drive/folders/18BRSRSLjBQcbYOiu59cWZ4fzmmK3ZoWJ) (you will need to sign in with your NCSU email to access it). Alternatively, you may wish to explore other network data (from places like the [network repository](https://networkrepository.com/index.php), [Kaggle](https://www.kaggle.com/) or others).
+Each unit and assignment is a milestone in your project development. For this project, you may select any social network data that appeals to you. I have collated quite a few from various sources available on the [Github repo](https://github.com/Tom-R-Leppard/SP25_SNA_Book/tree/main/Social%20Network%20Analysis%20-%20Data). Alternatively, you may wish to explore other network data (from places like the [network repository](https://networkrepository.com/index.php), [Kaggle](https://www.kaggle.com/) or others). **Pay attention to the introductions of each unit. There are learning objectives, project milestones, and tips for preparing to do this professionally.**

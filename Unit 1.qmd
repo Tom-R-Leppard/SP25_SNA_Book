@@ -1,6 +1,6 @@
 # Unit 1
 
-## Learning Elements 
+## Learning Elements
 
 In this unit, we will cover how to transform and wrangle network data. Network data aren't always clean. Nor are they always representative of an entire group. As the researcher, it is up to you to learn best practices of cleaning your data. It is also important for you to know as much as possible about the group you are studying. For your research results to be generalisable to the group you are studying, your data need to truly represent the group you are studying (whether you have sample or population data). This process might include trimming or adding to your network. Or it might include making various subgraphs of your network.
 
@@ -17,7 +17,7 @@ By the end of this unit you will:
 ## Project Milestones
 
 | Milestone (assignments linked) | Explanation |
-|--------------------------------------|----------------------------------|
+|----|----|
 | [My Ego Network](A1_My%20Ego%20Network.qmd) | Students will draw their own ego network following an assignment in class. |
 | [Project Prospectus](A2_Project%20Prospectus.qmd) | Students are expected to discuss potential project ideas, possible sources of data, and research questions they could explore. |
 

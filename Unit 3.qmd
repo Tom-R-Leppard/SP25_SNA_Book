@@ -17,7 +17,7 @@ By the end of this unit you will:
 ## Project Milestones
 
 | Milestone (assignments linked) | Explanation |
-|------------------------------------|------------------------------------|
+|----|----|
 | [Final Project](Final%20Project%20Instructions.qmd) | Students will perform an exploratory analysis using the data they have been working on all semester long. The aim of this project is for you to do an in-depth exploration which includes descriptions, visualisations, and some primary analysis.   |
 
 ## Workforce Preparation
