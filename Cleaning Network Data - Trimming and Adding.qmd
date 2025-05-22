@@ -8,18 +8,30 @@ library(igraph)
 
 # Cleaning Network Data - Trimming and Adding
 
-This script is intended to help you to clean up network data that you have collected or got access to. One very common issue with cleaning network data is knowing what to do with isolates. Isolates are those who are a part of your network, but who have no connections to others in the group. Isolates are stored in network data differently depending on how your data are stored.
+This script is intended to help you to clean up network data that you have collected or got access to.
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **LEARNING ELEMENTS - Examining Data and Practicing Wrangling**                                                                                                                                    |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| -   Data are not always clean, but are messy! Part of analysing your network is learning about your data. What parts are there and what is missing? That is why we need to learn how to clean data |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+## Deleting Nodes.
+To delete nodes from your network, you use the delete_vertices() function in igraph. There are several reasons you may wish to remove nodes from the network. One very common issue with cleaning network data is knowing what to do with nodes isolates. Isolates are those who are a part of your network, but who have no connections to others in the group. Isolates are stored in network data differently depending on how your data are stored.
 
 If your data are stored in an adjacency matrix, then isolates are those with no 1s in the matrix. Ensuring that R recognises them as isolated is very simple. Bring in the data, and then convert it into a matrix. Any that are isolated will show as isolates.
 
 ```{r}
 hog_crush_matrix <- read.csv(file.choose(), row.names = 1, header = TRUE) # select Hogwarts Crushes matrix.csv
+
 crush_matrix <- as.matrix(hog_crush_matrix)
+
 hog_crush_net_mat <- graph_from_adjacency_matrix(crush_matrix, mode = "directed", diag = FALSE)
+
 plot(hog_crush_net_mat)
 ```
 
-However, things are not as straightforward when you are working with edgelists.With this structure, you have only two columns, one for senders and the other for receivers. If there is an individual in the group who neither sends nor receives, what do you do with them? One way of recording such isolates in an edgelist is list them as connected to themselves (known as a self loop). Take a look at this edgelist and you will see that these individuals are connected to themselves
+However, things are not as straightforward when you are working with edgelists. With this structure, you have only two columns, one for senders and the other for receivers. If there is an individual in the group who neither sends nor receives, but is a legitimate participant of the group, what do you do with them? One way of recording such isolates in an edgelist is list them as connected to themselves (known as a self loop). Take a look at this edgelist and you will see that these individuals are connected to themselves
 
 ```{r}
 hog_crush_correct <- read.csv(file.choose(), header=TRUE) # select Hogwarts Crushes Edgelist_SELFLOOPS.csv
@@ -29,18 +41,11 @@ hog_crush_correct
 ```
 
 Now when you make this a graph object R does something different.
-
 ```{r}
 Crush_correct_net <-  graph_from_data_frame(hog_crush_correct, directed = TRUE)
 plot(Crush_correct_net)
 ```
-
-They have self looped edges!!! These do not look great. To Remove them, you can use the delete_edges() command and select the edges that are looped by using the E() command coupled with the is.loop() option.This is also something you will need to remember to do every time you bring in an edgelist with isolates.
-
-```{r}
-Crush_correct_net  <- delete_edges(Crush_correct_net , E(Crush_correct_net )[which_loop(Crush_correct_net )])
-plot(Crush_correct_net)
-```
+These do not look great, and can cause confusion to viewers of the network visual and even influence some of the mathematics of your analysis. We will deal with those in a moment. 
 
 Another way to deal with isolates from an edgelist is to list noone in the "to" column. In other words, you list the name of the person in your network but leave the cell next to them blank. However, this approach also has additional steps to take before it is clean and ready to go.
 
@@ -74,48 +79,41 @@ crush_wrong_net <- delete_vertices(crush_wrong_net, "")
 plot(crush_wrong_net)
 ```
 
-Other things to do to clean a network object once in Rstudio.
+Sometimes, you want to remove all of the isolated nodes from your network because you only care about those who have connections to others. To do this, you identify those with no connections (degree = 0) and them remove them from your network. I suggest making a new object with this sub network.
 
-You may want to add or remove nodes and vertices (nodes) from your network. Only do this if you have legitimate reason to.
+```{r} hog_crush_isol <- which(degree(Crush_correct_net)==0)}
+```
 
-Deleting Nodes. You might decide to remove one or more nodes from your network. For example, in this hogwarts dataset, we may want to remove those who are not students at Hogwarts (i.e. remove teachers or adults). To do this, you would use the delete_vertices() option
+Now you use the delete_vertices() command and remove those in the vector you just created (those with degree = 0)
 
-Basic - You can delete them one-by-one.
+```{r} Crush_no_isol <-delete_vertices(Crush_correct_net, hog_crush_isol)}
+plot(Crush_no_isol)
+```
+
+Now this new object has only those nodes with ties to others in the network.
+
+
+Other than isolates, you you might decide to remove one or more specific nodes from your network. For example, in this hogwarts dataset, we may want to remove those who are not students at Hogwarts (i.e. remove teachers or adults). To do this, you would use the delete_vertices() option.
+
+One approach is to delete them one-by-one and identify them by their name. 
 
 ```{r}
 hog_crush_students <- delete_vertices(Crush_correct_net, "Voldemort")
 plot(hog_crush_students)
 ```
 
-Pro tip - if you are deleting multiple, it is worth making a vector with all the names of those you want to remove, then use the delete_vertices() command
-
+A quicker way, if you are deleting multiple, is to make a vector with all the names of those you want to remove, then use the delete_vertices() command.
 ```{r}
 hog_adults <- c("Severus Snape", "Lily Potter", "James Potter", "Nymphadora Tonks", "Remus Lupin", "Voldemort", "Flitwick", "McGonagal", "Madeye")
+
 hog_crush_students <- delete_vertices(Crush_correct_net, hog_adults)
+
 plot(hog_crush_students)
 ```
 
 This new version removed all unwanted nodes at once.
 
-## Deleting isolates.
-
-Sometimes, you want to remove the isolated nodes from your network because you only care about those who have connections to others. To do this, you identify those with no connections (degree = 0) and them remove them from your network. I suggest making a new object with this sub network.
-
-```{r}
-hog_crush_isol <- which(degree(Crush_correct_net)==0)
-```
-
-Now you use the delete_vertices() command and remove those in the vector you just created (those with degree = 0)
-
-```{r}
-Crush_no_isol <-delete_vertices(Crush_correct_net, hog_crush_isol)
-plot(Crush_no_isol)
-```
-
-Now this new object has only those nodes with ties to others in the network.
-
 ## Adding Nodes
-
 Use add.vertices(graph name, number of additional vertices, attribute = )
 
 ```{r}
@@ -124,9 +122,14 @@ plot(crush_added)
 ```
 
 ## Deleting edges
+To remove unwanted edges you can use the delete_edges() command. Let's begin with our edgelist from above and select the edges that are looped by using the E() command coupled with the is.loop() option. That way we can delete the selfloops 
+```{r}
+Crush_correct_net  <- delete_edges(Crush_correct_net , E(Crush_correct_net )[which_loop(Crush_correct_net )])
+plot(Crush_correct_net)
+```
 
-You may want to delete edges between two nodes.
 
+Additionally, you may want to delete edges between two specific nodes.
 ```{r}
 edges_to_delete <- E(Crush_correct_net)[(.from("Remus Lupin") & .to("Nymphadora Tonks"))]
 Crush_edge_delete <- delete_edges(Crush_correct_net, edges_to_delete)

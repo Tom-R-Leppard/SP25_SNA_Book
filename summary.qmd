@@ -4,6 +4,6 @@ First off, well done! You have now learned how to wrangle, visualise and analyse
 
 I hope you have enjoyed the course.
 
-## Where Now? 
+## Where Now?
 
 There is even more to social network analysis! If this course has sparked a fire for you - I hope it has - then there is even more for you to learn. Consider learning more about different types of analysis you can do on your network.
