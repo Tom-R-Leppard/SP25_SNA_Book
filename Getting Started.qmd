@@ -16,14 +16,14 @@ If you are new to R or new to coding, wonderful! This is a great way to start ge
 
 To get going, you will need to download both R and RStudio. Yes, these are separate downloads. Think of R as the engine, and Rstudio as the car you are driving. RStudio makes it easy to do the things you want to do while R, (the 'engine') actually drives everything you do. To do this, follow the instructions on the [Posit](https://posit.co/download/rstudio-desktop/) website. At the time of the publication of this book, this link has 2 steps, one to install R and the other to install RStudio. Depending on your machine (if you have a windows, mac or an operating system like Linux) there are different instructions. Download and install the the ones you need.
 
-
 ## Option 2: Posit Cloud
 
-If you do not want to or cannot download R/RStudio, there are a few ways to use it for free, albeit limited, online. Consider making a free account on [Posit Cloud](https://login.posit.cloud/login?redirect=%2Foauth%2Fauthorize%3Fredirect_uri%3Dhttps%253A%252F%252Fposit.cloud%252Flogin%26client_id%3Dposit-cloud%26response_type%3Dcode%26show_auth%3D0&product=cloud). 
+If you do not want to or cannot download R/RStudio, there are a few ways to use it for free, albeit limited, online. Consider making a free account on [Posit Cloud](https://login.posit.cloud/login?redirect=%2Foauth%2Fauthorize%3Fredirect_uri%3Dhttps%253A%252F%252Fposit.cloud%252Flogin%26client_id%3Dposit-cloud%26response_type%3Dcode%26show_auth%3D0&product=cloud).
 
-Once you have made your account, click on the tab at the top right to create a new project. Select RStudio. From here on its mostly the same with a few tweaks, pay attention below for a few differences between posit cloud and downloading RStudio.  
+Once you have made your account, click on the tab at the top right to create a new project. Select RStudio. From here on its mostly the same with a few tweaks, pay attention below for a few differences between posit cloud and downloading RStudio.
 
 ## A little about RStudio
+
 Once you have installed it, or created your new project on Posit Cloud, go ahead and open RStudio. When you open RStudio, you will see four windows, let's walk through those for a moment. There are multiple uses for each window. However, for now, we will discuss them how we will be using them just to get you started.
 
 1.  Starting from the top left, you have a window for your script files. Think of this as a place to write, run, and store code. Here, you can open different files including script, markdown, quarto and others. For the sake of what we are doing in this book, just focus on those three types.
@@ -35,23 +35,27 @@ Once you have installed it, or created your new project on Posit Cloud, go ahead
 4.  Finally, on the bottom right there are multiple reasons we use this window. Mostly, the network visualisations we will create will appear in the 'Plots' or 'Viewer' tab.
 
 ### On Packages
-The final thing you need to know is that we will be using multiple types of commands throughout this book. These are grouped into what are called 'packages.' Think of packages as mini dictionaries for different languages. In this case, however, these languages enable you to do different things with/to your data. 
+
+The final thing you need to know is that we will be using multiple types of commands throughout this book. These are grouped into what are called 'packages.' Think of packages as mini dictionaries for different languages. In this case, however, these languages enable you to do different things with/to your data.
 
 To access these packages, you first need to install them. You can do this, using the following function.
+
 ```{r eval = FALSE}
 install.packages("igraph")
 ```
 
-The above code will download the package to your machine (or your project space on posit.cloud). Then, you need to tell R which "language" you are coding in each time you open up RStudio. To do this, you use the 'library()' function. Keep an eye out for the various packages use. If you see a command to bring in a package you don't recognise, you will need to install it (just replace igraph with the name of the other package in the above chunk). 
+The above code will download the package to your machine (or your project space on posit.cloud). Then, you need to tell R which "language" you are coding in each time you open up RStudio. To do this, you use the 'library()' function. Keep an eye out for the various packages use. If you see a command to bring in a package you don't recognise, you will need to install it (just replace igraph with the name of the other package in the above chunk).
+
 ```{r eval = FALSE}
 library(igraph)
 ```
 
 ### Loading Data
-Great stuff! You now have RStudio sorted out and you (if you ran the above) have installed igraph. Now, the last thing you need is the data that you are going to use and to bring it into the environment. There are many ways that you can do this, but I have provided you, what I think, is the simplest low-tech method that you can use across both on posit cloud or your own machine. 
 
-In each of the chapters, near the beginning of the chapter, you will see a line with the function 'read.csv()' and the option 'file.choose()' nested inside it. This, when run, will open a window on your machine to access your files on the computer. You need to select the .csv file that houses the data we are using in each chapter. I have commented in each chunk right after that command which .csv file you are to select. 
+Great stuff! You now have RStudio sorted out and you (if you ran the above) have installed igraph. Now, the last thing you need is the data that you are going to use and to bring it into the environment. There are many ways that you can do this, but I have provided you, what I think, is the simplest low-tech method that you can use across both on posit cloud or your own machine.
 
-If you are on posit.cloud, that window cannot access your computer but the 'Files' tab in the bottom right window. Before you can run the function, you will need to upload the .csv files that you will be calling into that space. Click on the 'Files' tab and you will see a button that says, upload. You need to upload the data into that space and then run the read.csv() code. 
+In each of the chapters, near the beginning of the chapter, you will see a line with the function 'read.csv()' and the option 'file.choose()' nested inside it. This, when run, will open a window on your machine to access your files on the computer. You need to select the .csv file that houses the data we are using in each chapter. I have commented in each chunk right after that command which .csv file you are to select.
 
-The only thing left to do, is to head over to the [Github repo](https://github.com/Tom-R-Leppard/SP25_SNA_Book/tree/main/Social%20Network%20Analysis%20-%20Data) and get started! 
+If you are on posit.cloud, that window cannot access your computer but the 'Files' tab in the bottom right window. Before you can run the function, you will need to upload the .csv files that you will be calling into that space. Click on the 'Files' tab and you will see a button that says, upload. You need to upload the data into that space and then run the read.csv() code.
+
+The only thing left to do, is to head over to the [Github repo](https://github.com/Tom-R-Leppard/SP25_SNA_Book/tree/main/Social%20Network%20Analysis%20-%20Data) and get started!

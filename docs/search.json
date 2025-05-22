@@ -2,23 +2,23 @@
   {
     "objectID": "Unit 2.html",
     "href": "Unit 2.html",
-    "title": "9  Unit 2",
+    "title": "10  Unit 2",
     "section": "",
-    "text": "9.1 Learning Elements\nIn this unit, we will cover how to visualise network data. I maintain that visualisations serve two main purposes. One for you, the data scientist and one for your constituents. As such, visualisations can tell you more about your data. Visualising your network might inform you that you need to do some more cleaning (self loops, extraneous nodes etc.). It might even drive some of your questions that need answering about this network. For example, seeing that there are a few highly central figures in the network may influence you to ask specific questions about those individuals. Additionally, you need to create visualisations that engage stakeholders and tell the story of your analysis.\nBy the end of this unit you will:",
+    "text": "10.1 Learning Elements\nIn this unit, we will cover how to visualise network data. I maintain that visualisations serve two main purposes. One for you, the data scientist and one for your constituents. As such, visualisations can tell you more about your data. Visualising your network might inform you that you need to do some more cleaning (self loops, extraneous nodes etc.). It might even drive some of your questions that need answering about this network. For example, seeing that there are a few highly central figures in the network may influence you to ask specific questions about those individuals. Additionally, you need to create visualisations that engage stakeholders and tell the story of your analysis.\nBy the end of this unit you will:",
     "crumbs": [
       " Unit 2: Visualising Network Data",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Unit 2</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Unit 2</span>"
     ]
   },
   {
     "objectID": "Unit 2.html#project-milestones",
     "href": "Unit 2.html#project-milestones",
-    "title": "9  Unit 2",
-    "section": "9.2 Project Milestones",
-    "text": "9.2 Project Milestones\n\n\n\nMilestone (assignments linked)\nExplanation\n\n\n\n\nData Exploration\nStudents will give descriptions of the network data they are using. They will discuss possible transformations to the data that they will need to perform before analysing. They may also provide basic visualisations to demonstrate this.\n\n\nVisualisations\nStudents will provide multiple visualisations of the network they are studying. This assignment requires students to demonstrate they have learned how to make basic visualization, clean visualization, and more advanced visualisations (i.e. at least one dynamic or interactive version of their network).",
+    "title": "10  Unit 2",
+    "section": "10.2 Project Milestones",
+    "text": "10.2 Project Milestones\n\n\n\nMilestone (assignments linked)\nExplanation\n\n\n\n\nData Exploration\nStudents will give descriptions of the network data they are using. They will discuss possible transformations to the data that they will need to perform before analysing. They may also provide basic visualisations to demonstrate this.\n\n\nVisualisations\nStudents will provide multiple visualisations of the network they are studying. This assignment requires students to demonstrate they have learned how to make basic visualization, clean visualization, and more advanced visualisations (i.e. at least one dynamic or interactive version of their network).",
     "crumbs": [
       " Unit 2: Visualising Network Data",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Unit 2</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Unit 2</span>"
     ]
   },
   {
@@ -650,11 +650,11 @@
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "23  Summary",
+    "title": "24  Summary",
     "section": "",
-    "text": "23.1 Where Now?\nFirst off, well done! You have now learned how to wrangle, visualise and analyse network data. One final word, this course has presented the process of network analysis in a linear fashion with each step building on the next. That is on purpose - to help you build a project by the end of the semester. However, this process is iterative. Always be mindful of the science behind the data science. Just because the data might tell you something, the science - the process - you used to get there is your responsibility. You need to make sure the data are clean and as representative as possible. Or that you don’t make extrapolations that go beyond your data. Don’t be so in love with the findings that you miss that you need to clean the data a little more. It is always a best practice to keep a record of all of your work and understand what the data’s limits are (i.e. who is missing?, who could be missing?). Always be transparent about your process and your limitations.\nI hope you have enjoyed the course.\nThere is even more to social network analysis! If this course has sparked a fire for you - I hope it has - then there is even more for you to learn. Consider learning more about different types of analysis you can do on your network.",
+    "text": "24.1 Where Now?\nFirst off, well done! You have now learned how to wrangle, visualise and analyse network data. One final word, this course has presented the process of network analysis in a linear fashion with each step building on the next. That is on purpose - to help you build a project by the end of the semester. However, this process is iterative. Always be mindful of the science behind the data science. Just because the data might tell you something, the science - the process - you used to get there is your responsibility. You need to make sure the data are clean and as representative as possible. Or that you don’t make extrapolations that go beyond your data. Don’t be so in love with the findings that you miss that you need to clean the data a little more. It is always a best practice to keep a record of all of your work and understand what the data’s limits are (i.e. who is missing?, who could be missing?). Always be transparent about your process and your limitations.\nI hope you have enjoyed the course.\nThere is even more to social network analysis! If this course has sparked a fire for you - I hope it has - then there is even more for you to learn. Consider learning more about different types of analysis you can do on your network.",
     "crumbs": [
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Summary</span>"
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Summary</span>"
     ]
   },
   {
@@ -734,12 +734,12 @@
   {
     "objectID": "Network Data Structures.html",
     "href": "Network Data Structures.html",
-    "title": "3  Introducing Network Data Structures",
+    "title": "4  Introducing Network Data Structures",
     "section": "",
-    "text": "3.1 Edgelists\nOne of the first steps to wrangling network data is to understand how it is strcutured. This section will walk you through the basic ways that network data is structured and demonstrate how to bring them into the R envrionment. During class time we will work on converting these data objects into network objects in R using the igraph package.\nKeep in mind, you be using network data that is already stored into these formats or may be formatting original data. We will first discuss edgelists and then adjacency matrices.\nRegardless of how your data is structred, the easiest way to store any network data is in a .csv excel file. We can use the read.csv() function in base R to read it into our environment.\nYour data may be stored as an edgelist. An edgelist is what it says, a list of edges or relationships that exist between the nodes in your network. Since these are edges between nodes, the data are stored in a dyadic format (pairs).\nSplit across two columns you have the names of everyone in the network that share a connection. The basic format for any edgelist is to have a ‘from’ and a ‘to’ column. The titles of the columns are arbitrary, but are helpful for you as the researcher, especially if the connection is directed. You may wish to call the columns ‘sender’ and ‘receiver.’\nThis code chunk shows how to read in a .csv that is formatted as an edgelist. Note, the header = TRUE option tells R that the first row are headers (column names). Using the head() command, we see the first lines of these network data.\nThis is a network of romantic affiliations based on students from the Harry Potter saga. Note the column names reflect this.\nPAUSE AND THINK: Is this a directed or an undirected network? What can you see to indicate whether it is or is not?\nmy_edge &lt;- read.csv(file.choose(), header = TRUE) # select Hogwarts Crushes Edgelist_SELFLOOPS.csv\n\nhead(my_edge)\n\n           Crusher            Crush\n1     Harry Potter    Ginny Weasley\n2     Harry Potter        Cho Chang\n3      Ron Weasley Hermione Granger\n4 Hermione Granger      Ron Weasley\n5      Ron Weasley   Lavender Brown\n6    Ginny Weasley     Harry Potter",
+    "text": "4.1 Edgelists\nOne of the first steps to wrangling network data is to understand how it is strcutured. This section will walk you through the basic ways that network data is structured and demonstrate how to bring them into the R envrionment. Then, we will work on converting these data objects into network objects in R using the igraph package.\nKeep in mind, you be using network data that is already stored into these formats or may be formatting original data. We will first discuss edgelists and then adjacency matrices. Regardless of how your data is structred, the easiest way to store any network data is in a .csv excel file. We can use the read.csv() function in base R to read it into our environment.\nBefore we dive in, let’s talk about direction. This is important because it influences the way we create the network. A network can be either directed or undirected, meaning that the ties existing between the nodes could be one way or inherently mutual. The direction depends on whether a person can ‘nominates’ another. A simple example of an undirected connection is a family tie, whereas friendship could be directed. One person might say that they are friends with someone, but that someone may not return the friendship.\nYour data may be stored as an edgelist. An edgelist is what it says, a list of edges or relationships that exist between the nodes in your network. Since these are edges between nodes, the data are stored in a dyadic format (pairs).\nSplit across two columns you have the names of everyone in the network that share a connection. The basic format for any edgelist is to have a ‘from’ and a ‘to’ column. The titles of the columns are arbitrary, but are helpful for you as the researcher, especially if the connection is directed. You may wish to call the columns ‘sender’ and ‘receiver.’\nThis code chunk shows how to read in a .csv that is formatted as an edgelist. Note, the header = TRUE option tells R that the first row are headers (column names). Using the head() command, we see the first lines of these network data.\nThis is a network of romantic affiliations based on students from the Harry Potter saga. Note the column names reflect this.\nPAUSE AND THINK: Is this a directed or an undirected network? What can you see to indicate whether it is or is not?\nmy_edge &lt;- read.csv(file.choose(), header = TRUE) # select Hogwarts Crushes Edgelist_SELFLOOPS.csv\n\nhead(my_edge)\n\n           Crusher            Crush\n1     Harry Potter    Ginny Weasley\n2     Harry Potter        Cho Chang\n3      Ron Weasley Hermione Granger\n4 Hermione Granger      Ron Weasley\n5      Ron Weasley   Lavender Brown\n6    Ginny Weasley     Harry Potter\nThis network is directed. These are individuals who have romantic feeling for others in the storyline of Harry Potter. Romantic ties, may not be reciprocated (poor Snape!). As you look through this network, you can see the ties that exist. Take a look at the first six rows above, Harry ‘sends’ to Ginny, he also sends to Cho. You could look through the whole dataset and identify where the ties exist and who sends to whom!",
     "crumbs": [
       " Unit 1: Cleaning and Transforming Network Data",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introducing Network Data Structures</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Introducing Network Data Structures</span>"
     ]
   },
   {
@@ -756,45 +756,45 @@
   {
     "objectID": "Cleaning Network Data - Trimming and Adding.html",
     "href": "Cleaning Network Data - Trimming and Adding.html",
-    "title": "4  Cleaning Network Data - Trimming and Adding",
+    "title": "5  Cleaning Network Data - Trimming and Adding",
     "section": "",
-    "text": "4.1 Deleting isolates.\nThis script is intended to help you to clean up network data that you have collected or got access to. One very common issue with cleaning network data is knowing what to do with isolates. Isolates are those who are a part of your network, but who have no connections to others in the group. Isolates are stored in network data differently depending on how your data are stored.\nIf your data are stored in an adjacency matrix, then isolates are those with no 1s in the matrix. Ensuring that R recognises them as isolated is very simple. Bring in the data, and then convert it into a matrix. Any that are isolated will show as isolates.\nHowever, things are not as straightforward when you are working with edgelists.With this structure, you have only two columns, one for senders and the other for receivers. If there is an individual in the group who neither sends nor receives, what do you do with them? One way of recording such isolates in an edgelist is list them as connected to themselves (known as a self loop). Take a look at this edgelist and you will see that these individuals are connected to themselves\nNow when you make this a graph object R does something different.\nThey have self looped edges!!! These do not look great. To Remove them, you can use the delete_edges() command and select the edges that are looped by using the E() command coupled with the is.loop() option.This is also something you will need to remember to do every time you bring in an edgelist with isolates.\nAnother way to deal with isolates from an edgelist is to list noone in the “to” column. In other words, you list the name of the person in your network but leave the cell next to them blank. However, this approach also has additional steps to take before it is clean and ready to go.\nTake a look at the edgeist now it is in and you will see I added a few more characters to this group: Madeye, Flitwick, McGonagal, and Voldemort. They are all listed in the “Crusher” (from) column but have no connection to anyone in the “crush” column. This makes sense, since we know little about their romances from the Harry Potter Saga.\nWhen we make this a graph object, R does something funky.\nThe new characters are all connected to a nameless node and it looks, on visual inspection, that they all have a crush on the same person.\nI have highlighted that node in the visualization below. The red node is nameless because the edgelist has empty (nameless) cells.\nOne way to deal with this is to delete the superfluous node. You do this using the delete_vertex() function. ##This fixes the issue once you have the data in Rstudio, but the issue still exists in your dataset. If you choose to structure your network data this way, you will have to remember to remove this node every time. This may be harder to do/realise when dealing with large dense networks.\nOther things to do to clean a network object once in Rstudio.\nYou may want to add or remove nodes and vertices (nodes) from your network. Only do this if you have legitimate reason to.\nDeleting Nodes. You might decide to remove one or more nodes from your network. For example, in this hogwarts dataset, we may want to remove those who are not students at Hogwarts (i.e. remove teachers or adults). To do this, you would use the delete_vertices() option\nBasic - You can delete them one-by-one.\nPro tip - if you are deleting multiple, it is worth making a vector with all the names of those you want to remove, then use the delete_vertices() command\nThis new version removed all unwanted nodes at once.\nSometimes, you want to remove the isolated nodes from your network because you only care about those who have connections to others. To do this, you identify those with no connections (degree = 0) and them remove them from your network. I suggest making a new object with this sub network.\nhog_crush_isol &lt;- which(degree(Crush_correct_net)==0)\nNow you use the delete_vertices() command and remove those in the vector you just created (those with degree = 0)\nCrush_no_isol &lt;-delete_vertices(Crush_correct_net, hog_crush_isol)\nplot(Crush_no_isol)\nNow this new object has only those nodes with ties to others in the network.",
+    "text": "5.1 Deleting Nodes.\nThis script is intended to help you to clean up network data that you have collected or got access to.\nTo delete nodes from your network, you use the delete_vertices() function in igraph. There are several reasons you may wish to remove nodes from the network. One very common issue with cleaning network data is knowing what to do with nodes isolates. Isolates are those who are a part of your network, but who have no connections to others in the group. Isolates are stored in network data differently depending on how your data are stored.\nIf your data are stored in an adjacency matrix, then isolates are those with no 1s in the matrix. Ensuring that R recognises them as isolated is very simple. Bring in the data, and then convert it into a matrix. Any that are isolated will show as isolates.\nhog_crush_matrix &lt;- read.csv(file.choose(), row.names = 1, header = TRUE) # select Hogwarts Crushes matrix.csv\n\ncrush_matrix &lt;- as.matrix(hog_crush_matrix)\n\nhog_crush_net_mat &lt;- graph_from_adjacency_matrix(crush_matrix, mode = \"directed\", diag = FALSE)\n\nplot(hog_crush_net_mat)\nHowever, things are not as straightforward when you are working with edgelists. With this structure, you have only two columns, one for senders and the other for receivers. If there is an individual in the group who neither sends nor receives, but is a legitimate participant of the group, what do you do with them? One way of recording such isolates in an edgelist is list them as connected to themselves (known as a self loop). Take a look at this edgelist and you will see that these individuals are connected to themselves\nhog_crush_correct &lt;- read.csv(file.choose(), header=TRUE) # select Hogwarts Crushes Edgelist_SELFLOOPS.csv\n\n#Take a look at the data\nhog_crush_correct\n\n            Crusher            Crush\n1      Harry Potter    Ginny Weasley\n2      Harry Potter        Cho Chang\n3       Ron Weasley Hermione Granger\n4  Hermione Granger      Ron Weasley\n5       Ron Weasley   Lavender Brown\n6     Ginny Weasley     Harry Potter\n7       Lily Potter     James Potter\n8      James Potter      Lily Potter\n9     Severus Snape      Lily Potter\n10 Nymphadora Tonks      Remus Lupin\n11      Remus Lupin Nymphadora Tonks\n12   Lavender Brown      Ron Weasley\n13        Cho Chang   Cedric Diggory\n14        Cho Chang     Harry Potter\n15   Cedric Diggory        Cho Chang\n16        McGonagal        McGonagal\n17           Madeye           Madeye\n18        Voldemort        Voldemort\n19         Flitwick         Flitwick\nNow when you make this a graph object R does something different.\nCrush_correct_net &lt;-  graph_from_data_frame(hog_crush_correct, directed = TRUE)\nplot(Crush_correct_net)\nThese do not look great, and can cause confusion to viewers of the network visual and even influence some of the mathematics of your analysis. We will deal with those in a moment.\nAnother way to deal with isolates from an edgelist is to list noone in the “to” column. In other words, you list the name of the person in your network but leave the cell next to them blank. However, this approach also has additional steps to take before it is clean and ready to go.\nhog_crush_wrong &lt;- read.csv(file.choose(), header=TRUE) # select Hogwarts Crushes Edgelist_EMPTY NODE.csv\nTake a look at the edgeist now it is in and you will see I added a few more characters to this group: Madeye, Flitwick, McGonagal, and Voldemort. They are all listed in the “Crusher” (from) column but have no connection to anyone in the “crush” column. This makes sense, since we know little about their romances from the Harry Potter Saga.\nhog_crush_wrong\n\n            Crusher            Crush\n1      Harry Potter    Ginny Weasley\n2      Harry Potter        Cho Chang\n3       Ron Weasley Hermione Granger\n4  Hermione Granger      Ron Weasley\n5       Ron Weasley   Lavender Brown\n6     Ginny Weasley     Harry Potter\n7       Lily Potter     James Potter\n8      James Potter      Lily Potter\n9     Severus Snape      Lily Potter\n10 Nymphadora Tonks      Remus Lupin\n11      Remus Lupin Nymphadora Tonks\n12   Lavender Brown      Ron Weasley\n13        Cho Chang   Cedric Diggory\n14        Cho Chang     Harry Potter\n15   Cedric Diggory        Cho Chang\n16        McGonagal                 \n17           Madeye                 \n18        Voldemort                 \n19         Flitwick\nWhen we make this a graph object, R does something funky.\nThe new characters are all connected to a nameless node and it looks, on visual inspection, that they all have a crush on the same person.\nI have highlighted that node in the visualization below. The red node is nameless because the edgelist has empty (nameless) cells.\ncrush_wrong_net &lt;- graph_from_data_frame(hog_crush_wrong, directed = TRUE)\nplot(crush_wrong_net)\n\n\n\n\n\n\n\nV(crush_wrong_net)$wrong &lt;- ifelse(V(crush_wrong_net)$name %in% c(\"\"), \"red\", \"white\")\nplot(crush_wrong_net, vertex.color = V(crush_wrong_net)$wrong)\nOne way to deal with this is to delete the superfluous node. You do this using the delete_vertex() function. ##This fixes the issue once you have the data in Rstudio, but the issue still exists in your dataset. If you choose to structure your network data this way, you will have to remember to remove this node every time. This may be harder to do/realise when dealing with large dense networks.\ncrush_wrong_net &lt;- delete_vertices(crush_wrong_net, \"\")\nplot(crush_wrong_net)\nSometimes, you want to remove all of the isolated nodes from your network because you only care about those who have connections to others. To do this, you identify those with no connections (degree = 0) and them remove them from your network. I suggest making a new object with this sub network.\nnlj hog_crush_isol &lt;- which(degree(Crush_correct_net)==0)}\nNow you use the delete_vertices() command and remove those in the vector you just created (those with degree = 0)\nNow this new object has only those nodes with ties to others in the network.\nOther than isolates, you you might decide to remove one or more specific nodes from your network. For example, in this hogwarts dataset, we may want to remove those who are not students at Hogwarts (i.e. remove teachers or adults). To do this, you would use the delete_vertices() option.\nOne approach is to delete them one-by-one and identify them by their name.\nhog_crush_students &lt;- delete_vertices(Crush_correct_net, \"Voldemort\")\nplot(hog_crush_students)\nA quicker way, if you are deleting multiple, is to make a vector with all the names of those you want to remove, then use the delete_vertices() command.\nhog_adults &lt;- c(\"Severus Snape\", \"Lily Potter\", \"James Potter\", \"Nymphadora Tonks\", \"Remus Lupin\", \"Voldemort\", \"Flitwick\", \"McGonagal\", \"Madeye\")\n\nhog_crush_students &lt;- delete_vertices(Crush_correct_net, hog_adults)\n\nplot(hog_crush_students)\nThis new version removed all unwanted nodes at once.",
     "crumbs": [
       " Unit 1: Cleaning and Transforming Network Data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cleaning Network Data - Trimming and Adding</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Cleaning Network Data - Trimming and Adding</span>"
     ]
   },
   {
     "objectID": "Cleaning Network Data - Trimming and Adding.html#adding-nodes",
     "href": "Cleaning Network Data - Trimming and Adding.html#adding-nodes",
-    "title": "4  Cleaning Network Data - Trimming and Adding",
-    "section": "4.2 Adding Nodes",
-    "text": "4.2 Adding Nodes\nUse add.vertices(graph name, number of additional vertices, attribute = )\n\ncrush_added &lt;- add.vertices(Crush_correct_net, 1, name = \"Michael Corner\")\nplot(crush_added)",
+    "title": "5  Cleaning Network Data - Trimming and Adding",
+    "section": "5.2 Adding Nodes",
+    "text": "5.2 Adding Nodes\nUse add.vertices(graph name, number of additional vertices, attribute = )\n\ncrush_added &lt;- add.vertices(Crush_correct_net, 1, name = \"Michael Corner\")\nplot(crush_added)",
     "crumbs": [
       " Unit 1: Cleaning and Transforming Network Data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cleaning Network Data - Trimming and Adding</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Cleaning Network Data - Trimming and Adding</span>"
     ]
   },
   {
     "objectID": "Cleaning Network Data - Trimming and Adding.html#deleting-edges",
     "href": "Cleaning Network Data - Trimming and Adding.html#deleting-edges",
-    "title": "4  Cleaning Network Data - Trimming and Adding",
-    "section": "4.3 Deleting edges",
-    "text": "4.3 Deleting edges\nYou may want to delete edges between two nodes.\n\nedges_to_delete &lt;- E(Crush_correct_net)[(.from(\"Remus Lupin\") & .to(\"Nymphadora Tonks\"))]\nCrush_edge_delete &lt;- delete_edges(Crush_correct_net, edges_to_delete)\nplot(Crush_edge_delete)\n\n\n\n\n\n\n\n\nTo delete all edges between two nodes\n\nedges_to_delete2 &lt;- E(Crush_correct_net)[(.from(\"Remus Lupin\") & .to(\"Nymphadora Tonks\")) | .from(\"Nymphadora Tonks\") & .to(\"Remus Lupin\")]\nCrush_edge_delete &lt;- delete_edges(Crush_correct_net, edges_to_delete2)\nplot(Crush_edge_delete)",
+    "title": "5  Cleaning Network Data - Trimming and Adding",
+    "section": "5.3 Deleting edges",
+    "text": "5.3 Deleting edges\nTo remove unwanted edges you can use the delete_edges() command. Let’s begin with our edgelist from above and select the edges that are looped by using the E() command coupled with the is.loop() option. That way we can delete the selfloops\n\nCrush_correct_net  &lt;- delete_edges(Crush_correct_net , E(Crush_correct_net )[which_loop(Crush_correct_net )])\nplot(Crush_correct_net)\n\n\n\n\n\n\n\n\nAdditionally, you may want to delete edges between two specific nodes.\n\nedges_to_delete &lt;- E(Crush_correct_net)[(.from(\"Remus Lupin\") & .to(\"Nymphadora Tonks\"))]\nCrush_edge_delete &lt;- delete_edges(Crush_correct_net, edges_to_delete)\nplot(Crush_edge_delete)\n\n\n\n\n\n\n\n\nTo delete all edges between two nodes\n\nedges_to_delete2 &lt;- E(Crush_correct_net)[(.from(\"Remus Lupin\") & .to(\"Nymphadora Tonks\")) | .from(\"Nymphadora Tonks\") & .to(\"Remus Lupin\")]\nCrush_edge_delete &lt;- delete_edges(Crush_correct_net, edges_to_delete2)\nplot(Crush_edge_delete)",
     "crumbs": [
       " Unit 1: Cleaning and Transforming Network Data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cleaning Network Data - Trimming and Adding</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Cleaning Network Data - Trimming and Adding</span>"
     ]
   },
   {
     "objectID": "Cleaning Network Data - Trimming and Adding.html#add-edges",
     "href": "Cleaning Network Data - Trimming and Adding.html#add-edges",
-    "title": "4  Cleaning Network Data - Trimming and Adding",
-    "section": "4.4 Add Edges",
-    "text": "4.4 Add Edges\nUse add.edges().\n\ncrush_added &lt;- add.edges(crush_added, edges = c(\"Michael Corner\", \"Ginny Weasley\"))\nplot(crush_added)\n\n\n\n\n\n\n\n\nNow to add the reciprocated tie\n\ncrush_added &lt;- add.edges(crush_added, edges = c(\"Ginny Weasley\", \"Michael Corner\"))\nplot(crush_added)",
+    "title": "5  Cleaning Network Data - Trimming and Adding",
+    "section": "5.4 Add Edges",
+    "text": "5.4 Add Edges\nUse add.edges().\n\ncrush_added &lt;- add.edges(crush_added, edges = c(\"Michael Corner\", \"Ginny Weasley\"))\nplot(crush_added)\n\n\n\n\n\n\n\n\nNow to add the reciprocated tie\n\ncrush_added &lt;- add.edges(crush_added, edges = c(\"Ginny Weasley\", \"Michael Corner\"))\nplot(crush_added)",
     "crumbs": [
       " Unit 1: Cleaning and Transforming Network Data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cleaning Network Data - Trimming and Adding</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Cleaning Network Data - Trimming and Adding</span>"
     ]
   },
   {
@@ -822,23 +822,23 @@
   {
     "objectID": "Unit 2.html#learning-elements",
     "href": "Unit 2.html#learning-elements",
-    "title": "9  Unit 2",
+    "title": "10  Unit 2",
     "section": "",
     "text": "Produce basic (clean), intermediate (storytelling), and more advanced (engaging) visualisations.\nUnderstand that visuals can tell a story about your network.\nLearn about visual accessibility.",
     "crumbs": [
       " Unit 2: Visualising Network Data",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Unit 2</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Unit 2</span>"
     ]
   },
   {
     "objectID": "Unit 2.html#workforce-preparation",
     "href": "Unit 2.html#workforce-preparation",
-    "title": "9  Unit 2",
-    "section": "9.3 Workforce Preparation",
-    "text": "9.3 Workforce Preparation\nVisualisaion can be an effective form of communication. It can also confuse, if not done well. Network data may not be the most intuitive visualistions to look at. Although, their novelty make for an attractive visualisation, people are not as used to interpreting them as they are other charts or graphs. Be mindful, when visualising your networks, of their readability. Use titles that are descriptive. For example, if you alter the node sizes to reflect popular people (highly central nodes) consider a title that describes this.\nEnjoy Unit 2!",
+    "title": "10  Unit 2",
+    "section": "10.3 Workforce Preparation",
+    "text": "10.3 Workforce Preparation\nVisualisaion can be an effective form of communication. It can also confuse, if not done well. Network data may not be the most intuitive visualistions to look at. Although, their novelty make for an attractive visualisation, people are not as used to interpreting them as they are other charts or graphs. Be mindful, when visualising your networks, of their readability. Use titles that are descriptive. For example, if you alter the node sizes to reflect popular people (highly central nodes) consider a title that describes this.\nEnjoy Unit 2!",
     "crumbs": [
       " Unit 2: Visualising Network Data",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Unit 2</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Unit 2</span>"
     ]
   },
   {
@@ -861,6 +861,100 @@
     "crumbs": [
       " Unit 3: Analysing Network Data",
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>Unit 3</span>"
+    ]
+  },
+  {
+    "objectID": "Getting Started.html",
+    "href": "Getting Started.html",
+    "title": "2  Getting Started with R",
+    "section": "",
+    "text": "2.1 Quick Start\nIf you are an old hand when it comes to coding and have experience with R, great! Know that we will mostly be using the package ‘igraph’ so go ahead and install it now (you can use the code below). Keep an eye out for the new packages we use throughout the book and install them as you go. Otherwise, notice throughout the book I suggest bringing in the various networks using the read.csv(file.choose()) option. If you would prefer to download all of the datasets from the the Github repo and bring them in however you like. Other than that, get going!\ninstall.packages(\"igraph\")",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started with R</span>"
+    ]
+  },
+  {
+    "objectID": "Getting Started.html#new-to-r",
+    "href": "Getting Started.html#new-to-r",
+    "title": "2  Getting Started with R",
+    "section": "2.2 New to R?",
+    "text": "2.2 New to R?\nIf you are new to R or new to coding, wonderful! This is a great way to start getting into it. There are a few steps we need to take before you install the package above. If you are planning on using R long term, I strongly suggest downloading it and RStudio to your personal machine. Even if you don’t I suggest doing this because it is the most straightforward (go to option 1). If not, say you don’t have a personal machine and need to use a public machine or one in a lab, then there are ways to work with that (go to option 2).",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started with R</span>"
+    ]
+  },
+  {
+    "objectID": "Getting Started.html#option-1-downloading-rrstudio",
+    "href": "Getting Started.html#option-1-downloading-rrstudio",
+    "title": "2  Getting Started with R",
+    "section": "2.3 Option 1: Downloading R/RStudio",
+    "text": "2.3 Option 1: Downloading R/RStudio\nTo get going, you will need to download both R and RStudio. Yes, these are separate downloads. Think of R as the engine, and Rstudio as the car you are driving. RStudio makes it easy to do the things you want to do while R, (the ‘engine’) actually drives everything you do. To do this, follow the instructions on the Posit website. At the time of the publication of this book, this link has 2 steps, one to install R and the other to install RStudio. Depending on your machine (if you have a windows, mac or an operating system like Linux) there are different instructions. Download and install the the ones you need.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started with R</span>"
+    ]
+  },
+  {
+    "objectID": "Getting Started.html#option-2-posit-cloud",
+    "href": "Getting Started.html#option-2-posit-cloud",
+    "title": "2  Getting Started with R",
+    "section": "2.4 Option 2: Posit Cloud",
+    "text": "2.4 Option 2: Posit Cloud\nIf you do not want to or cannot download R/RStudio, there are a few ways to use it for free, albeit limited, online. Consider making a free account on Posit Cloud.\nOnce you have made your account, click on the tab at the top right to create a new project. Select RStudio. From here on its mostly the same with a few tweaks, pay attention below for a few differences between posit cloud and downloading RStudio.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started with R</span>"
+    ]
+  },
+  {
+    "objectID": "Getting Started.html#a-little-about-rstudio",
+    "href": "Getting Started.html#a-little-about-rstudio",
+    "title": "2  Getting Started with R",
+    "section": "2.5 A little about RStudio",
+    "text": "2.5 A little about RStudio\nOnce you have installed it, or created your new project on Posit Cloud, go ahead and open RStudio. When you open RStudio, you will see four windows, let’s walk through those for a moment. There are multiple uses for each window. However, for now, we will discuss them how we will be using them just to get you started.\n\nStarting from the top left, you have a window for your script files. Think of this as a place to write, run, and store code. Here, you can open different files including script, markdown, quarto and others. For the sake of what we are doing in this book, just focus on those three types.\nOn the bottom left there is a space for you to enter code and run it directly. This is basically a window to look at the engine.\nNext, the top right window houses your global environment. Think of this as a bucket. What you do in the script or the console can fill things into the bucket. For example, you can bring in network data and store it in this environment.\nFinally, on the bottom right there are multiple reasons we use this window. Mostly, the network visualisations we will create will appear in the ‘Plots’ or ‘Viewer’ tab.\n\n\n2.5.1 On Packages\nThe final thing you need to know is that we will be using multiple types of commands throughout this book. These are grouped into what are called ‘packages.’ Think of packages as mini dictionaries for different languages. In this case, however, these languages enable you to do different things with/to your data.\nTo access these packages, you first need to install them. You can do this, using the following function.\n\ninstall.packages(\"igraph\")\n\nThe above code will download the package to your machine (or your project space on posit.cloud). Then, you need to tell R which “language” you are coding in each time you open up RStudio. To do this, you use the ‘library()’ function. Keep an eye out for the various packages use. If you see a command to bring in a package you don’t recognise, you will need to install it (just replace igraph with the name of the other package in the above chunk).\n\nlibrary(igraph)\n\n\n\n2.5.2 Loading Data\nGreat stuff! You now have RStudio sorted out and you (if you ran the above) have installed igraph. Now, the last thing you need is the data that you are going to use and to bring it into the environment. There are many ways that you can do this, but I have provided you, what I think, is the simplest low-tech method that you can use across both on posit cloud or your own machine.\nIn each of the chapters, near the beginning of the chapter, you will see a line with the function ‘read.csv()’ and the option ‘file.choose()’ nested inside it. This, when run, will open a window on your machine to access your files on the computer. You need to select the .csv file that houses the data we are using in each chapter. I have commented in each chunk right after that command which .csv file you are to select.\nIf you are on posit.cloud, that window cannot access your computer but the ‘Files’ tab in the bottom right window. Before you can run the function, you will need to upload the .csv files that you will be calling into that space. Click on the ‘Files’ tab and you will see a button that says, upload. You need to upload the data into that space and then run the read.csv() code.\nThe only thing left to do, is to head over to the Github repo and get started!",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Getting Started with R</span>"
+    ]
+  },
+  {
+    "objectID": "Network Data Structures.html#adjacency-matrices",
+    "href": "Network Data Structures.html#adjacency-matrices",
+    "title": "4  Introducing Network Data Structures",
+    "section": "4.2 Adjacency Matrices",
+    "text": "4.2 Adjacency Matrices\nYour data may be stored as an adjacency matrix. An adjacency matrix is a datasheet that uses a numerical system (usually a binary system 0 and 1 for unweighted networks) to denote the ties that exist between cells in the spreadsheet. 0 indicates no tie and 1 indicates a tie. In a weigted network, the number may be higher than 1 (i.e. to indicate the number of interactions, the distance, or other weight).\nThe most important element of an adjacency matrix is that the first row and the first column have the list of nodes. Each cell is an individual node and this node is mirrored on the other side of the matrix. For example, cell A2 is the same as B1. These two lines (the first row and column) must have the same names in them in order for R to recognise it as a network. In other words, an adjacency matrix has all the possible dyads (pairs) in the network with 1s and 0s to indicate whether they share a tie. Note that A1 should always be left empty.\nOne final characteristic of an adjacency matrix is the line where the same cell overlaps. This is called the diagonal. Cell A2 and B1 are the same name, the coordinates whether those cells meet (B2) can indicate whether that node is connected to itself. The same is true all the way down the diagonal of the matrix. The researcher (YOU) must decide whether self loops/ties make sense given the characteristics/parameters of the network when you collect network data. For example, in a network of sending text messages, it may not make sense.\nThis code chunk shows you how to bring in a .csv with network data stored as an adjacency matrix. These data are the same data as before - crushes between Harry Potter Characters. Note, the row.names = 1 option is used here to ensure R recognises row 1 as names not connections.\n\nmy_adj  &lt;- read.csv(file.choose(), row.names=1) # select Hogwarts Crushes matrix.csv\n\nhead(my_adj)\n\n                 Harry.Potter Ron.Weasley Hermione.Granger Ginny.Weasley\nHarry Potter                0           0                0             1\nRon Weasley                 0           0                1             0\nHermione Granger            0           1                0             0\nGinny Weasley               1           0                0             0\nLily Potter                 0           0                0             0\nJames Potter                0           0                0             0\n                 Lily.Potter James.Potter Severus.Snape Nymphadora.Tonks\nHarry Potter               0            0             0                0\nRon Weasley                0            0             0                0\nHermione Granger           0            0             0                0\nGinny Weasley              0            0             0                0\nLily Potter                0            1             0                0\nJames Potter               1            0             0                0\n                 Remus.Lupin Lavender.Brown Cho.Chang Cedric.Diggory\nHarry Potter               0              0         1              0\nRon Weasley                0              1         0              0\nHermione Granger           0              0         0              0\nGinny Weasley              0              0         0              0\nLily Potter                0              0         0              0\nJames Potter               0              0         0              0",
+    "crumbs": [
+      " Unit 1: Cleaning and Transforming Network Data",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Introducing Network Data Structures</span>"
+    ]
+  },
+  {
+    "objectID": "Network Data Structures.html#making-network-objects",
+    "href": "Network Data Structures.html#making-network-objects",
+    "title": "4  Introducing Network Data Structures",
+    "section": "4.3 Making Network Objects",
+    "text": "4.3 Making Network Objects\nNow we know how network data are stored, there are a couple of steps we need to take before we can get analysing our networks. In short, we need to convert our edgelist or adjacency matrix into a network using some functions that the igraph package provides. Let’s start with edgelists and then move on to adjacency matrices.\nOur edgelist is very simple to convert into a network. First, we will need to tell R that the commands we are running from here on are igraph. So in this next chunk we will use the library() command to let R know.\nIn the next line, we use the graph_from_data_frame() function from igraph to create an object called g1 which is our first network.\n\nlibrary(igraph)\ng1 &lt;- graph_from_data_frame(my_edge, directed = TRUE)\n\nFor an adjacency matrix, things are slightly different. At the moment, our object ‘my_adj’ looks like a matrix, it has the 1s and 0s, but R recognises it as a table. We need to create an object that R recognises is a matrix. In short, R needs to recognise the 1s as ties and the 0s as the lack of ties.\nSo, you will notice in the chunk below there are two steps instead of just one. The first, we use the as.matrix() function to create a new object called ‘mat’ (call these whatever you want) that now has the same information as ‘my_adj’ but now stored as a matrix. Next, we use the graph_from_adjaency_matrix() function to convert this matrix into what R recognises as a network and create g2.\n\nmat &lt;- as.matrix(my_adj) #Creates an object R recognises as a matrix not a table. \ng2 &lt;- graph_from_adjacency_matrix(mat, mode = 'directed', diag = FALSE)\n\nGreat, now we have our network objects! Let’s understand what these networks look like. They will look exactly the same because they represent the same ties. So, let’s look at g1 and understand how igraph stores networks. To view it, we simply name the object. I want to draw your attention to a few places. It lists it as an igraph object, a network. The DN means directed network. Then it lists 12 and 15. These are how many nodes and how many edges there are in the network. The second line lists all the attributes R can recognise from the network we pulled in (there are all kinds of information we could have about the people and their relationships). In this case, we have their names and that is it. Then it lists the edges that exist between the individuals in this network. Notice that the link between them looks like an arrow -&gt;? If this was an undirected network, the link would look like this –.\n\ng1\n\nIGRAPH 6fe04ac DN-- 12 15 -- \n+ attr: name (v/c)\n+ edges from 6fe04ac (vertex names):\n [1] Harry Potter    -&gt;Ginny Weasley    Harry Potter    -&gt;Cho Chang       \n [3] Ron Weasley     -&gt;Hermione Granger Hermione Granger-&gt;Ron Weasley     \n [5] Ron Weasley     -&gt;Lavender Brown   Ginny Weasley   -&gt;Harry Potter    \n [7] Lily Potter     -&gt;James Potter     James Potter    -&gt;Lily Potter     \n [9] Severus Snape   -&gt;Lily Potter      Nymphadora Tonks-&gt;Remus Lupin     \n[11] Remus Lupin     -&gt;Nymphadora Tonks Lavender Brown  -&gt;Ron Weasley     \n[13] Cho Chang       -&gt;Cedric Diggory   Cho Chang       -&gt;Harry Potter    \n[15] Cedric Diggory  -&gt;Cho Chang       \n\n\nFinally, you can use the plot() function to visualise the network. I plot one, then the other. They reflect the same data but stored and brought into RStudio in different ways.\n\nplot(g1)\n\n\n\n\n\n\n\n\n\nplot(g2)",
+    "crumbs": [
+      " Unit 1: Cleaning and Transforming Network Data",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Introducing Network Data Structures</span>"
+    ]
+  },
+  {
+    "objectID": "Network Data Structures.html#summary",
+    "href": "Network Data Structures.html#summary",
+    "title": "4  Introducing Network Data Structures",
+    "section": "4.4 Summary",
+    "text": "4.4 Summary\nHere you have learned three things:\n\nHow network data are stored (an edge list or adjacency matrix)\nHow to bring network data into RStudio and understand it\nHow to plot network data.\n\nWell done!",
+    "crumbs": [
+      " Unit 1: Cleaning and Transforming Network Data",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Introducing Network Data Structures</span>"
+    ]
+  },
+  {
+    "objectID": "Cleaning Network Data - Trimming and Adding.html#deleting-nodes.",
+    "href": "Cleaning Network Data - Trimming and Adding.html#deleting-nodes.",
+    "title": "5  Cleaning Network Data - Trimming and Adding",
+    "section": "",
+    "text": "plot(Crush_no_isol)",
+    "crumbs": [
+      " Unit 1: Cleaning and Transforming Network Data",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Cleaning Network Data - Trimming and Adding</span>"
     ]
   }
 ]
