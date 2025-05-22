@@ -526,7 +526,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Sometimes, you want to remove all of the isolated nodes from your network because you only care about those who have connections to others. To do this, you identify those with no connections (degree = 0) and them remove them from your network. I suggest making a new object with this sub network.</p>
-<p><code>nlj hog_crush_isol &lt;- which(degree(Crush_correct_net)==0)}</code></p>
+<p><code>tyg hog_crush_isol &lt;- which(degree(Crush_correct_net)==0)}</code></p>
 <p>Now you use the delete_vertices() command and remove those in the vector you just created (those with degree = 0)</p>
 <pre class="{r} Crush_no_isol <-delete_vertices(Crush_correct_net, hog_crush_isol)}"><code>plot(Crush_no_isol)</code></pre>
 <p>Now this new object has only those nodes with ties to others in the network.</p>
