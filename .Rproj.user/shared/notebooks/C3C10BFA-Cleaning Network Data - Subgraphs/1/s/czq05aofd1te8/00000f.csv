@@ -1,4 +1,0 @@
-"0","sub_people <- c('Wiley', 'Jammer', 'Flowdan', 'Ice Kid')"
-"0","sub_net <- subgraph(grime_08_clean, sub_people) "
-"0","par(mar = c(0,0,0,0))"
-"0","plot(sub_net)"

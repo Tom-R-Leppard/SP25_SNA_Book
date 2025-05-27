@@ -8,15 +8,8 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
 This is a skeleton markdown file that you will use to complete Assignment 3 this semester. Use the chunks (see below) to code in. Where you see ........................ please remove and write your response to the prompt.
 
-```{r}
-###################### THIS IS A CHUNK #############################
-```
+Grading: Full marks are awarded for completion. One mark will be dropped for each portion incomplete. This assignment will have 5 points per portion (4 questions/prompts to complete) and a total of 20 marks.
 
-As usual, follow the steps below and submit your markdown document as a pdf. You will need to knit this to a pdf or knit it to an html then save as a pdf to submit.
-
-YOUR MUST NAME YOUR FILE LIKE THIS: course_section_semester_assignment_unityID For example: DSA295_003_SP25_A2_trleppar
-
-Grading: Full marks are awarded for completion and proper naming. One mark will be dropped if not named properly, and/or additional marks dropped for each portion incomplete. This assignment will have 5 points per portion (4 prompts to complete) and a total of 20 marks.
 
 ## Place your library() here. You will need to list each one you will use!
 
@@ -27,35 +20,29 @@ Grading: Full marks are awarded for completion and proper naming. One mark will 
 ## Bringing in your data
 
 By this time, you're a dab hand at bringing in your network data. Please bring in your network, convert it to a network object and view that object. Just a reminder, to view the network, just list the name of the network. If my igraph object (network object) is called 'graph' I can simply code graph in the chunk and I will view it.
-
 ```{r}
 
 ```
 
 Clean and or transform your network data if you need/want to and provide a raw (unaltered) visualisation using the plot() function.
-
 ```{r}
 
 ```
 
 ## Basic visualisation
-
 In class, we have covered multiple basic visualizations. Using the markdown files and your notes from our class about basic network visualisation, I want you to demonstrate your skill in basic network visualisation.
 
 Please alter the labels by either changing their size or toggling them.
-
 ```{r}
 
 ```
 
 Change the colours of the network (nodes or edges).
-
 ```{r}
 
 ```
 
 Present a basic visualisation, you feel appears clean.
-
 ```{r}
 
 ```
@@ -63,23 +50,19 @@ Present a basic visualisation, you feel appears clean.
 Discuss what alterations you have done to the network and why you did them. ..............................
 
 ## Intermediate visualisation
-
 You have learned how to tell a story through network visualisation. These stories centre prominent and influential nodes in the network.
 
 Present a CLEAN network visual demonstrating popular (degree) nodes in your network.
-
 ```{r}
 
 ```
 
 Present a CLEAN network visual demonstrating influential (betweenness) nodes in your network.
-
 ```{r}
 
 ```
 
 Present them side-by-side sing the par() function. Consider presenting sub or main titles so I can tell which is which.
-
 ```{r}
 
 ```
@@ -87,11 +70,9 @@ Present them side-by-side sing the par() function. Consider presenting sub or ma
 Briefly (1 - 2 sentences) discuss the stories that your visualisations tell. E.g. who are/are they many or few popular/influential nodes? ..............................
 
 ## Advanced visualisation
-
 You have learned how to create interactive, or animated network visualisations.
 
 Please produce one advanced network visualisation. Bare in mind that you will need to leave the visual as a widget in this markdown.
-
 ```{r}
 
 ```

@@ -1,3 +1,0 @@
-"0","grime_edge_list <- read.csv(file.choose(), header = TRUE)"
-"0",""
-"0","grime_08 <- graph_from_data_frame(d= grime_edge_list, directed = TRUE)"

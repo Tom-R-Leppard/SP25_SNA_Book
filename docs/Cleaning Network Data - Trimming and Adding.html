@@ -351,9 +351,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#deleting-nodes." id="toc-deleting-nodes." class="nav-link active" data-scroll-target="#deleting-nodes."><span class="header-section-number">5.1</span> Deleting Nodes.</a></li>
-  <li><a href="#adding-nodes" id="toc-adding-nodes" class="nav-link" data-scroll-target="#adding-nodes"><span class="header-section-number">5.2</span> Adding Nodes</a></li>
-  <li><a href="#deleting-edges" id="toc-deleting-edges" class="nav-link" data-scroll-target="#deleting-edges"><span class="header-section-number">5.3</span> Deleting edges</a></li>
+  <li><a href="#deleting-edges" id="toc-deleting-edges" class="nav-link" data-scroll-target="#deleting-edges"><span class="header-section-number">5.2</span> Deleting edges</a></li>
+  <li><a href="#adding-nodes" id="toc-adding-nodes" class="nav-link" data-scroll-target="#adding-nodes"><span class="header-section-number">5.3</span> Adding Nodes</a></li>
   <li><a href="#add-edges" id="toc-add-edges" class="nav-link" data-scroll-target="#add-edges"><span class="header-section-number">5.4</span> Add Edges</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">5.5</span> Summary</a></li>
   </ul>
 </nav>
     </div>
@@ -389,11 +390,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><strong>LEARNING ELEMENTS - Examining Data and Practicing Wrangling</strong></td>
+<td><strong>LEARNING ELEMENTS - Data Practices</strong></td>
 </tr>
 <tr class="even">
 <td><ul>
-<li>Data are not always clean, but are messy! Part of analysing your network is learning about your data. What parts are there and what is missing? That is why we need to learn how to clean data</li>
+<li>Data are not always clean, but are messy! Part of analysing your network is learning about your data. What parts are there and what is missing? That is why we need to learn how to clean data.</li>
+<li>However, we have to, again, be mindful of the sensitivity of network data. Say you are collecting your own data, but not everyone in your study consents to the project. It is unethical to add them to your network, even if you may know that they are a part of the group.</li>
 </ul></td>
 </tr>
 </tbody>
@@ -401,29 +403,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="deleting-nodes." class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="deleting-nodes."><span class="header-section-number">5.1</span> Deleting Nodes.</h2>
 <p>To delete nodes from your network, you use the delete_vertices() function in igraph. There are several reasons you may wish to remove nodes from the network. One very common issue with cleaning network data is knowing what to do with nodes isolates. Isolates are those who are a part of your network, but who have no connections to others in the group. Isolates are stored in network data differently depending on how your data are stored.</p>
-<p>If your data are stored in an adjacency matrix, then isolates are those with no 1s in the matrix. Ensuring that R recognises them as isolated is very simple. Bring in the data, and then convert it into a matrix. Any that are isolated will show as isolates.</p>
+<p>If your data are stored in an adjacency matrix, then isolates are those with no 1s in the matrix. Ensuring that R recognises them as isolated is very simple. Bring in the data, and then convert it into a matrix. Any that are isolated will show as isolates. The process of deleting or adding nodes and edges apply to any network object either made from an edgelist or adjacency matrix.</p>
+<p>However, dealing with isolates is not as straightforward when you are working with edgelists. With this structure, you have only two columns, one for senders and the other for receivers. If there is an individual in the group who neither sends nor receives, but is a legitimate participant of the group, what do you do with them? One way of recording such isolates in an edgelist is list them as connected to themselves (known as a self loop). Take a look at this edgelist and you will see that these individuals are connected to themselves.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>hog_crush_matrix <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.choose</span>(), <span class="at">row.names =</span> <span class="dv">1</span>, <span class="at">header =</span> <span class="cn">TRUE</span>) <span class="co"># select Hogwarts Crushes matrix.csv</span></span>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>hog_crush_loops <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.choose</span>(), <span class="at">header=</span><span class="cn">TRUE</span>) <span class="co"># select Hogwarts Crushes Edgelist_SELFLOOPS.csv</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>crush_matrix <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(hog_crush_matrix)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>hog_crush_net_mat <span class="ot">&lt;-</span> <span class="fu">graph_from_adjacency_matrix</span>(crush_matrix, <span class="at">mode =</span> <span class="st">"directed"</span>, <span class="at">diag =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(hog_crush_net_mat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="Cleaning-Network-Data---Trimming-and-Adding_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>However, things are not as straightforward when you are working with edgelists. With this structure, you have only two columns, one for senders and the other for receivers. If there is an individual in the group who neither sends nor receives, but is a legitimate participant of the group, what do you do with them? One way of recording such isolates in an edgelist is list them as connected to themselves (known as a self loop). Take a look at this edgelist and you will see that these individuals are connected to themselves</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>hog_crush_correct <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.choose</span>(), <span class="at">header=</span><span class="cn">TRUE</span>) <span class="co"># select Hogwarts Crushes Edgelist_SELFLOOPS.csv</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Take a look at the data</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>hog_crush_correct</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Take a look at the data</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>hog_crush_loops</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>            Crusher            Crush
 1      Harry Potter    Ginny Weasley
@@ -449,24 +435,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Now when you make this a graph object R does something different.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>Crush_correct_net <span class="ot">&lt;-</span>  <span class="fu">graph_from_data_frame</span>(hog_crush_correct, <span class="at">directed =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Crush_correct_net)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Crush_loops <span class="ot">&lt;-</span>  <span class="fu">graph_from_data_frame</span>(hog_crush_loops, <span class="at">directed =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Crush_loops)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="Cleaning-Network-Data---Trimming-and-Adding_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="Cleaning-Network-Data---Trimming-and-Adding_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>These do not look great, and can cause confusion to viewers of the network visual and even influence some of the mathematics of your analysis. We will deal with those in a moment.</p>
-<p>Another way to deal with isolates from an edgelist is to list noone in the “to” column. In other words, you list the name of the person in your network but leave the cell next to them blank. However, this approach also has additional steps to take before it is clean and ready to go.</p>
+<p>These do not look great, and can cause confusion to viewers of the network visual and even influence some of the mathematics of your analysis. We will deal with those in a moment (next step deleting edges).</p>
+<p>Another way to record isolates from an edgelist is to list no-one in the “to” column. In other words, you list the name of the person in your network but leave the cell next to them blank. However, this approach also has additional steps to take before it is clean and ready to go.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>hog_crush_wrong <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.choose</span>(), <span class="at">header=</span><span class="cn">TRUE</span>) <span class="co"># select Hogwarts Crushes Edgelist_EMPTY NODE.csv</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>hog_crush_empty <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">file.choose</span>(), <span class="at">header=</span><span class="cn">TRUE</span>) <span class="co"># select Hogwarts Crushes Edgelist_EMPTY NODE.csv</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Take a look at the edgeist now it is in and you will see I added a few more characters to this group: Madeye, Flitwick, McGonagal, and Voldemort. They are all listed in the “Crusher” (from) column but have no connection to anyone in the “crush” column. This makes sense, since we know little about their romances from the Harry Potter Saga.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>hog_crush_wrong</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>hog_crush_empty</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>            Crusher            Crush
 1      Harry Potter    Ginny Weasley
@@ -494,8 +481,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The new characters are all connected to a nameless node and it looks, on visual inspection, that they all have a crush on the same person.</p>
 <p>I have highlighted that node in the visualization below. The red node is nameless because the edgelist has empty (nameless) cells.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>crush_wrong_net <span class="ot">&lt;-</span> <span class="fu">graph_from_data_frame</span>(hog_crush_wrong, <span class="at">directed =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(crush_wrong_net)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>crush_empty <span class="ot">&lt;-</span> <span class="fu">graph_from_data_frame</span>(hog_crush_empty, <span class="at">directed =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(crush_empty)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Cleaning-Network-Data---Trimming-and-Adding_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">V</span>(crush_empty)<span class="sc">$</span>wrong <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(<span class="fu">V</span>(crush_empty)<span class="sc">$</span>name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">""</span>), <span class="st">"red"</span>, <span class="st">"white"</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(crush_empty, <span class="at">vertex.color =</span> <span class="fu">V</span>(crush_empty)<span class="sc">$</span>wrong)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Cleaning-Network-Data---Trimming-and-Adding_files/figure-html/unnamed-chunk-6-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>One way to deal with this is to delete the superfluous node. You do this using the delete_vertex() function. ##This fixes the issue once you have the data in Rstudio, but the issue still exists in your dataset. If you choose to structure your network data this way, you will have to remember to remove this node every time. This may be harder to do/realise when dealing with large dense networks.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>crush_empty <span class="ot">&lt;-</span> <span class="fu">delete_vertices</span>(crush_empty, <span class="st">""</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(crush_empty)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -503,38 +514,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">V</span>(crush_wrong_net)<span class="sc">$</span>wrong <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(<span class="fu">V</span>(crush_wrong_net)<span class="sc">$</span>name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">""</span>), <span class="st">"red"</span>, <span class="st">"white"</span>)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(crush_wrong_net, <span class="at">vertex.color =</span> <span class="fu">V</span>(crush_wrong_net)<span class="sc">$</span>wrong)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="Cleaning-Network-Data---Trimming-and-Adding_files/figure-html/unnamed-chunk-7-2.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>One way to deal with this is to delete the superfluous node. You do this using the delete_vertex() function. ##This fixes the issue once you have the data in Rstudio, but the issue still exists in your dataset. If you choose to structure your network data this way, you will have to remember to remove this node every time. This may be harder to do/realise when dealing with large dense networks.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>crush_wrong_net <span class="ot">&lt;-</span> <span class="fu">delete_vertices</span>(crush_wrong_net, <span class="st">""</span>)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(crush_wrong_net)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="Cleaning-Network-Data---Trimming-and-Adding_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
 </div>
 <p>Sometimes, you want to remove all of the isolated nodes from your network because you only care about those who have connections to others. To do this, you identify those with no connections (degree = 0) and them remove them from your network. I suggest making a new object with this sub network.</p>
-<p><code>tyg hog_crush_isol &lt;- which(degree(Crush_correct_net)==0)}</code></p>
-<p>Now you use the delete_vertices() command and remove those in the vector you just created (those with degree = 0)</p>
-<pre class="{r} Crush_no_isol <-delete_vertices(Crush_correct_net, hog_crush_isol)}"><code>plot(Crush_no_isol)</code></pre>
-<p>Now this new object has only those nodes with ties to others in the network.</p>
-<p>Other than isolates, you you might decide to remove one or more specific nodes from your network. For example, in this hogwarts dataset, we may want to remove those who are not students at Hogwarts (i.e.&nbsp;remove teachers or adults). To do this, you would use the delete_vertices() option.</p>
-<p>One approach is to delete them one-by-one and identify them by their name.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>hog_crush_students <span class="ot">&lt;-</span> <span class="fu">delete_vertices</span>(Crush_correct_net, <span class="st">"Voldemort"</span>)</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(hog_crush_students)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>hog_crush_isol <span class="ot">&lt;-</span> <span class="fu">which</span>(<span class="fu">degree</span>(crush_empty)<span class="sc">==</span><span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now you use the delete_vertices() command and remove those in the vector you just created (those with degree = 0)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>Crush_no_isol <span class="ot">&lt;-</span><span class="fu">delete_vertices</span>(crush_empty, hog_crush_isol)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Crush_no_isol)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -543,13 +532,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>A quicker way, if you are deleting multiple, is to make a vector with all the names of those you want to remove, then use the delete_vertices() command.</p>
+<p>Now this new object has only those nodes with ties to others in the network.</p>
+<p>Other than isolates, you you might decide to remove one or more specific nodes from your network. For example, in this hogwarts dataset, we may want to remove those who are not students at Hogwarts (i.e.&nbsp;remove teachers or adults). To do this, you would use the delete_vertices() option.</p>
+<p>Another approach is to delete them one-by-one and identify them by their name. Let’s say you have a network and only want to remove one node. You can do so based on their name. To do this, let’s now switch to the other data we brought in, the one with the self loops (we will deal with those next!). We can use the same function, delete_vertices(), but this time, state the name of the node we want to delete.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>hog_adults <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Severus Snape"</span>, <span class="st">"Lily Potter"</span>, <span class="st">"James Potter"</span>, <span class="st">"Nymphadora Tonks"</span>, <span class="st">"Remus Lupin"</span>, <span class="st">"Voldemort"</span>, <span class="st">"Flitwick"</span>, <span class="st">"McGonagal"</span>, <span class="st">"Madeye"</span>)</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>hog_crush_students <span class="ot">&lt;-</span> <span class="fu">delete_vertices</span>(Crush_correct_net, hog_adults)</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(hog_crush_students)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>hog_crush_students <span class="ot">&lt;-</span> <span class="fu">delete_vertices</span>(Crush_loops, <span class="st">"Voldemort"</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(hog_crush_students)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -558,14 +547,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>This new version removed all unwanted nodes at once.</p>
-</section>
-<section id="adding-nodes" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="adding-nodes"><span class="header-section-number">5.2</span> Adding Nodes</h2>
-<p>Use add.vertices(graph name, number of additional vertices, attribute = )</p>
+<p>A quicker way, if you are deleting multiple, is to make a vector with all the names of those you want to remove, then use the delete_vertices() command.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>crush_added <span class="ot">&lt;-</span> <span class="fu">add.vertices</span>(Crush_correct_net, <span class="dv">1</span>, <span class="at">name =</span> <span class="st">"Michael Corner"</span>)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(crush_added)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>hog_adults <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Severus Snape"</span>, <span class="st">"Lily Potter"</span>, <span class="st">"James Potter"</span>, <span class="st">"Nymphadora Tonks"</span>, <span class="st">"Remus Lupin"</span>, <span class="st">"Voldemort"</span>, <span class="st">"Flitwick"</span>, <span class="st">"McGonagal"</span>, <span class="st">"Madeye"</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>hog_crush_students <span class="ot">&lt;-</span> <span class="fu">delete_vertices</span>(Crush_loops, hog_adults)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(hog_crush_students)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -574,13 +562,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<p>This new version removed all unwanted nodes at once.</p>
 </section>
-<section id="deleting-edges" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="deleting-edges"><span class="header-section-number">5.3</span> Deleting edges</h2>
-<p>To remove unwanted edges you can use the delete_edges() command. Let’s begin with our edgelist from above and select the edges that are looped by using the E() command coupled with the is.loop() option. That way we can delete the selfloops</p>
+<section id="deleting-edges" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="deleting-edges"><span class="header-section-number">5.2</span> Deleting edges</h2>
+<p>To remove unwanted edges you can use the delete_edges() command. Let’s begin with our edgelist from above and select the edges that are looped by using the E() command coupled with the is.loop() options.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>Crush_correct_net  <span class="ot">&lt;-</span> <span class="fu">delete_edges</span>(Crush_correct_net , <span class="fu">E</span>(Crush_correct_net )[<span class="fu">which_loop</span>(Crush_correct_net )])</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Crush_correct_net)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>Crush_loops  <span class="ot">&lt;-</span> <span class="fu">delete_edges</span>(Crush_loops, <span class="fu">E</span>(Crush_loops )[<span class="fu">which_loop</span>(Crush_loops)])</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Crush_loops)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -589,11 +579,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>Additionally, you may want to delete edges between two specific nodes.</p>
+<p>In addition to the selfloops, you may want to delete edges between two specific nodes. You can do so by selecting</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>edges_to_delete <span class="ot">&lt;-</span> <span class="fu">E</span>(Crush_correct_net)[(<span class="fu">.from</span>(<span class="st">"Remus Lupin"</span>) <span class="sc">&amp;</span> <span class="fu">.to</span>(<span class="st">"Nymphadora Tonks"</span>))]</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>Crush_edge_delete <span class="ot">&lt;-</span> <span class="fu">delete_edges</span>(Crush_correct_net, edges_to_delete)</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Crush_edge_delete)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>edges_to_delete <span class="ot">&lt;-</span> <span class="fu">E</span>(Crush_loops)[(<span class="fu">.from</span>(<span class="st">"Remus Lupin"</span>) <span class="sc">&amp;</span> <span class="fu">.to</span>(<span class="st">"Nymphadora Tonks"</span>))]</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>Crush_edge_delete <span class="ot">&lt;-</span> <span class="fu">delete_edges</span>(Crush_loops, edges_to_delete)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Crush_edge_delete)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -602,11 +594,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>To delete all edges between two nodes</p>
+<p>To delete all edges between two nodes.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>edges_to_delete2 <span class="ot">&lt;-</span> <span class="fu">E</span>(Crush_correct_net)[(<span class="fu">.from</span>(<span class="st">"Remus Lupin"</span>) <span class="sc">&amp;</span> <span class="fu">.to</span>(<span class="st">"Nymphadora Tonks"</span>)) <span class="sc">|</span> <span class="fu">.from</span>(<span class="st">"Nymphadora Tonks"</span>) <span class="sc">&amp;</span> <span class="fu">.to</span>(<span class="st">"Remus Lupin"</span>)]</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>Crush_edge_delete <span class="ot">&lt;-</span> <span class="fu">delete_edges</span>(Crush_correct_net, edges_to_delete2)</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Crush_edge_delete)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>edges_to_delete2 <span class="ot">&lt;-</span> <span class="fu">E</span>(Crush_loops)[(<span class="fu">.from</span>(<span class="st">"Remus Lupin"</span>) <span class="sc">&amp;</span> <span class="fu">.to</span>(<span class="st">"Nymphadora Tonks"</span>)) <span class="sc">|</span> <span class="fu">.from</span>(<span class="st">"Nymphadora Tonks"</span>) <span class="sc">&amp;</span> <span class="fu">.to</span>(<span class="st">"Remus Lupin"</span>)]</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>Crush_edge_delete <span class="ot">&lt;-</span> <span class="fu">delete_edges</span>(Crush_loops, edges_to_delete2)</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Crush_edge_delete)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -616,12 +610,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="add-edges" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="add-edges"><span class="header-section-number">5.4</span> Add Edges</h2>
-<p>Use add.edges().</p>
+<section id="adding-nodes" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="adding-nodes"><span class="header-section-number">5.3</span> Adding Nodes</h2>
+<p>Next, you might need to add data to the network object. Use caution when doing this. Consider the ethics of your research. Has the person you are adding consented to being studied? Adding data, any data, requires consideration.</p>
+<p>Once you have considered the above and are sure that it is ethical to add data to your network, you may wish to add nodes to your network. To do so, use add.vertices() function.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>crush_added <span class="ot">&lt;-</span> <span class="fu">add.edges</span>(crush_added, <span class="at">edges =</span> <span class="fu">c</span>(<span class="st">"Michael Corner"</span>, <span class="st">"Ginny Weasley"</span>))</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(crush_added)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>crush_added <span class="ot">&lt;-</span> <span class="fu">add.vertices</span>(Crush_loops, <span class="dv">1</span>, <span class="at">name =</span> <span class="st">"Michael Corner"</span>)  </span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(crush_added)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -630,10 +626,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>Now to add the reciprocated tie</p>
+<p>This function follows the following logic: you state the network that you want to add to, state how many nodes you are adding (in this case 1), then state the attribute of the node you are adding (in this case, the name is “Michael Corner.”</p>
+</section>
+<section id="add-edges" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="add-edges"><span class="header-section-number">5.4</span> Add Edges</h2>
+<p>You may need to add edges that you know exist. For example, in this network, the node that we added, “Michael Corner” has connections to another in this network! So, when I originally collected these network data, I forgot this guy! Note, these are fictional people, so I do not need to check with “Michael Corner” before I add him and his connections to our network.</p>
+<p>We have added him in, but now we need to add his connections. To do this, you use add.edges().Note, that we start with Michael, then we list to whom he is connected. Think of this as a “from” and “to” formula. So here, this goes from “Michael Corner” to “Ginny Weasley.”</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>crush_added <span class="ot">&lt;-</span> <span class="fu">add.edges</span>(crush_added, <span class="at">edges =</span> <span class="fu">c</span>(<span class="st">"Ginny Weasley"</span>, <span class="st">"Michael Corner"</span>))</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(crush_added)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>crush_added <span class="ot">&lt;-</span> <span class="fu">add.edges</span>(crush_added, <span class="at">edges =</span> <span class="fu">c</span>(<span class="st">"Michael Corner"</span>, <span class="st">"Ginny Weasley"</span>))</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(crush_added)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -642,6 +644,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<p>Now to add the reciprocated tie, from “Gunny Wealey” to “Michael Corner.”</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>crush_added <span class="ot">&lt;-</span> <span class="fu">add.edges</span>(crush_added, <span class="at">edges =</span> <span class="fu">c</span>(<span class="st">"Ginny Weasley"</span>, <span class="st">"Michael Corner"</span>))</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>                         </span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(crush_added)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Cleaning-Network-Data---Trimming-and-Adding_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="summary" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="summary"><span class="header-section-number">5.5</span> Summary</h2>
+<p>Here we have covered a few ways to clean network data. We have covered a few tings.</p>
+<ol type="1">
+<li><p>Network data can be messy</p></li>
+<li><p>Adding or delete nodes and edges either systematically (i.e.&nbsp;all isolates) or one-by-one.</p></li>
+</ol>
+<p>Well done!</p>
 
 
 </section>
