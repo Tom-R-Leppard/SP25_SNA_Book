@@ -4,7 +4,7 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
 # Two Mode Networks - Edgelists
 
-This is a continuation of the previous section working with two mode networks. The same learning elements apply here as applied in [Chapter 7](Two%20Mode%20Networks%20-%20AM.qmd).
+This is a continuation of the previous section working with two mode networks. The same learning elements apply here as applied in [Chapter 8](Two%20Mode%20Networks%20-%20AM.qmd).
 
 ```{r}
 library(igraph)
@@ -37,7 +37,7 @@ It recognises that there are two types of node in this object, so we can set tha
 V(hp_tm_net)$type <- bipartite_mapping(hp_tm_net)$type
 ```
 
-Now we have changed it into a two mode network and added the characteristic "type" that we are familiar with from working with an adjacency matrix like we did in [Chapter 7](Two%20Mode%20Networks%20-%20AM.qmd).
+Now we have changed it into a two mode network and added the characteristic "type" that we are familiar with from working with an adjacency matrix like we did in [Chapter 8](Two%20Mode%20Networks%20-%20AM.qmd).
 
 ```{r}
 V(hp_tm_net)$type 
