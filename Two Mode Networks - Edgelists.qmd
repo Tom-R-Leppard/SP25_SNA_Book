@@ -50,6 +50,7 @@ When we plot it, it looks how we expect!
 ```{r}
 shapes <- c("circle", "square")
 colors <-c("green", "orange")
+
 plot(hp_tm_net, vertex.color=colors[V(hp_tm_net)$type+1],
      vertex.shape=shapes[V(hp_tm_net)$type+1], vertex.label = NA)
 ```

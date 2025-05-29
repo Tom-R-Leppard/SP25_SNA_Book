@@ -4,6 +4,12 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
 # Interactive Networks Visualisations
 
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| LEARNING ELEMENTS - Data Practices                                                                                                                                                |
++===================================================================================================================================================================================+
+| -   Assessing Data Communication. Sometimes a visceral interaction with data can be very engaging. Rather than just looking at a plot, people can participate in a visualisation. |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
 ```{r}
 library(igraph)
 library(dplyr) 
@@ -33,7 +39,7 @@ head(edges.df)
 
 The visNetwork package requires that our each node has a unique ID. This ID is not separate from the network (i.e. a row number in a dataframe), rather, this unique ID MUST MATCH the names of the vertices. THIS IS IMPORTAT. If you are to create this type of network, you will need both the edge information and the node information. Remember, the latter, the node information, can simply consist of just an id column. So, if you are working with a network that only has a an adjacency matrix or a network, you can create a dataframe that has the other half you need - a dataframe with the node id (names).
 
-In our case, we have a network that I have created that has both of these separate dataframes that we can use to create our network. First, we need the aforementioned ID for each node. In this case, we can use the rename() function from the dplyr package to rename the column 'name' to id. The vistNetwork package can now detect the unique ids that define each node.
+In our case, we have a network that I have created that has both of these separate dataframes that we can use to create our network. First, we need the aforementioned ID for each node. In this case, we can use the rename() function from the dplyr package to rename the column 'name' to id. The visNetwork package can now detect the unique ids that define each node.
 
 ```{r}
 vertices.df <- vertices.df %>%
@@ -131,7 +137,7 @@ grime_08_isol_3d_col
 
 ```
 
-If you would like to save this widget, you can do so using the savewidget() function from the htmltools package. Then you can call upon it using the browseURL function. However, in order to make this work well in a html format, you will need to use the browsable() function on the object. The chunk below should open an html page with your network (remove the #).
+If you would like to save this widget, you can do so using the savewidget() function from the htmltools package. Then you can call upon it using the browseURL function. However, in order to make this work well in a html format, you will need to use the browsable() function on the object. The chunk below should open an html page with your network.
 
 ```{r eval =FALSE}
 
@@ -147,8 +153,9 @@ Finally, you can further represent elements of your graph in the 3D network. For
 grime_coms <- grime_isol
 cl <- cluster_infomap(grime_coms)
 V(grime_coms)$color <- cl$membership
+V(grime_coms)$size <- 5
 
-grime_coms3D <- graphjs(grime_coms,   edge.color = "gray",  bg = "white", main = "Communities in Grime 2008")
+grime_coms3D <- graphjs(grime_coms,   edge.color = "maroon",  bg = "white", main = "Communities in Grime 2008")
 grime_coms3D
 
 ```
@@ -156,3 +163,7 @@ grime_coms3D
 ## Closing Thoughts on Interactive Networks
 
 I think these networks are cool. However, I really think they are a bit of a gimmick! Their utility is limited at best. For example, they only really work in online spaces while are completely useless in print. The click functions and maneuverable attributes of these graphs are fun to play around with, perhaps useful in grabbing the imagination of readers. However, many academic uses for network analysis is much easier to present using static graphs. Still... they are loads of fun!
+
+## Summary
+
+Here you have learned how to create interactive visualisations. Specifically, here you have learned how to create two types: interactive and 3D.
