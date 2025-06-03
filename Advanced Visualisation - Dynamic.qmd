@@ -6,6 +6,7 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
 ```{r}
 library(igraph)
+library(ADAPTSNA)
 ```
 
 You might be interested in networks that change over time. Rather than a cross-section of relationships, you may have multiple networks that are taken at different time points. These are called discrete longitudinal networks. They are discrete because each network represents a discrete, distinct, point in time. For example, you may have monthly phone call data between people and their family. You may have yearly romantic affiliations between a group of people. The point is, the time stamps are distinct and standardised (yearly, monthly, daily etc.) and the relationships may change over time. There is such a thing as continuous longitudinal network data, but we will just focus on discrete networks for now.
@@ -14,26 +15,26 @@ In other tutorials we have been using collaboration data between Grime musicians
 
 ```{r}
 # 2008
-edge_list <- read.csv(file.choose(), header = TRUE) # select GRIME_EDGE_LIST_2008 _GRIME ONLY.csv
+edge_list <- load_data("GRIME_2008_Edge.csv", header = TRUE)
 grime_08<- graph_from_data_frame(d=edge_list, directed = TRUE)
 ##Removing Loops
 grime_08 <- delete_edges(grime_08, E(grime_08)[is.loop(grime_08)])
 
 
 # 2010
-edge_list_10 <- read.csv(file.choose(), header = TRUE) # select GRIME_EDGE_LIST_2010 _GRIME ONLY.csv
+edge_list_10 <- load_data("GRIME_2010_Edge.csv", header = TRUE)
 grime_10<- graph_from_data_frame(d=edge_list_10, directed = TRUE)
 ##Removing Loops
 grime_10 <- delete_edges(grime_10, E(grime_10)[is.loop(grime_10)])
 
 # 2012
-edge_list_12 <- read.csv(file.choose(), header = TRUE) # select GRIME_EDGE_LIST_2012 _GRIME ONLY.csv
+edge_list_12 <- load_data("GRIME_2012_Edge.csv", header = TRUE)
 grime_12<- graph_from_data_frame(d=edge_list_12, directed = TRUE)
 ##Removing Loops
 grime_12 <- delete_edges(grime_12, E(grime_12)[is.loop(grime_12)])
 
 # 2014
-edge_list_14 <- read.csv(file.choose(), header = TRUE) # select GRIME_EDGE_LIST_2014 _GRIME ONLY.csv
+edge_list_14 <- load_data("GRIME_2014_Edge.csv", header = TRUE)
 grime_14<- graph_from_data_frame(d=edge_list_14, directed = TRUE)
 ##Removing Loops
 grime_14 <- delete_edges(grime_14, E(grime_14)[is.loop(grime_14)])

@@ -4,6 +4,7 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
 ```{r}
 library(igraph)
+library(ADAPTSNA)
 ```
 
 # Visualisations - Intermediate
@@ -19,7 +20,7 @@ In the previous chapter, we talked about creating clean network visuals that are
 First, bring in the data on Grime musicians and their collaborations with each other in 2008. Then clean the network a little bit by deleting the self-loops.
 
 ```{r}
-grime_edge_list <- read.csv(file.choose(), header = TRUE) # select GRIME_EDGE_LIST_2008 _GRIME ONLY.csv
+grime_edge_list <- load_data("GRIME_2008_Edge.csv", header = TRUE) 
 
 grime_08 <- graph_from_data_frame(d= grime_edge_list, directed = TRUE)
 plot(grime_08)

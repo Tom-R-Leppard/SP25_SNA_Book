@@ -1,0 +1,44 @@
+# Contents and Schedule
+
+Here is a roadmap for how to use this book.
+
+Depending on your usage, you might wish change the sequencing of the content of this book. However, it is designed so that each topic can serve as the content for a week in a semester. The flow of the book follows the logic of a data science workflow that will help readers flow from wrangling, visualising and then analysing network data.
+
+## Unit 1 - Cleaning and Transforming
+
++-------------------+--------------------------------------------------------------------------+---------------------------------------------------+
+| Topic             | Chapter                                                                  | Assignments                                       |
++:=================:+:========================================================================:+:=================================================:+
+| Introduction      | [Chapter 4](Unit%201.qmd)                                                |                                                   |
++-------------------+--------------------------------------------------------------------------+---------------------------------------------------+
+| Data Structures   | [Chapter 5](Network%20Data%20Structures.qmd)                             |                                                   |
++-------------------+--------------------------------------------------------------------------+---------------------------------------------------+
+| Cleaning #1       | [Chapter 6](Cleaning%20Network%20Data%20-%20Trimming%20and%20Adding.qmd) | [My Ego Network](A1_My%20Ego%20Network.qmd)       |
++-------------------+--------------------------------------------------------------------------+---------------------------------------------------+
+| Cleaning #2       | [Chapter 7](Cleaning%20Network%20Data%20-%20Subgraphs.qmd)               |                                                   |
++-------------------+--------------------------------------------------------------------------+---------------------------------------------------+
+| Attributes        | [Chapter 8](Node%20and%20Edge%20Attributes.qmd)                          |                                                   |
++-------------------+--------------------------------------------------------------------------+---------------------------------------------------+
+| Two-Mode Networks | [Chapter 9](Two%20Mode%20Networks%20-%20AM.qmd)                          | [Project Prospectus](A2_Project%20Prospectus.qmd) |
+|                   |                                                                          |                                                   |
+|                   | [Chapter 10](Two%20Mode%20Networks%20-%20Edgelists.qmd)                  |                                                   |
++-------------------+--------------------------------------------------------------------------+---------------------------------------------------+
+
+## Unit 2 - Visualising
+
+| Topic | Chapter | Assignments |
+|:--:|:--:|:--:|
+| Introduction | [Chapter 11](Unit%202.qmd) |  |
+| Basic | [Chapter 12](Basic%20Visualisation.qmd) | [Data Exploration](A3_Data%20Exploration.qmd) |
+| Intermediate | [Chapter 13](Intermediate%20Visualisation.qmd) |  |
+| Advanced #1 | [Chapter 14](Advanced%20Visualisation%20-%20Interactive.qmd) |  |
+| Advanced #2 | [Chapter 15](Advanced%20Visualisation%20-%20Dynamic.qmd) | [Visualisation](A4_Visualisations.qmd) |
+
+## Unit 3 - Analysing
+
+| Topic | Chapter | Assignments |
+|:--:|:--:|:--:|
+| Introduction | [Chapter 16](Unit%203.qmd) |  |
+| People | [Chapter 17](People%20In%20Networks.qmd) |  |
+| Communities | [Chapter 18](Communities%20in%20Networks.qmd) |  |
+| Networks | [Chapter 19](Networks%20of%20People.qmd) | [Final Project](Final%20Project%20Instructions.qmd) |

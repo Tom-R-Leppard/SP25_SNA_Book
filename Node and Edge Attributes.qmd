@@ -6,7 +6,7 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
 ```{r}
 library(igraph)
-library(readxl)
+library(ADAPTSNA)
 ```
 
 Your network may have some edge characteristics. What this means is that the network has qualitative or quantitative information regarding the connections between nodes. These could be things that denote a certain type of connection between individuals in the network (romantic vs. friend, positive vs. negative, kinship vs. friend). These qualitatively different categories tell us more about the types of relationships that there are between the nodes in our network. Meanwhile, quantitative information can also tells us more about the information. Quantitative information could include things like frequency of communication. Such information is termed the edges "weight" indicating that there are substantively meaningful differences between the levels of connection (for example interacting only once compared to 10 times).
@@ -28,8 +28,8 @@ All of this information can be attached to our edgelist. You can also do this on
 This dataset has a lot more information about these individuals and their relationships than others we have used this far. We have two excel spreadsheets (.csv) one called vertices and the other called edges. The vertices sheet has information about each individual node in the network while the edges contains both the edges that exist as well as information about them. Let's read them in and take a look at them
 
 ```{r}
-vertices.df <- read.csv(file.choose()) # select Node data.csv
-edges.df <- read.csv(file.choose()) # select Edge data.csv
+vertices.df <- load_data("Node data.csv")
+edges.df <- load_data("Edge data.csv")
 ```
 
 Let's take a look at these one at a tine to get an idea of what information we have.

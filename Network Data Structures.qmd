@@ -6,7 +6,7 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
 One of the first steps to wrangling network data is to understand how it is strcutured. This section will walk you through the basic ways that network data is structured and demonstrate how to bring them into the R envrionment. Then, we will work on converting these data objects into network objects in R using the igraph package.
 
-Keep in mind, you be using network data that is already stored into these formats or may be formatting original data. We will first discuss edgelists and then adjacency matrices. Regardless of how your data is structred, the easiest way to store any network data is in a .csv excel file. We can use the read.csv() function in base R to read it into our environment.
+Keep in mind, you be using network data that is already stored into these formats or may be formatting original data. We will first discuss edgelists and then adjacency matrices. Regardless of how your data is structured, the easiest way to store any network data is in a .csv excel file. 
 
 Before we dive in, let's talk about direction. This is important because it influences the way we create the network. A network can be either directed or undirected, meaning that the ties existing between the nodes could be one way or inherently mutual. The direction depends on whether a person can 'nominates' another. A simple example of an undirected connection is a family tie, whereas friendship could be directed. One person might say that they are friends with someone, but that someone may not return the friendship.
 
@@ -31,7 +31,8 @@ This is a network of romantic affiliations based on students from the Harry Pott
 PAUSE AND THINK: Is this a directed or an undirected network? What can you see to indicate whether it is or is not?
 
 ```{r}
-my_edge <- read.csv(file.choose(), header = TRUE) # select Hogwarts Crushes Edgelist_SELFLOOPS.csv
+library(ADAPTSNA) # So we can get the data
+my_edge <- load_data("Hogwarts Crushes Edgelist.csv", header = TRUE)
 
 head(my_edge)
 ```
@@ -49,7 +50,7 @@ One final characteristic of an adjacency matrix is the line where the same cell 
 This code chunk shows you how to bring in a .csv with network data stored as an adjacency matrix. These data are the same data as before - crushes between Harry Potter Characters. Note, the row.names = 1 option is used here to ensure R recognises row 1 as names not connections.
 
 ```{r}
-my_adj  <- read.csv(file.choose(), row.names=1) # select Hogwarts Crushes matrix.csv
+my_adj  <- load_data("Hogwarts Crushes matrix.csv", row.names=1)
 
 head(my_adj)
 ```

@@ -3,7 +3,8 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ```
 
 ```{r}
-library(igraph)
+library(igraph) # Networks
+library(ADAPTSNA) # Data
 ```
 
 # Cleaning Network Data - Trimming and Adding
@@ -26,7 +27,7 @@ If your data are stored in an adjacency matrix, then isolates are those with no 
 However, dealing with isolates is not as straightforward when you are working with edgelists. With this structure, you have only two columns, one for senders and the other for receivers. If there is an individual in the group who neither sends nor receives, but is a legitimate participant of the group, what do you do with them? One way of recording such isolates in an edgelist is list them as connected to themselves (known as a self loop). Take a look at this edgelist and you will see that these individuals are connected to themselves.
 
 ```{r}
-hog_crush_loops <- read.csv(file.choose(), header=TRUE) # select Hogwarts Crushes Edgelist_SELFLOOPS.csv
+hog_crush_loops <- load_data("Hogwarts Crushes Edgelist_SELFLOOPS.csv", header=TRUE)
 
 #Take a look at the data
 hog_crush_loops
@@ -45,7 +46,7 @@ These do not look great, and can cause confusion to viewers of the network visua
 Another way to record isolates from an edgelist is to list no-one in the "to" column. In other words, you list the name of the person in your network but leave the cell next to them blank. However, this approach also has additional steps to take before it is clean and ready to go.
 
 ```{r}
-hog_crush_empty <- read.csv(file.choose(), header=TRUE) # select Hogwarts Crushes Edgelist_EMPTY NODE.csv
+hog_crush_empty <- load_data("Hogwarts Crushes Edgelist_EMPTY.csv", header=TRUE)
 ```
 
 Take a look at the edgeist now it is in and you will see I added a few more characters to this group: Madeye, Flitwick, McGonagal, and Voldemort. They are all listed in the "Crusher" (from) column but have no connection to anyone in the "crush" column. This makes sense, since we know little about their romances from the Harry Potter Saga.

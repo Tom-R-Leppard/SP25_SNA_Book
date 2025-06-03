@@ -6,6 +6,7 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
 ```{r}
 library(igraph)
+library(ADAPTSNA)
 ```
 
 Social network data can be one mode or two mode. So far we have dealt with one mode network data. This means that one type of node is connected to the same type of node. Individuals connected to other individuals. We can also measure networks where there are two types of node. Let's say individuals connected to groups that they participate in.
@@ -25,7 +26,7 @@ For this and the next chapter we will use some unique data where individuals are
 I identified various groups from the series and then researched which characters are participants in the groups. For example, I googled "list of prefects at hogwarts." Same for phoenix, death eaters etc. Most of the info came from this site - https://harrypotter.fandom.com/wiki/Dumbledore%27s_Army. I then checked each person on google to see what house they were in - some are missing and NA because they are fake characters from the movies or the wiki page. I then structured these into an adjacency matrix and an edgelist. In this chapter, we work on adjacecny matrices. We will deal with the rest in the next chapter.
 
 ```{r}
-hp <- read.csv(file.choose(),header=TRUE,row.names=1) ## select harry_potter_two_mode_AM.csv
+hp <- load_data("Harry Potter_Two_Mode_AM.csv", row.names=1)
 
 hp_mat <- as.matrix(hp)
 

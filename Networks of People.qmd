@@ -6,6 +6,7 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
 ```{r}
 library(igraph)
+library(ADAPTSNA)
 ```
 
 There are two elements to analyse networks, the nodes and the networks. In this chapter, we will cover some of the fundamental network measures. As usual, we won't get too technical into the mathematics behind each measure, but focus on the substantive interpretations.
@@ -19,7 +20,7 @@ Here, I will introduce you to some classic network measures using the 2008 Grime
 Let's bring in our usual 2008 Grime data and then clean it up a bit (delete the selfloops).
 
 ```{r}
-grime_edge_list <- read.csv(file.choose(), header = TRUE) # GRIME_EDGE_LIST_2008 _GRIME ONLY.csv
+grime_edge_list <- load_data("GRIME_2008_Edge.csv", header = TRUE)
 
 grime_08 <- graph_from_data_frame(d= grime_edge_list, directed = TRUE)
 
@@ -72,7 +73,7 @@ transitivity <- transitivity(grime_08_clean)
 transitivity
 ```
 
-## Centraisation
+## Centralisation
 
 The final measure I want to introduce you to is called centralisation. We have covered measures of centrality which are concerned with individuals. Measures of centralisation use similar logic but describe the graph. They capture the extent to which the network is centred around one or a few individuals. You can well imagine that a star graph (a graph where all pendula are connected to a central node) is highly centralised. Meanwhile, a full graph may be less centrlaised.
 
@@ -105,10 +106,10 @@ The values have changed!Both have increased suggesting that the isolates were im
 Right, let's have some fun with this. I am going to read in some more Grime network years.
 
 ```{r}
-grime_2010 <- read.csv(file.choose(), header = TRUE)
-grime_2012 <- read.csv(file.choose(), header = TRUE)
-grime_2014 <- read.csv(file.choose(), header = TRUE)
-grime_2016 <- read.csv(file.choose(), header = TRUE)
+grime_2010 <- load_data("GRIME_2010_Edge.csv", header = TRUE)
+grime_2012 <- load_data("GRIME_2012_Edge.csv", header = TRUE)
+grime_2014 <- load_data("GRIME_2014_Edge.csv", header = TRUE)
+grime_2016 <- load_data("GRIME_2016_Edge.csv", header = TRUE)
 #cleaning the loops
 grime_2010_edge <- graph_from_data_frame(d= grime_2010, directed = TRUE)
 grime_2010_edge <- delete.edges(grime_2010_edge, E(grime_2010_edge)[which_loop(grime_2010_edge)])

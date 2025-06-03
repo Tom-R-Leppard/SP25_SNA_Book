@@ -20,8 +20,9 @@ This being said, there are aspects of the visualisation that you must remember t
 
 ```{r}
 library(igraph)
+library(ADAPTSNA)
 
-grime_edge_list <- read.csv(file.choose(), header = TRUE) # select GRIME_EDGE_LIST_2008 _GRIME ONLY.csv
+grime_edge_list <- load_data("GRIME_2008_Edge.csv", header = TRUE)
 
 grime_08 <- graph_from_data_frame(d= grime_edge_list, directed = TRUE)
 plot(grime_08)

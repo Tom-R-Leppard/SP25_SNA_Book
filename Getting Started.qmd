@@ -2,10 +2,20 @@
 
 ## Quick Start
 
-If you are an old hand when it comes to coding and have experience with R, great! Know that we will mostly be using the package 'igraph' so go ahead and install it now (you can use the code below). Keep an eye out for the new packages we use throughout the book and install them as you go. Otherwise, notice throughout the book I suggest bringing in the various networks using the read.csv(file.choose()) option. If you would prefer to download all of the datasets from the the [Github repo](https://github.com/Tom-R-Leppard/SP25_SNA_Book/tree/main/Social%20Network%20Analysis%20-%20Data) and bring them in however you like. Other than that, get going!
+If you are an old hand when it comes to coding and have experience with R, great! Know that we will mostly be using the package 'igraph' so go ahead and install it now (you can use the code below). Keep an eye out for the new packages we use throughout the book and install them as you go. 
+
+The data we will be using come from the "ADAPTSNA" package which is the companion package to this book and available on my Github. Install it using the code below. 
+
+Other than that, get going!
 
 ```{r eval = FALSE}
+# Network Package
 install.packages("igraph")
+library(igraph)
+
+# Package to access data
+remotes::install_github("Tom-R-Leppard/ADAPTSNA")
+library(ADAPTSNA)
 ```
 
 ## New to R?
@@ -36,7 +46,7 @@ Once you have installed it, or created your new project on Posit Cloud, go ahead
 
 ### On Packages
 
-The final thing you need to know is that we will be using multiple types of commands throughout this book. These are grouped into what are called 'packages.' Think of packages as mini dictionaries for different languages. In this case, however, these languages enable you to do different things with/to your data.
+Another thing you need to know is that we will be using multiple types of commands throughout this book. These are grouped into what are called 'packages.' Think of packages as mini dictionaries for different languages. In this case, however, these languages enable you to do different things with/to your data.
 
 To access these packages, you first need to install them. You can do this, using the following function.
 
@@ -50,12 +60,25 @@ The above code will download the package to your machine (or your project space 
 library(igraph)
 ```
 
+You only ever need to install it once on to your machine but every time you open R you will need to activate it in your library. 
+
 ### Loading Data
 
 Great stuff! You now have RStudio sorted out and you (if you ran the above) have installed igraph. Now, the last thing you need is the data that you are going to use and to bring it into the environment. There are many ways that you can do this, but I have provided you, what I think, is the simplest low-tech method that you can use across both on posit cloud or your own machine.
 
-In each of the chapters, near the beginning of the chapter, you will see a line with the function 'read.csv()' and the option 'file.choose()' nested inside it. This, when run, will open a window on your machine to access your files on the computer. You need to select the .csv file that houses the data we are using in each chapter. I have commented in each chunk right after that command which .csv file you are to select.
+In each of the chapters, you will need both the "igraph" and "ADAPTSNA" packages. "igraph" is the network package, "ADAPTSNA" is a package to help you bring in the data used in this book. Follow the code below to install the second package. 
 
-If you are on posit.cloud, that window cannot access your computer but the 'Files' tab in the bottom right window. Before you can run the function, you will need to upload the .csv files that you will be calling into that space. Click on the 'Files' tab and you will see a button that says, upload. You need to upload the data into that space and then run the read.csv() code.
+```{r eval = FALSE}
+# Package to access data
+remotes::install_github("Tom-R-Leppard/ADAPTSNA")
+library(ADAPTSNA)
+```
 
-The only thing left to do, is to head over to the [Github repo](https://github.com/Tom-R-Leppard/SP25_SNA_Book/tree/main/Social%20Network%20Analysis%20-%20Data) and get started!
+This package has all of the datasets we will be using for this book. To see all of the available datasets in this package, use the code below. This will return the names of the .csv files we are using. 
+
+```{r eval = FALSE}
+list_data_files()
+```
+
+
+The only thing left to do, is to head over to the [Github repo](https://github.com/Tom-R-Leppard/SP25_SNA_Book/tree/main/Social%20Network%20Analysis%20-%20Data) and get started thinking about your project!

@@ -11,8 +11,11 @@ book:
    
   chapters:
     - index.qmd
-    - intro.qmd
-    - Getting Started.qmd
+    - part: "Introduction and Getting Going"
+      chapters:
+        - intro.qmd
+        - Getting Started.qmd
+        - Reading Schedule.qmd
     - part: " Unit 1: Cleaning and Transforming Network Data"
       chapters:
         - Unit 1.qmd
