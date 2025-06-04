@@ -4,6 +4,14 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
 # Dynamic Network Visualisations
 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| LEARNING ELEMENTS - Data Practices                                                                                                                                                        |
++===========================================================================================================================================================================================+
+| -   Design Practices. So far we have dealt with cross-sectional networks. However, one way we can measure networks is at different time points to study the evolution of relationships.   |
+|                                                                                                                                                                                           |
+| -   Examining Data Creation. In this chapter you will be creating a network list which "stacks" networks into a series that we can analyse as one dynamic (flowing) network.              |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
 ```{r}
 library(igraph)
 library(ADAPTSNA)

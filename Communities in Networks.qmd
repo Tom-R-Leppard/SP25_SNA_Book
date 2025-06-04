@@ -4,6 +4,12 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
 # Communities In Networks
 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| LEARNING ELEMENTS - Data Practices                                                                                                                                                                                |
++===================================================================================================================================================================================================================+
+| -   Examining Data Creation. Community detection algorithms provide metrics at the individual and network level of measurement. The community that the individual is in and the modularity of the whole network.  |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
 ```{r}
 library(igraph)
 library(ADAPTSNA)

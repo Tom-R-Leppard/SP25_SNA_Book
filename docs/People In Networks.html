@@ -402,6 +402,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>LEARNING ELEMENTS - Data Discoveries</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><ul>
+<li><p>Design Practices. There are difference scopes or units of network analysis. Here you are analysing the smallest unit in the network, the individual. In later chapters you will cover communities (the meso-level) and entire network.</p></li>
+<li><p>Assessing Methods. This is a brief introduction to each measurement of centrality. We do not go too much into the maths behind each measurement. Once you get these concepts down, I encourage you to learn a little more about how these measures are calculated.</p></li>
+</ul></td>
+</tr>
+</tbody>
+</table>
 <p>One way to analyse a social network is to analyse the people in those networks. In general terms,we can report on individuals based on the structural position they hold within a network. The concept and various measures of centrality allows us to do so. Ultimately, as the scientist, you can tell stories about the individuals in your network based on how central of peripheral they are in the group. In other words, measures of centrality tell stories about the individuals in your network.</p>
 <p>I encourage you to think about these measures in terms of an individuals prominence and influence over the network. In this chapter, we will be using four measures, degree centrality, betweenness centrality, closeness centrality, and constraint. First, let’s go through these one-by-one showing how to measure these in igraph. I won’t go too deep into the maths behind the algorithms, but will focus more on substantively what it means. Then, I will show you how to construct a data frame with all of this information so you can then use these to run further analysis (i.e.&nbsp;perhaps regressing centrality on career success). You may have multiple years worth of networks and could create line graphs of centrality for each node over time to see their personal change overtime.</p>
 <p>Before we begin, let’s bring in the Grime data we have been using so far. We know by now we need to remove self loops in this edgelist.</p>
