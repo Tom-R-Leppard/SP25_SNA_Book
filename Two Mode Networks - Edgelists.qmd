@@ -4,7 +4,7 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
 # Two Mode Networks - Edgelists
 
-This is a continuation of the previous section working with two mode networks. The same learning elements apply here as applied in [Chapter 8](Two%20Mode%20Networks%20-%20AM.qmd).
+This is a continuation of the previous section working with two mode networks. The same learning elements apply here as applied in [Chapter 9](Two%20Mode%20Networks%20-%20AM.qmd).
 
 ```{r}
 library(igraph)

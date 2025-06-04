@@ -3,6 +3,10 @@
         {
             "columnIndex": 2,
             "ascending": true
+        },
+        {
+            "columnIndex": 4,
+            "ascending": false
         }
     ],
     "path": "~/Teaching/SNA/Spring 2025/SNA_SP_25_Book/SP25_SNA_Book"

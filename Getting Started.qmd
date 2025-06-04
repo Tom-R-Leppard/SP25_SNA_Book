@@ -2,9 +2,9 @@
 
 ## Quick Start
 
-If you are an old hand when it comes to coding and have experience with R, great! Know that we will mostly be using the package 'igraph' so go ahead and install it now (you can use the code below). Keep an eye out for the new packages we use throughout the book and install them as you go. 
+If you are an old hand when it comes to coding and have experience with R, great! Know that we will mostly be using the package 'igraph' so go ahead and install it now (you can use the code below). Keep an eye out for the new packages we use throughout the book and install them as you go.
 
-The data we will be using come from the "ADAPTSNA" package which is the companion package to this book and available on my Github. Install it using the code below. 
+The data we will be using come from the "ADAPTSNA" package which is the companion package to this book and available on my Github. Install it using the code below.
 
 Other than that, get going!
 
@@ -60,13 +60,13 @@ The above code will download the package to your machine (or your project space 
 library(igraph)
 ```
 
-You only ever need to install it once on to your machine but every time you open R you will need to activate it in your library. 
+You only ever need to install it once on to your machine but every time you open R you will need to activate it in your library.
 
 ### Loading Data
 
 Great stuff! You now have RStudio sorted out and you (if you ran the above) have installed igraph. Now, the last thing you need is the data that you are going to use and to bring it into the environment. There are many ways that you can do this, but I have provided you, what I think, is the simplest low-tech method that you can use across both on posit cloud or your own machine.
 
-In each of the chapters, you will need both the "igraph" and "ADAPTSNA" packages. "igraph" is the network package, "ADAPTSNA" is a package to help you bring in the data used in this book. Follow the code below to install the second package. 
+In each of the chapters, you will need both the "igraph" and "ADAPTSNA" packages. "igraph" is the network package, "ADAPTSNA" is a package to help you bring in the data used in this book. Follow the code below to install the second package.
 
 ```{r eval = FALSE}
 # Package to access data
@@ -74,11 +74,10 @@ remotes::install_github("Tom-R-Leppard/ADAPTSNA")
 library(ADAPTSNA)
 ```
 
-This package has all of the datasets we will be using for this book. To see all of the available datasets in this package, use the code below. This will return the names of the .csv files we are using. 
+This package has all of the datasets we will be using for this book. To see all of the available datasets in this package, use the code below. This will return the names of the .csv files we are using.
 
 ```{r eval = FALSE}
 list_data_files()
 ```
-
 
 The only thing left to do, is to head over to the [Github repo](https://github.com/Tom-R-Leppard/SP25_SNA_Book/tree/main/Social%20Network%20Analysis%20-%20Data) and get started thinking about your project!

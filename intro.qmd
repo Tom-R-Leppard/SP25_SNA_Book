@@ -42,8 +42,8 @@ Finally, let me point you to the assignments in this course. You are welcome to 
 
 Students, the biggest thing you need to know is that you will be working on a project for the duration of the course. For more details see [the Final Project Instructions](Final%20Project%20Instructions.qmd).
 
-Each unit and assignment is a milestone in your project development. For this project, you may select any social network data that appeals to you. I have collated quite a few from various sources available on the [Github repo](https://github.com/Tom-R-Leppard/SP25_SNA_Book/tree/main/Social%20Network%20Analysis%20-%20Data). Alternatively, you may wish to explore other network data (from places like the [network repository](https://networkrepository.com/index.php), [Kaggle](https://www.kaggle.com/) or others). 
+Each unit and assignment is a milestone in your project development. For this project, you may select any social network data that appeals to you. I have collated quite a few from various sources available on the [Github repo](https://github.com/Tom-R-Leppard/SP25_SNA_Book/tree/main/Social%20Network%20Analysis%20-%20Data). Alternatively, you may wish to explore other network data (from places like the [network repository](https://networkrepository.com/index.php), [Kaggle](https://www.kaggle.com/) or others).
 
-Any data that you use, make sure you cite where you are using it from! 
+Any data that you use, make sure you cite where you are using it from!
 
 **Pay attention to the introductions of each unit. There are learning objectives, project milestones, and tips for preparing to do this professionally.**

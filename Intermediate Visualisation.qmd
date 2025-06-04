@@ -109,7 +109,7 @@ Finally, you can combine node-level characteristics with these other visualisati
 Here, I attach data external to the network (i.e. node characteristics) and visualise those. I bring in a separate .csv file that has various variables that pertain to the nodes. **These are fake characteristics that I made up.** Take a look at this to see what we have available. 2 variables - fake sales (continuous) and the artist's sex (categorical - dichotomous)
 
 ```{r}
-grime_nodes <- read.csv(file.choose()) # Select Grime 2008 Nodes.csv
+grime_nodes <- load_data("GRIME_2008_Nodes.csv")
 head(grime_nodes)
 ```
 
