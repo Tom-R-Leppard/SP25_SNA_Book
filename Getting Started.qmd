@@ -14,6 +14,8 @@ install.packages("igraph")
 library(igraph)
 
 # Package to access data
+# Make sure you have remotes installed first
+install.packages("remotes")
 remotes::install_github("Tom-R-Leppard/ADAPTSNA")
 library(ADAPTSNA)
 ```
@@ -70,6 +72,8 @@ In each of the chapters, you will need both the "igraph" and "ADAPTSNA" packages
 
 ```{r eval = FALSE}
 # Package to access data
+# Make sure you have remotes installed first
+install.packages("remotes")
 remotes::install_github("Tom-R-Leppard/ADAPTSNA")
 library(ADAPTSNA)
 ```
