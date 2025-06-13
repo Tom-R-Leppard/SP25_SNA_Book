@@ -5,3 +5,17 @@ This book is designed to build skills in Social Network Analysis by teaching it 
 The book is divided into three sections that mirror the units of the course. Each chapter of the book with take you through a data science workflow session-by-session bulding from data cleaning to analysis. First, it starts building your skills cleaning and transforming network data. In this unit you will be learning about network data structured, bringing network data into R and best practices for cleaning network data. Second, it transitions into a unit on network visualisation. This unit builds your skills in basic, intermediate, and advanced network visualisation. The aim of this unit is to help you create clean network visualisations that tell a clear story, and engage your viewers. Finally, the book finishes with some modules on analysing network data. Specifically, a discussion on the units of network analysis, individuals (nodes in the networks), communities (clusters of nodes in the networks), and the network itself. There is much to learn beyond this book, however, by the end of this you will have learned the fundamental principles and will build competence in network analysis.
 
 Enjoy!
+
+## Attribution
+
+**License**
+
+This book is licensed under a Creative Commons Attribution-[NonCommercial-NoDerivatives 4.0 International License (CC BY-NC-ND 4.0).](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+
+You may share this material in any medium or format for noncommercial purposes, provided you give appropriate credit, do not modify the material, and do not use it for commercial purposes.
+
+![](creative%20commons.png)
+
+**Suggested Citation**
+
+Leppard, Tom R. *Social Network Analysis: A Guide Using Principles of the ADAPT Model*. 2025. Available at: <https://tom-r-leppard.github.io/SP25_SNA_Book/>

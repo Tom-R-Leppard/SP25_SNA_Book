@@ -5,9 +5,13 @@ book:
   title: "Social Network Analysis: A Guide Using Principles of the ADAPT Model"
   author: "Tom R. Leppard"
   date: "5/16/2025"
+  sidebar:
+    search: true
+    title: " "
+    logo: cover.png
   cover-image: cover.png
   cover-image-alt: |
-    A textbook cover with a turtle that has a network on its shell. 
+    A textbook cover with a turtle. 
    
   chapters:
     - index.qmd
@@ -53,7 +57,6 @@ format:
     theme:
       - superhero
       - brand
-  
   pdf:
     documentclass: scrreprt
 
