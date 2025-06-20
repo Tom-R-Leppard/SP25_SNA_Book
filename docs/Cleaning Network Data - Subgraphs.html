@@ -456,37 +456,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(ego_graphs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]
-IGRAPH 6b33433 DN-- 2 1 -- 
+IGRAPH 7307b90 DN-- 2 1 -- 
 + attr: name (v/c), collab_weight (e/n)
-+ edge from 6b33433 (vertex names):
++ edge from 7307b90 (vertex names):
 [1] Asher D-&gt;Wiley
 
 [[2]]
-IGRAPH 6b33452 DN-- 1 0 -- 
+IGRAPH 7307ba9 DN-- 1 0 -- 
 + attr: name (v/c), collab_weight (e/n)
-+ edges from 6b33452 (vertex names):
++ edges from 7307ba9 (vertex names):
 
 [[3]]
-IGRAPH 6b3345e DN-- 1 0 -- 
+IGRAPH 7307bb5 DN-- 1 0 -- 
 + attr: name (v/c), collab_weight (e/n)
-+ edges from 6b3345e (vertex names):
++ edges from 7307bb5 (vertex names):
 
 [[4]]
-IGRAPH 6b3346a DN-- 2 1 -- 
+IGRAPH 7307bbf DN-- 2 1 -- 
 + attr: name (v/c), collab_weight (e/n)
-+ edge from 6b3346a (vertex names):
++ edge from 7307bbf (vertex names):
 [1] Scorcher-&gt;Wiley
 
 [[5]]
-IGRAPH 6b33479 DN-- 3 2 -- 
+IGRAPH 7307bca DN-- 3 2 -- 
 + attr: name (v/c), collab_weight (e/n)
-+ edges from 6b33479 (vertex names):
++ edges from 7307bca (vertex names):
 [1] Bless Beats-&gt;Wiley     Bless Beats-&gt;Roll Deep
 
 [[6]]
-IGRAPH 6b334ae DN-- 3 2 -- 
+IGRAPH 7307bd6 DN-- 3 2 -- 
 + attr: name (v/c), collab_weight (e/n)
-+ edges from 6b334ae (vertex names):
++ edges from 7307bd6 (vertex names):
 [1] Flowdan-&gt;Wiley  Flowdan-&gt;Jammer</code></pre>
 </div>
 </div>
@@ -495,7 +495,7 @@ IGRAPH 6b334ae DN-- 3 2 --
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">E</span>(grime_08_clean)[[<span class="fu">.inc</span>(<span class="st">'Wiley'</span>)]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>+ 8/28 edges from 6b2268c (vertex names):
+<pre><code>+ 8/28 edges from 72f5cd5 (vertex names):
              tail         head tid hid collab_weight
 1         Asher D        Wiley   1  29             1
 2        Scorcher        Wiley   4  29             4
@@ -557,7 +557,7 @@ IGRAPH 6b334ae DN-- 3 2 --
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>frequent_collabors <span class="ot">&lt;-</span> <span class="fu">E</span>(grime_08_clean)[[collab_weight <span class="sc">&gt;</span> <span class="dv">1</span>]]</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>frequent_collabors</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>+ 8/28 edges from 6b2268c (vertex names):
+<pre><code>+ 8/28 edges from 72f5cd5 (vertex names):
              tail   head tid hid collab_weight
 2        Scorcher  Wiley   4  29             4
 4         Flowdan  Wiley   6  29             3
