@@ -19,3 +19,7 @@ You may share this material in any medium or format for noncommercial purposes, 
 **Suggested Citation**
 
 Leppard, Tom R. *Social Network Analysis: A Guide Using Principles of the ADAPT Model*. 2025. Available at: <https://tom-r-leppard.github.io/SP25_SNA_Book/>
+
+## Acknowledgements
+
+This project would not have been possible without funding from the National Science Foundation. Furthermore, I could not have done it without the endless tutelage from my friends and mentors Steve McDonald and Andrew Davis. Good to acknowledge the network who first introduced me to networks!

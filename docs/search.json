@@ -42,5 +42,90 @@
       " Unit 1: Cleaning and Transforming Network Data",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Introducing Network Data Structures</span>"
     ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Social Network Analysis: A Guide Using Principles of the ADAPT Model",
+    "section": "",
+    "text": "Preface\nThis book is designed to build skills in Social Network Analysis by teaching it using principles from the data science teaching and learning model called ADAPT. It is designed to demonstrate principles of the model and will discuss aspects aspect of the model (learn more in Chapter 2).\nThe book is divided into three sections that mirror the units of the course. Each chapter of the book with take you through a data science workflow session-by-session bulding from data cleaning to analysis. First, it starts building your skills cleaning and transforming network data. In this unit you will be learning about network data structured, bringing network data into R and best practices for cleaning network data. Second, it transitions into a unit on network visualisation. This unit builds your skills in basic, intermediate, and advanced network visualisation. The aim of this unit is to help you create clean network visualisations that tell a clear story, and engage your viewers. Finally, the book finishes with some modules on analysing network data. Specifically, a discussion on the units of network analysis, individuals (nodes in the networks), communities (clusters of nodes in the networks), and the network itself. There is much to learn beyond this book, however, by the end of this you will have learned the fundamental principles and will build competence in network analysis.\nEnjoy!",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#attribution",
+    "href": "index.html#attribution",
+    "title": "Social Network Analysis: A Guide Using Principles of the ADAPT Model",
+    "section": "Attribution",
+    "text": "Attribution\nLicense\nThis book is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License (CC BY-NC-ND 4.0).\nYou may share this material in any medium or format for noncommercial purposes, provided you give appropriate credit, do not modify the material, and do not use it for commercial purposes.\n\nSuggested Citation\nLeppard, Tom R. Social Network Analysis: A Guide Using Principles of the ADAPT Model. 2025. Available at: https://tom-r-leppard.github.io/SP25_SNA_Book/",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#acknowledgements",
+    "href": "index.html#acknowledgements",
+    "title": "Social Network Analysis: A Guide Using Principles of the ADAPT Model",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\nThis project would not have been possible without funding from the National Science Foundation. Furthermore, I could not have done it without the endless tutelage from my friends and mentors Steve McDonald and Andrew Davis. Good to acknowledge the network who first introduced me to networks!",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "Two Mode Networks - Edgelists.html",
+    "href": "Two Mode Networks - Edgelists.html",
+    "title": "10  Two Mode Networks - Edgelists",
+    "section": "",
+    "text": "10.1 Summary\nThis is a continuation of the previous section working with two mode networks. The same learning elements apply here as applied in Chapter 9.\nThere is a slightly different approach to bringing in Two mode network data from an Edgelist than from an Adjacency matrix. Instead of a two mode matrix, you may have edgelist data in two mode format.\nDifferent from the adjacency matrix, this edge list has one type of node in one column and the other type in the second column.\nThis is the same process as any other network created from an edgelist. Directed is set to FALSE because there is not really a direction between individuals and groups. Rather, the ties are a marker of affiliation.\nLet’s check to see if this is actually a two mode network using bipartite_mapping. This function goes through the edgelist an ensures that the columns have distinct nodes in them (i.e. it is truly a bipartite or two mode network).\nIt recognises that there are two types of node in this object, so we can set that as a vertex characteristic. In turn, this changes the network from a one mode to a two mode network.\nNow we have changed it into a two mode network and added the characteristic “type” that we are familiar with from working with an adjacency matrix like we did in Chapter 8.\nYou see the true and false statements, as we expect to see. Since this is the case, we will need to use the same +1 alteration to the arguments in our visualisation.\nWhen we plot it, it looks how we expect!\nFinal things to remember here about two mode networks are that, just like one mode network data, they can be stored as either a matrix or an edgelist. When bringing in a two mode network from an adjacency matrix, you can convert the data into a network object using the graph_from_biadjacency_matrix() function so long as you have set it as matrix. When bringing in a two mode network from an edgelist, you have to set the bipartite characteristic.",
+    "crumbs": [
+      " Unit 1: Cleaning and Transforming Network Data",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Two Mode Networks - Edgelists</span>"
+    ]
+  },
+  {
+    "objectID": "Two Mode Networks - AM.html",
+    "href": "Two Mode Networks - AM.html",
+    "title": "9  Two Mode Networks - Adjacency Matrix",
+    "section": "",
+    "text": "9.1 Getting to Know the Data\nSocial network data can be one mode or two mode. So far we have dealt with one mode network data. This means that one type of node is connected to the same type of node. Individuals connected to other individuals. We can also measure networks where there are two types of node. Let’s say individuals connected to groups that they participate in.\nFor this and the next chapter we will use some unique data where individuals are connected to groups. Specifically, this dataset demosntrates characters from the Harry Potter books auhtored by J.K. Rowling who are connected to various groups across the serries.\nI identified various groups from the series and then researched which characters are participants in the groups. For example, I googled “list of prefects at hogwarts.” Same for phoenix, death eaters etc. Most of the info came from this site - https://harrypotter.fandom.com/wiki/Dumbledore%27s_Army. I then checked each person on google to see what house they were in - some are missing and NA because they are fake characters from the movies or the wiki page. I then structured these into an adjacency matrix and an edgelist. In this chapter, we work on adjacecny matrices. We will deal with the rest in the next chapter.\nhp &lt;- load_data(\"Harry Potter_Two_Mode_AM.csv\", row.names=1)\n\nhp_mat &lt;- as.matrix(hp)\n\nhead(hp_mat)\n\n                 Phoenix Dumbeldore.s.Army Death.Eaters Inquisitorial.Squad\nAlbus Dumbledore       1                 0            0                   0\nRemus Lupin            1                 0            0                   0\nMolly Weasley          1                 0            0                   0\nSiruis Black           1                 0            0                   0\nSeverus Snape          1                 0            1                   0\nAlastor Moody          1                 0            0                   0\n                 Prefect Gryffindor Ravenclaw Hufflepuff Slytherin\nAlbus Dumbledore       1          1         0          0         0\nRemus Lupin            1          1         0          0         0\nMolly Weasley          0          1         0          0         0\nSiruis Black           0          1         0          0         0\nSeverus Snape          0          0         0          0         1\nAlastor Moody          0          0         0          1         0",
+    "crumbs": [
+      " Unit 1: Cleaning and Transforming Network Data",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Two Mode Networks - Adjacency Matrix</span>"
+    ]
+  },
+  {
+    "objectID": "Two Mode Networks - AM.html#two-mode-adjacency-matrices",
+    "href": "Two Mode Networks - AM.html#two-mode-adjacency-matrices",
+    "title": "9  Two Mode Networks - Adjacency Matrix",
+    "section": "9.2 Two Mode Adjacency Matrices",
+    "text": "9.2 Two Mode Adjacency Matrices\nSo, here we have a two mode adjacency matrix. You will notice some things that are similar to you, perhaps the 1/0 nature of a matrix. But this is slightly different. The columns no longer reflect the same names as the rows. Now, instead of an i,j matrix we have an i,g (group) matrix. This means that there is no diagonal. Why? Well, because the names at the top of the matrix (columns) are different from the side (rows). Here then, i is sending to the group. Rather, we talk about this, usually, in terms of affiliation. So, i is affiliated with the group (or not).\nFor R to understand this is a two mode network matrix, we use a slightly different command than a regular matrix. graph_from_biadjacency_matrix() is the current function where R recognises the separate column names as one type of node and the row names as another. For this to truly be a two mode network, they have to be distinct.\n\nhp_aff &lt;- graph_from_biadjacency_matrix(hp_mat)\n\n\nplot(hp_aff)\n\n\n\n\n\n\n\n\nLooking at this plot, you can’t tell if it is a one more or a two mode network since the nodes all look exactly the same. There are a few things we need to do in order to make this clearer.",
+    "crumbs": [
+      " Unit 1: Cleaning and Transforming Network Data",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Two Mode Networks - Adjacency Matrix</span>"
+    ]
+  },
+  {
+    "objectID": "Two Mode Networks - AM.html#visualising-two-mode-networks",
+    "href": "Two Mode Networks - AM.html#visualising-two-mode-networks",
+    "title": "9  Two Mode Networks - Adjacency Matrix",
+    "section": "9.3 Visualising Two Mode Networks",
+    "text": "9.3 Visualising Two Mode Networks\nLet’s make the visualisation much clearer between the two types of nodes.\nI do this by changing the shape and the colour of each type of node. I set a vector with the colours and shapes I want\n\nshapes &lt;- c(\"circle\", \"square\")\ncolors &lt;-c(\"green\", \"orange\")\n\nThen we can plot them based on these design parameters\n\npar(mar =c(5,0,2,0))\nset.seed(123)\nplot(hp_aff, vertex.color=colors[V(hp_aff)$type+1],\n     vertex.shape=shapes[V(hp_aff)$type+1], vertex.label.cex = 0.5, vertex.size = 7, main = \"Harry Potter\", sub = \"Characters Connected to Groups\")\n\n\n\n\n\n\n\n\nHere, I tell R to use the indices I’ve defined in the shapes and colors vectors and apply those to the network using the vertex.shape and vertex.color arguments. Notice that I need to state type + 1 in both of these arguments. It might look a bit unusual at first, but it makes sense once we take a closer look at what R does behind the scenes.\nThe “type” vertex characteristic is stored as TRUE or FALSE. You can verify this by running the code V(hp_aff)$type. This will display a long list of TRUE and FALSE values, which are stored in R as logical values: TRUE is equivalent to 1, and FALSE is equivalent to 0. Meanwhile, the index values for our shapes and colors vectors are stored differently. R always starts indexing at 1. In our colors vector, “green” is stored at index 1 and “orange” at index 2. For the shapes vector, “circle” is stored at index 1 and “square” at index 2.\nThus, there’s a mismatch between how the “type” characteristic is stored (as 1/0) and the way the shapes and colors vectors are indexed (which start from 1). To fix this, we add +1 to the type values, so that FALSE (which is stored as 0) becomes 1, and TRUE (which is stored as 1) becomes 2.\nIn this network, the second mode (which represents the “groups” in the bipartite network) is always considered to be the “TRUE” type. So, this means that the “characters” (the first mode, FALSE or 0) are displayed with green circles, and the “groups” (the second mode, TRUE or 1) are displayed with orange squares.\nSo, that visualisation was a lot better than the first! However, we can add a legend to the visualisation to further explain the network. You have to be mindful that some people may not see colours too well. So, differentiating the colours might not be so useful. Adding the legend on the plot can help orient people a little more to the visualisation you are presenting. Here we repeat the code from above to reproduce the plot. Then, you can use the legend() function to further explain the plot.\n\npar(mar =c(5,1,2,1))\nset.seed(123)\nplot(hp_aff, vertex.color=colors[V(hp_aff)$type+1],\n     vertex.shape=shapes[V(hp_aff)$type+1], vertex.label.cex = 0.5, vertex.size = 7, main = \"Harry Potter\", sub = \"Characters Connected to Groups\")\n\nlegend(\"bottomleft\", \n       legend = c(\"Characters (circle)\", \"Groups (square)\"), \n       fill = c(\"green\", \"orange\"), \n       title = \"Node Types\")\n\n\n\n\n\n\n\n\nThis visualisation is great, but, we can do even more to emphasise the the bipartite (two-mode) nature of the network. Igraph has a specific layout option that can help emphasise this. Pay attention to the layout option below.\n\npar(mar =c(0,0,0,0))\nplot(hp_aff, vertex.color=colors[V(hp_aff)$type+1],\n     vertex.shape=shapes[V(hp_aff)$type+1], vertex.label = NA, layout = layout_as_bipartite(hp_aff))",
+    "crumbs": [
+      " Unit 1: Cleaning and Transforming Network Data",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Two Mode Networks - Adjacency Matrix</span>"
+    ]
+  },
+  {
+    "objectID": "Two Mode Networks - AM.html#summary",
+    "href": "Two Mode Networks - AM.html#summary",
+    "title": "9  Two Mode Networks - Adjacency Matrix",
+    "section": "9.4 Summary",
+    "text": "9.4 Summary\nNetwork data can be one mode or two mode. Two mode network data can come in all different shapes and sizes. If you are collecting network data, consider a two mode network approach. Imagine you work for a company and you’re interested in the TV subscriptions of people. From a simple survey, you could create a two mode network of individuals connected to their TV subscriptions. This might be a little easier to imagine in the next chapter when we deal with edgelists.\nIn this section you have learned:\n\nWhat a two mode adjacency matrix looks like.\nHow to bring a two mode adjacency matrix into R and visualise it.\nSome common practices when visualising two mode networks.\n\nNext, we will do the same but focus on bringing in the same network but in an edgelist. The same learning elements apply with edgelists as they do with adjacency matrices.",
+    "crumbs": [
+      " Unit 1: Cleaning and Transforming Network Data",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Two Mode Networks - Adjacency Matrix</span>"
+    ]
   }
 ]
